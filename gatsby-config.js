@@ -8,7 +8,7 @@ module.exports = {
 		// You can also add new values here to query them like usual
 		// See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.js
 		siteTitle: 'Gaboland',
-		siteTitleAlt: 'Gaboland Testing - Make Solutions, Dont Problems',
+		siteTitleAlt: 'Gaboland - Make Solutions, Dont Problems',
 		siteHeadline: 'Gaboland - Portfolio by @gabrielba15',
 		siteUrl: 'https://cara.lekoarts.de',
 		siteDescription: 'Portfolio by Gabriel',
