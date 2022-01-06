@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link as TLink, Flex } from 'theme-ui';
 import { Link } from 'gatsby';
+import { pages } from '../../../utils/options';
 
 const Navigation = ({ nav }) => {
-	const pages = ['Contact', 'About', 'Tema'];
 	return (
 		<Flex
 			as="nav"
