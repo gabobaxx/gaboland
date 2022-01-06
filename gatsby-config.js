@@ -20,7 +20,9 @@ module.exports = {
 		{
 			resolve: '@lekoarts/gatsby-theme-emma',
 			// See the theme's README for all available options
-			options: {},
+			options: {
+				// projectsPath: 'content/sections'
+			},
 		},
 		{
 			resolve: 'gatsby-plugin-manifest',
