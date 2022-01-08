@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 	});
 
 	createPage({
-		path: '/projects',
+		path: '/g/projects',
 		component: projectsTemplate,
 	});
 
