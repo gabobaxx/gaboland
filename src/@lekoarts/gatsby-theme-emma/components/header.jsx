@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link as TLink } from 'theme-ui';
+import { Flex, Link as TLink } from 'theme-ui';
 import { Link } from 'gatsby';
 // Components
 import Navigation from '@lekoarts/gatsby-theme-emma/src/components/navigation';
-import ThemeChangerButton from '../../../components/theme-changer-button';
 // import SocialLinks from '@lekoarts/gatsby-theme-emma/src/components/social-links';
 
 const Header = ({ meta, nav }) => {
@@ -11,22 +10,51 @@ const Header = ({ meta, nav }) => {
 	const navEmpty = nav.length === 0;
 
 	return (
-		<React.Fragment>
-			<TLink
-				aria-label={`${siteTitle}, Back to homepage`}
-				as={Link}
+		<Flex as="header" variant="layout.header">
+			<Flex
 				sx={{
-					color: 'text',
-					':hover': { color: 'primary', textDecoration: 'none' },
+					fontWeight: 'bold',
+					fontSize: 4,
+					flex: 1,
+					justifyContent: navEmpty ? 'center' : 'flex-start',
 				}}
-				to="/"
 			>
-				{siteTitle}
-			</TLink>
+				<TLink
+					aria-label={`${siteTitle}, Back to homepage`}
+					as={Link}
+					sx={{
+						color: 'text',
+						':hover': { color: 'primary', textDecoration: 'none' },
+					}}
+					to="/"
+				>
+					{siteTitle}
+				</TLink>
+			</Flex>
 
-			<ThemeChangerButton />
-			{!navEmpty && <Navigation nav={nav} />}
-		</React.Fragment>
+			<Flex
+				sx={{
+					a: {
+						fontSize: 2,
+						color: 'text',
+						display: 'flex',
+						alignItems: 'center',
+						'&:hover': {
+							color: 'primary',
+						},
+						'&:not(:first-of-type)': {
+							ml: 1,
+						},
+					},
+					display: 'flex',
+					justifyContent: 'flex-end',
+					order: 4,
+					ml: 1,
+				}}
+			>
+				{!navEmpty && <Navigation nav={nav} />}
+			</Flex>
+		</Flex>
 	);
 };
 
