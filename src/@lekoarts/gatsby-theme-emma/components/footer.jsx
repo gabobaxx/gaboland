@@ -1,22 +1,44 @@
 import React from 'react';
 import { Box, Flex } from 'theme-ui';
 
+const Copyright = () => (
+	<Flex
+		sx={{
+			display: 'flex',
+			backgroundColor: 'primary',
+			justifyContent: 'space-between',
+		}}
+		variant="layout.footer"
+	>
+		<Box as="footer">
+			&copy; {new Date().getFullYear()}. All rights reserved.
+		</Box>
+		<Box as="footer">Made with LOVE by gaboland team.</Box>
+	</Flex>
+);
+
+const FooterSocialLinks = () => (
+	<Flex
+		sx={{
+			py: 40,
+			mt: 48,
+			display: 'flex',
+			backgroundColor: 'primary',
+			justifyContent: 'space-between',
+		}}
+		variant="layout.footer"
+	>
+		<Box as="footer">Github</Box>
+		<button>About me</button>
+		<Box as="footer">Insta</Box>
+	</Flex>
+);
 const Footer = () => {
 	return (
-		<Flex
-			sx={{
-				display: 'flex',
-				justifyContent: 'space-between',
-				fontSize: 1,
-			}}
-		>
-			<Box as="footer" variant="layout.footer">
-				&copy; {new Date().getFullYear()}. All rights reserved.
-			</Box>
-			<Box as="footer" variant="layout.footer">
-				Made with LOVE by gaboland team.
-			</Box>
-		</Flex>
+		<React.Fragment>
+			<FooterSocialLinks />
+			<Copyright />
+		</React.Fragment>
 	);
 };
 

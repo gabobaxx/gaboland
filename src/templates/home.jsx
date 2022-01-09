@@ -21,24 +21,24 @@ const components = {
 	ProjectCard,
 };
 
-const Home = ({ children }) => {
+const Home = () => {
 	const meta = useSiteMetadata();
 	const nav = useNavigation();
-	console.log(children);
 	return (
 		<MDXProvider components={components}>
 			<Seo />
 			<Header meta={meta} nav={nav} />
-			<Hero />
-			<h2>Projects</h2>
-			<Projects />
-			<h2>Skills</h2>
-			<Skills />
-			<h2>Experiences</h2>
-			<Experiences />
-			<h2>Contact</h2>
-			<Contact />
-			<Test />
+			<main className="container">
+				<Hero />
+				<h2>Projects</h2>
+				<Projects />
+				<h2>Skills</h2>
+				<Skills />
+				<h2>Experiences</h2>
+				<Experiences />
+				<h2>Contact</h2>
+				<Contact />
+			</main>
 			<Footer />
 		</MDXProvider>
 	);

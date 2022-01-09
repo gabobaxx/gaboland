@@ -1,24 +1,25 @@
 export const layout = {
 	footer: {
-		textAlign: 'center',
+		py: 20,
+		px: 24,
+		fontSize: 10,
+		color: 'gs100',
 		display: 'block',
-		color: 'textMuted',
-		px: [2, 3],
-		py: [3, 4],
+		fontWeight: 'bold',
+		textAlign: 'center',
 	},
 	header: {
-		px: [3, 4],
-		py: [2, 3],
-		fontSize: 2,
+		my: 24,
+		px: [48, 50] /* [breakpoints] */,
 		display: 'flex',
-		alignItems: 'center',
 		flexWrap: 'wrap',
+		alignItems: 'center',
 	},
 	main: {
 		position: 'relative',
 	},
 	container: {
-		maxWidth: '5xl',
 		padding: 4,
+		maxWidth: '5xl',
 	},
 };

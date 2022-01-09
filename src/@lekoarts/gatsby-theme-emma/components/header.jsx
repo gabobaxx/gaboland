@@ -10,12 +10,19 @@ const Header = ({ meta, nav }) => {
 	const navEmpty = nav.length === 0;
 
 	return (
-		<Flex as="header" variant="layout.header">
+		<Flex
+			as="header"
+			variant="layout.header"
+			sx={{
+				fontFamily: 'head',
+				fontWeight: 'bold',
+			}}
+		>
+			{/* Site Title (Gaboland) */}
 			<Flex
 				sx={{
-					fontWeight: 'bold',
-					fontSize: 4,
 					flex: 1,
+					fontSize: 20,
 					justifyContent: navEmpty ? 'center' : 'flex-start',
 				}}
 			>
@@ -23,33 +30,37 @@ const Header = ({ meta, nav }) => {
 					aria-label={`${siteTitle}, Back to homepage`}
 					as={Link}
 					sx={{
-						color: 'text',
-						':hover': { color: 'primary', textDecoration: 'none' },
+						color: 'p700',
+						':hover': { color: 'p300', textDecoration: 'none' },
 					}}
 					to="/"
 				>
 					{siteTitle}
 				</TLink>
 			</Flex>
-
+			{/* Menu Links */}
 			<Flex
 				sx={{
+					ml: 1,
+					order: 4,
+					display: 'flex',
+					justifyContent: 'flex-end',
 					a: {
-						fontSize: 2,
-						color: 'text',
+						fontSize: 10,
+						color: 'p700',
 						display: 'flex',
 						alignItems: 'center',
 						'&:hover': {
-							color: 'primary',
+							color: 'p300',
+							textDecoration: 'none',
+						},
+						'a:not(:last-of-type)': {
+							mr: 2,
 						},
 						'&:not(:first-of-type)': {
 							ml: 1,
 						},
 					},
-					display: 'flex',
-					justifyContent: 'flex-end',
-					order: 4,
-					ml: 1,
 				}}
 			>
 				{!navEmpty && <Navigation nav={nav} />}

@@ -46,8 +46,8 @@ export const colors = {
 	gs800: '#393939',
 	gs900: '#131313',
 
-	alert: 'BE342D',
-	warning: 'F2C94C',
+	alert: '#BE342D',
+	warning: '#F2C94C',
 	success: '#3CB96E',
 
 	// Extras
