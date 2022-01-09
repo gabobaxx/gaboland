@@ -1,14 +1,3 @@
-## Branches
-
-- [main](https://github.com/gaboland/gaboland-cara-starter)
-- [beta](https://github.com/gaboland/gaboland-cara-starter/tree/beta)
-- [testing](https://github.com/gaboland/gaboland-cara-starter/tree/testing)
-- [development](https://github.com/gaboland/gaboland-cara-starter/tree/development)
-## Documentation
-
-- [Changelog](https://github.com/gaboland/gaboland-cara-starter/blob/testing/docs/CHANGELOG.md)
-- [Style Guide](https://github.com/gaboland/gaboland-cara-starter/blob/testing/docs/STYLE_GUIDE.md)
-
 <p align="center">
   <a href="https://cara.lekoarts.de">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
