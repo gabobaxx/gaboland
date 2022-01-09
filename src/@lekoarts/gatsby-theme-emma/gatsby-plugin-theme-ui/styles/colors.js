@@ -1,3 +1,7 @@
+/**
+ * ! Gradients Colors does not work.
+ * TODO: Fix Gradient Color Disaster.
+ */
 import { modes } from './modes';
 
 export const colors = {
