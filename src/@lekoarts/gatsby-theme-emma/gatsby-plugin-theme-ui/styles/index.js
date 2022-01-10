@@ -3,6 +3,7 @@ import { fonts, fontSizes, fontWeights, lineHeights } from './fonts';
 import { layout } from './layout';
 import { styles } from './styles';
 import { colors } from './colors';
+import { cards } from './cards';
 
 export {
 	buttons,
@@ -13,4 +14,5 @@ export {
 	lineHeights,
 	layout,
 	styles,
+	cards,
 };

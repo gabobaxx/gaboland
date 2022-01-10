@@ -11,6 +11,7 @@ import {
 	styles,
 	layout,
 	buttons,
+	cards,
 } from './styles/index';
 
 export default merge(tailwind, {
@@ -19,6 +20,7 @@ export default merge(tailwind, {
 	fontWeights,
 	lineHeights,
 	colors,
+	cards,
 	styles,
 	layout,
 	buttons,
