@@ -5,7 +5,7 @@
 import { modes } from './modes';
 
 export const colors = {
-	modes,
+	// modes,
 
 	primary: '#994747',
 	p100: '#C29191',
