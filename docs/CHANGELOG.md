@@ -1,41 +1,54 @@
 # Change Log
 
-## 0.0.3 (2021-12-28 || Dec 28, 2021)
+### 0.2.1 (Jan 9, 2022)
+
+#### Features
+
+- Header v.0.0.1 ([074221ac9](https://github.com/gaboland/portfolio/commit/074221ac9eea24cb490ef2c2bec44b41b56f8479)).
+- Footer v.0.0.1 ([074221ac9](https://github.com/gaboland/portfolio/commit/074221ac9eea24cb490ef2c2bec44b41b56f8479)).
+- Layout v.0.0.1 ([074221ac9](https://github.com/gaboland/portfolio/commit/074221ac9eea24cb490ef2c2bec44b41b56f8479)).
+- Noto and Manrope Fonts ([6dd3091d5](https://github.com/gaboland/portfolio/commit/6dd3091d5fb143dd47cbf24f1f45f0cf1326cae1)).
+- Deploy Vercel Fixed  ([22ec31e7e](https://github.com/gaboland/portfolio/commit/22ec31e7ef93dfc2d7ffe9484b1772af58afcee2)).
+
+#### Bug 
+
+- Gradient Color Disaster ([e6d320240](https://github.com/gaboland/portfolio/commit/e6d320240849fd0b09a952a87eefc2b9bd5bab70)).
+
+## 0.2.0 (Jan 8, 2022)
 
 ### Features
 
-- New Gatsby Theme ([a8d3df1c6](https://github.com/gaboland/gaboland-cara-starter/commit/a8d3df1c655ae82a2ced4fa1cfa8799066509af5)).
+- Projects and Project Pages Added ([6fe2bbe56](https://github.com/gaboland/gaboland-cara-starter/commit/6fe2bbe56c93a36941d90eea6974b2d1dd5ffcdc)).
+- Hero, Projects, Skills, Experiences, Contact Sections Added to Main Page ([6fe2bbe56](https://github.com/gaboland/gaboland-cara-starter/commit/6fe2bbe56c93a36941d90eea6974b2d1dd5ffcdc)).
 
-### Configs
+## 0.1.0 (Jan 7, 2022)
 
-- Needs Plugins to TypeScript files ([4e0e9c7c4](https://github.com/gaboland/gaboland-cara-starter/commit/4e0e9c7c483c1ae893001ddf128aa7589c2a8aac)).
+### Features
 
+- Footer ([6d34c0dc5](https://github.com/gaboland/gaboland-cara-starter/commit/6d34c0dc5be3707fe0c28a3e7c6638bd3ffe97fd)).
+- Flex Header ([6d34c0dc5](https://github.com/gaboland/gaboland-cara-starter/commit/6d34c0dc5be3707fe0c28a3e7c6638bd3ffe97fd)).
+- Theme Changer Button with new styles ([6d34c0dc5](https://github.com/gaboland/gaboland-cara-starter/commit/6d34c0dc5be3707fe0c28a3e7c6638bd3ffe97fd)).
 
-### Merges
+### 0.0.4 (Jan 6, 2022)
 
-- New Merge [#2](https://github.com/gaboland/gaboland-cara-starter/pull/2) : Testing into Development Branch ([81aed93b6](https://github.com/gaboland/gaboland-cara-starter/commit/81aed93b684594a61801eb8dc6c6a04e8a29f387)).
-- New Merge [#1](https://github.com/gaboland/gaboland-cara-starter/pull/1) : Theme Updated from Cara to Emma ([44ef36ed0](https://github.com/gaboland/gaboland-cara-starter/commit/44ef36ed0058ba0f648fca7b5207d6aa30055f75)).
-## 0.0.2 (2021-12-27 || Dec 27, 2021)
+#### Features
 
-### Configs
+- Home Component ([73889c999](https://github.com/gaboland/gaboland-cara-starter/commit/73889c999c03e3af70c68a0dcf11e525dde7dd50)).
 
-- Lint Staged & Husky added ([c524b15f9](https://github.com/gaboland/gaboland-cara-starter/commit/c524b15f9e759eb77c939f5a5bf7fd957de3cf98)).
+### 0.0.3 (Jan 5, 2022)
 
-### Refactoring
+#### Features
 
-- Version added ([69219df72](https://github.com/gaboland/gaboland-cara-starter/commit/69219df725c29db9461658ea977724bffe91cbc1)).
-- Style Guide added ([8ce4bf3ef](https://github.com/gaboland/gaboland-cara-starter/commit/8ce4bf3ef28688efbcc0502c8fe1af0bcd769e58)).
-- New Style Guide Info ([a232c55ad](https://github.com/gaboland/gaboland-cara-starter/commit/a232c55add6d1bf3c1abb38939503836db304a3f)).
-- New Names and Info Files ([ad62f4b01](https://github.com/gaboland/gaboland-cara-starter/commit/ad62f4b01b32b5e9d2770ed8d0b4a3ad3f5a137c))
+- Changer Button Component ([8ee1d1c1f](https://github.com/gaboland/gaboland-cara-starter/commit/8ee1d1c1ffac80e16f27c4075e6b0fe7db11c8a3)).
 
-## 0.0.1 (2021-12-26 || Dec 26, 2021)
+### 0.0.2 (Dec 30, 2021)
 
-### Configs
+#### Features
 
-- CHANGELOG.md, LICENSE, README.md ignored ([0bf470f24](https://github.com/gaboland/gaboland-cara-starter/commit/0bf470f24)).
-- ESLint added ([2ed01bf80](https://github.com/gaboland/gaboland-cara-starter/commit/2ed01bf8049f0e67a58fcacded09232708c8e884)).
-- Emojis file added ([ec1d45a93](https://github.com/gaboland/gaboland-cara-starter/commit/ec1d45a939e741d86c6c30d0d89888b33716271a)).
+- Alt Name Gaboland ([b0a8ebc0c](https://github.com/gaboland/gaboland-cara-starter/commit/b0a8ebc0cc38579c68b22a967ba814556af1b3aa)).
 
-### Refactoring
+### 0.0.1 (Dec 29, 2021)
 
-- About me & Contact added ([ef131167b](https://github.com/gaboland/gaboland-cara-starter/commit/ef131167b6816544e8104eb20b437b8eb07c4dbf)).
+#### Features
+
+- Initial Commit ([173d18f8f](https://github.com/gaboland/gaboland-cara-starter/commit/173d18f8fbd7862a7e1ee63a9723fb5d2c438d29)).
