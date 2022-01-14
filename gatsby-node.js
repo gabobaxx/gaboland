@@ -1,4 +1,5 @@
 const withDefaults = require('./utils/default-options');
+
 const path = require('path');
 const fs = require('fs');
 
