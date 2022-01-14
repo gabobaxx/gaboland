@@ -1,24 +1,25 @@
 import * as React from 'react';
 // Providers!
 import { MDXProvider } from '@mdx-js/react';
-
 // Hooks!
-import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-metadata';
 import useNavigation from '@lekoarts/gatsby-theme-emma/src/hooks/use-navigation';
-// Components!
-import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
-import Footer from '../@lekoarts/gatsby-theme-emma/components/footer';
-import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
-import ProjectCard from '../components/project-card.tsx';
-import Card, { CardVertical } from '../components/cards/card';
+import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-metadata';
+
+// Third Party Components!
 import { Image, Card as CardUI, Flex } from 'theme-ui';
+// Custom Components!
+import ProjectCard from 'components/project-card.tsx';
+import Card, { CardVertical } from 'components/cards/card';
+import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
+import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
 
 // Sections
 import Hero from '../../content/sections/hero';
-import Projects from '../../content/sections/projects';
 import Skills from '../../content/sections/skills';
-import Experiences from '../../content/sections/experiences';
 import Contact from '../../content/sections/contact';
+import Projects from '../../content/sections/projects';
+import Experiences from '../../content/sections/experiences';
 
 const components = {
 	ProjectCard,

@@ -19,20 +19,18 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@lekoarts/gatsby-theme-cara": "^3.0.0",
-		"@lekoarts/gatsby-theme-emma": "^3.0.2",
-		"gatsby": "^4.4.0",
-		"gatsby-plugin-gatsby-cloud": "^4.0.0",
-		"gatsby-plugin-manifest": "^4.0.0",
-		"gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.22",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"@lekoarts/gatsby-theme-cara": "3.0.0",
+		"@lekoarts/gatsby-theme-emma": "3.0.2",
+		"gatsby": "4.4.0",
+		"gatsby-plugin-manifest": "4.0.0",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
-		"cross-env": "^7.0.3",
+		"cross-env": "7.0.3",
 		"eslint": "7.19.0",
-		"eslint-plugin-react": "^7.28.0",
-		"husky": "^7.0.4"
+		"eslint-plugin-react": "7.28.0",
+		"husky": "7.0.4"
 	},
 	"lint-staged": {
 		"*.{jsx,js}": [

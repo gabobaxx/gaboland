@@ -1,6 +1,4 @@
-require('dotenv').config();
-
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
+require('dotenv').config(); // read .env file
 
 module.exports = {
 	siteMetadata: {
@@ -39,15 +37,6 @@ module.exports = {
 						type: 'image/png',
 					},
 				],
-			},
-		},
-		'gatsby-plugin-gatsby-cloud',
-		shouldAnalyseBundle && {
-			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-			options: {
-				analyzerMode: 'static',
-				reportFilename: '_bundle.html',
-				openAnalyzer: false,
 			},
 		},
 	].filter(Boolean),
