@@ -1,5 +1,52 @@
 # Change Log
 
+### 0.5.3 (Jan 14, 2022)
+
+### Bug
+
+- Vercel Deploy Fixed ([bad6a8546](https://github.com/gaboland/portfolio/commit/bad6a854671a286aff194ad087a57c15d948cdac)).
+### 0.5.2 (Jan 14, 2022)
+
+### Bug
+
+- Vercel Deploy ([acfc09404](https://github.com/gaboland/portfolio/commit/acfc09404737a1bbe5650127b45ec997f21f4e77)).
+
+### 0.5.1 (Jan 14, 2022)
+
+### Config
+
+- New Gatsby Config ([1056f4738](https://github.com/gaboland/portfolio/commit/1056f4738a266192a7fa258cf414dbf67dd4ce17)).
+- All Modules Updated to Latest Version ([1056f4738](https://github.com/gaboland/portfolio/commit/1056f4738a266192a7fa258cf414dbf67dd4ce17)).
+
+## 0.5.0 (Jan 13, 2022)
+
+- New Border Color to Cards ([d91eef087](https://github.com/gaboland/portfolio/commit/d91eef087dc8b7c26194c5ca868438da5fa9dc08)).
+- New Card Info ([d91eef087](https://github.com/gaboland/portfolio/commit/d91eef087dc8b7c26194c5ca868438da5fa9dc08)).
+
+## 0.4.0 (Jan 11, 2022)
+
+- Selfie ([942cfb9ac](https://github.com/gaboland/portfolio/commit/942cfb9ac3fe9a4ff3c75084be7c12bfe3dd766c)).
+- Content Centered ([942cfb9ac](https://github.com/gaboland/portfolio/commit/942cfb9ac3fe9a4ff3c75084be7c12bfe3dd766c)).
+
+### 0.3.2 (Jan 10, 2022)
+
+### Bug
+
+- Vercel Deploy Fixed ([19440a41c](https://github.com/gaboland/portfolio/commit/19440a41c285e25b87f77197f3674d63b911afc6)).
+
+### 0.3.1 (Jan 10, 2022)
+
+### Bug
+
+- Vercel Deploy ([6e104402c](https://github.com/gaboland/portfolio/commit/6e104402c58dee9b96443e6d093c8cc0d6e9bd33)).
+
+## 0.3.0 (Jan 10, 2022)
+
+- Vertical Card v.0.0.1 ([673f1147c](https://github.com/gaboland/portfolio/commit/673f1147cc51d5eb824a924255da60bef07645bc)).
+- Content Card v.0.0.1 ([673f1147c](https://github.com/gaboland/portfolio/commit/673f1147cc51d5eb824a924255da60bef07645bc)).
+
+#### Features
+
 ### 0.2.1 (Jan 9, 2022)
 
 #### Features
@@ -16,14 +63,10 @@
 
 ## 0.2.0 (Jan 8, 2022)
 
-### Features
-
 - Projects and Project Pages Added ([6fe2bbe56](https://github.com/gaboland/gaboland-cara-starter/commit/6fe2bbe56c93a36941d90eea6974b2d1dd5ffcdc)).
 - Hero, Projects, Skills, Experiences, Contact Sections Added to Main Page ([6fe2bbe56](https://github.com/gaboland/gaboland-cara-starter/commit/6fe2bbe56c93a36941d90eea6974b2d1dd5ffcdc)).
 
 ## 0.1.0 (Jan 7, 2022)
-
-### Features
 
 - Footer ([6d34c0dc5](https://github.com/gaboland/gaboland-cara-starter/commit/6d34c0dc5be3707fe0c28a3e7c6638bd3ffe97fd)).
 - Flex Header ([6d34c0dc5](https://github.com/gaboland/gaboland-cara-starter/commit/6d34c0dc5be3707fe0c28a3e7c6638bd3ffe97fd)).
