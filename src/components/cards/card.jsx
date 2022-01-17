@@ -1,6 +1,11 @@
 import React from 'react';
 import { Card as CardUI, Box } from 'theme-ui';
 
+const CardContact = ({ title, borderColor }) => <h1>H</h1>;
+const CardExperience = ({ title, borderColor }) => <h1>H</h1>;
+const CardSkill = ({ title, borderColor }) => <h1>H</h1>;
+const CardProject = ({ title, borderColor }) => <h1>H</h1>;
+
 export const CardVertical = ({ children, title, borderColor }) => (
 	<CardUI
 		variant="cards.principal"
