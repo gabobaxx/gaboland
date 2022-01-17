@@ -1,4 +1,4 @@
-import './styles/fonts.css';
+import './styles/global.css';
 import { merge } from 'theme-ui';
 import { tailwind } from '@theme-ui/presets';
 // Theme Config!

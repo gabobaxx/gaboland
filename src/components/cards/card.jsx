@@ -50,8 +50,8 @@ const Card = ({ children, title, borderColor }) => {
 				<Box as="header">{title || 'Contact Card'} </Box>
 				<Box as="p">{children}</Box>
 				<Box as="footer">
-					<p>Icon 1</p>
-					<p>Icono 2</p>
+					<i className="bi bi-github"></i>
+					<i className="bi bi-github"></i>
 				</Box>
 			</CardUI>
 		</CardUI>

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import * as React from 'react';
 // Providers!
 import { MDXProvider } from '@mdx-js/react';
@@ -91,14 +93,14 @@ const Home = () => {
 					<Skills />
 					<CardVertical title="Programming">
 						My life as a programmer started in 2019. I have 3 years of
-						experiences and I’m still learning.
+						experiences and I'm still learning.
 					</CardVertical>
 					<CardVertical title="Design" borderColor="success">
 						I have 2 year designing and learning technologies associeted with it
-						and I still don’t stop.
+						and I still don't stop.
 					</CardVertical>
 					<CardVertical title="Autodidact">
-						since 2017 I haven’t stopped learning somenthing new every single
+						since 2017 I haven't stopped learning somenthing new every single
 						day.
 					</CardVertical>
 				</Flex>
@@ -139,7 +141,7 @@ const Home = () => {
 						11:00h and from 15:00h to 18:h ET. for an immediate response.
 					</Card>
 					<Card title="Friendly Contact">
-						If you’re an old friend or a stranger who wants to contact me for
+						If you're an old friend or a stranger who wants to contact me for
 						anything (say hello, connection, etc.) write at any tiime through
 						the media but do not expect an immediate response.
 					</Card>
