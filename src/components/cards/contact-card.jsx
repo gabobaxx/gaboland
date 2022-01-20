@@ -6,9 +6,9 @@ const ContactCard = ({
 	children,
 	borderColor = 'p700',
 	title = 'Contact Card',
-	icons = { first: 'github', second: 'linkedin' }
+	icons = { first: 'github', second: 'linkedin' },
 }) => (
-	<Card sx={{ borderColor, variant: 'cards' }} variant="cards.large">
+	<Card sx={{ variant: 'cards', borderColor }} variant="cards.large">
 		<Card as="section" variant="cards.large.content">
 			<Box as="header">{title} </Box>
 			<Box as="p">{children}</Box>
