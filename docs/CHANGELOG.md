@@ -2,23 +2,23 @@
 
 ### 0.5.4 (Jan 20, 2022)
 
-### 🔥 Features
+##### 🔥 Features
 
 - NEW: Icons - Bootstrap ([c65e05160](https://github.com/gaboland/portfolio/commit/c65e051605d454d68f68abab1b215046e78164a8)).
 - NEW: Component -> Contact Card v1.0 ([ce7f68e94](https://github.com/gaboland/portfolio/commit/ce7f68e94acad77cb4f3bd51b1192b535dcb51f2)).
 - NEW: Component -> Button With Icon v1.0 ([9429128d1](https://github.com/gaboland/portfolio/commit/9429128d1daa583635f548c3241787e38722dd29)).
 
-### 🔄 Refactor
+##### 🔄 Refactor
 
 - CHANGES: Page -> Home [[Contact Card Component Added](https://github.com/gaboland/portfolio/commit/ce7f68e94acad77cb4f3bd51b1192b535dcb51f2)] ([9b81e7f98](https://github.com/gaboland/portfolio/commit/9b81e7f98a3340f00e7d29aa4064999638133d18)).
 - CHANGES: Component -> Contact Card [[Prop borderColor fixed](https://github.com/gaboland/portfolio/commit/ce7f68e94acad77cb4f3bd51b1192b535dcb51f2)] ([0ed59d801](https://github.com/gaboland/portfolio/commit/0ed59d8014d7e1796ba72c7fd4f4c5ad0d2cd0d3)).
 
-### 📦 Packages
+##### 📦 Packages
 
 - UPDATED: engine io [[#5](https://github.com/gabrielba15/portfolio/pull/5)] ([783503a10](https://github.com/gaboland/portfolio/commit/783503a10b6b7551e13e6e3083ee3a5534f2ae40)).
 - UPDATED: follow-redirects [[#6](https://github.com/gabrielba15/portfolio/pull/6)] ([08038a942](https://github.com/gaboland/portfolio/commit/08038a942d74c9b3f04f58d0335b03d60613c1aa)).
 
-### 🟢 Merges
+##### 🟢 Merges
 
 - MERGING: main -> development [[#7](https://github.com/gabrielba15/portfolio/pull/7)] ([26d15881f](https://github.com/gaboland/portfolio/commit/26d15881f182a652200903793090592c6d5081df)).
 
