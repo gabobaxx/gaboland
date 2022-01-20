@@ -34,4 +34,17 @@ export const cards = {
 			justifyContent: 'space-evenly',
 		},
 	},
+	small: {
+		height: 149,
+		maxWidth: 366,
+		content: {
+			height: 125,
+			maxWidth: 318,
+			overflow: 'hidden',
+		},
+		header: {
+			display: 'flex',
+			justifyContent: 'space-between',
+		},
+	},
 };
