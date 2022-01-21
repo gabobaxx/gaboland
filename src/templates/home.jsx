@@ -10,12 +10,12 @@ import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-meta
 // Third Party Components!
 import { Image, Card as CardUI, Flex } from 'theme-ui';
 // Custom Components!
-import { CardVertical, SmallCard } from 'components/cards/card';
+import { CardVertical } from 'components/cards/card';
 import CardContact from 'components/cards/contact-card';
+import ExperienceCard from 'components/cards/experience-card';
 import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
 import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
 import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
-
 // Sections
 import Hero from '../../content/sections/hero';
 import Skills from '../../content/sections/skills';
@@ -113,18 +113,25 @@ const Home = () => {
 					}}
 				>
 					<Experiences />
-					<SmallCard>
-						My personal website or portfolio. This projects is built with
-						Gatsby, React and Theme UI.
-					</SmallCard>
-					<CardVertical title="Gaboland">
-						My personal website or portfolio. This projects is built with
-						Gatsby, React and Theme UI.
-					</CardVertical>
-					<CardVertical title="Gaboland">
-						My personal website or portfolio. This projects is built with
-						Gatsby, React and Theme UI.
-					</CardVertical>
+					<ExperienceCard
+						title="Designer"
+						company="Freelance"
+						location="Barinas, Venezuela"
+						year="1 year"
+					/>
+					<ExperienceCard
+						title="Web Developer"
+						company="Freelance"
+						location="Barinas, Venezuela"
+						year="2 years"
+						borderColor="success"
+					/>
+					<ExperienceCard
+						title="UI Designer"
+						company="Freelance"
+						location="Barinas, Venezuela"
+						year="1 year"
+					/>
 				</Flex>
 				<h2>Contact</h2>
 				<Flex
