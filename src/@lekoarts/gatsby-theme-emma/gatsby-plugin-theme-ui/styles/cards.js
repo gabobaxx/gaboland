@@ -38,13 +38,15 @@ export const cards = {
 		height: 149,
 		maxWidth: 366,
 		content: {
-			height: 125,
-			maxWidth: 318,
+			textAlign: 'start',
+			width: 318,
 			overflow: 'hidden',
 		},
-		header: {
-			display: 'flex',
-			justifyContent: 'space-between',
+		elements: {
+			two: {
+				display: 'flex',
+				justifyContent: 'space-between',
+			},
 		},
 	},
 };
