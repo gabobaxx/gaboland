@@ -1,5 +1,17 @@
 # Change Log
 
+### 0.5.5 (Jan 21, 2022)
+
+##### 🔥 Features
+
+- NEW: Component -> Experience Card v1.0 ([5ba784b02](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)).
+- NEW: Component -> Small Card v1.0 ([ceb12d7e7](https://github.com/gabrielba15/portfolio/commit/ceb12d7e7dd9ae12b8dedf480bfe7b9d58c523c8)).
+- NEW: Component -> Badge v1.0 ([a5c731cd3](https://github.com/gabrielba15/portfolio/commit/a5c731cd3ad0f2912cf001d55670bb9ae430a4c7)).
+
+##### 🔄 Refactor
+
+- CHANGES: Page -> Home [[Experience Card Component Added](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)] ([5ba784b02](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)).
+
 ### 0.5.4 (Jan 20, 2022)
 
 ##### 🔥 Features
