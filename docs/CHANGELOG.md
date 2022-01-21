@@ -10,7 +10,7 @@
 
 ##### 🔄 Refactor
 
-- CHANGES: Page -> Home [[Experience Card Component Added](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)] ([5ba784b02](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)).
+- CHANGES: Page -> Home [[Experience Card Component Added](https://github.com/gaboland/portfolio/commit/5ba784b028bc30b11d5651b43042ef4dced08f58)] ([d4e83423f](https://github.com/gaboland/portfolio/commit/d4e83423fbae5d6c82f63959d42c65279454bc84)).
 
 ### 0.5.4 (Jan 20, 2022)
 
