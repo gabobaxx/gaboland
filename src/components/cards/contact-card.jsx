@@ -2,6 +2,11 @@ import * as React from 'react';
 import { Card, Box } from 'theme-ui';
 import ButtonWithIcon from 'components/buttons/button-with-icon';
 
+// Polyfill for capitalize (upper case first letter) a string.
+String.prototype.capitalizer = function () {
+	return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 const ContactCard = ({
 	children,
 	borderColor = 'p700',
@@ -13,8 +18,12 @@ const ContactCard = ({
 			<Box as="header">{title} </Box>
 			<Box as="p">{children}</Box>
 			<Box as="footer">
-				<ButtonWithIcon icon={icons.first} />
-				<ButtonWithIcon icon={icons.second} />
+				<ButtonWithIcon icon={icons.first}>
+					{icons.first.capitalizer()}
+				</ButtonWithIcon>
+				<ButtonWithIcon icon={icons.second}>
+					{icons.second.capitalizer()}
+				</ButtonWithIcon>
 			</Box>
 		</Card>
 	</Card>
