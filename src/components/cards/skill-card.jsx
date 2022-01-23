@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from 'theme-ui';
-import SmallCard from 'components/cards/skill-card';
+import SmallCard from './small-card';
 import ButtonWithIcon from 'components/buttons/button-with-icon';
 
 const SkillCard = ({
