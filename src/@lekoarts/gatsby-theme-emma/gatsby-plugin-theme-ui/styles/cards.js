@@ -35,7 +35,7 @@ export const cards = {
 		},
 	},
 	small: {
-		height: 149,
+		//height: 149,
 		maxWidth: 366,
 		content: {
 			textAlign: 'start',
