@@ -1,5 +1,18 @@
 # Change Log
 
+### 0.5.6 (Jan 23, 2022)
+
+##### 🔥 Features
+
+- NEW: Component -> Skill Card v1.0 ([118490ea5](https://github.com/gabrielba15/portfolio/commit/118490ea582c1941ffc3468bb448d5c79a6c1eb1)).
+
+##### 🔄 Refactor
+
+- CHANGES: Page -> Home [[Skill Card Component Added To UI](https://github.com/gabrielba15/portfolio/commit/118490ea582c1941ffc3468bb448d5c79a6c1eb1)] ([7b4443dd7](https://github.com/gabrielba15/portfolio/commit/7b4443dd727acfb4892ea5ba78b5ade29b356b36)).
+- CHANGES: Component -> Button With Icon [Side Prop, New Default Styles]  ([8a446cbc4](https://github.com/gabrielba15/portfolio/commit/8a446cbc4e6a53888a07acb90efaca0b0afa6a1f)).
+- CHANGES: Component -> Contact Card [Capitalizer Polyfill]  ([8a446cbc4](https://github.com/gabrielba15/portfolio/commit/8a446cbc4e6a53888a07acb90efaca0b0afa6a1f)).
+
+
 ### 0.5.5 (Jan 21, 2022)
 
 ##### 🔥 Features
