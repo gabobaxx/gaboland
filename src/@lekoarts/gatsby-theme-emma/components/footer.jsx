@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Flex, Button } from 'theme-ui';
+import { Box, Flex, Button, Link as TLink } from 'theme-ui';
+import { Link } from 'gatsby';
 
 const Copyright = () => (
 	<Flex
@@ -25,22 +26,44 @@ const FooterSocialLinks = () => (
 			display: 'flex',
 			backgroundColor: 'primary',
 			justifyContent: 'space-between',
+			alignItems: 'center',
 		}}
 		variant="layout.footer"
 	>
-		<Box className="bi bi-github" />
-		<Button
+		<TLink
+			as={Link}
+			key="gaboland-github"
+			sx={{ fontSize: 24, color: 'gs200' }}
+			to="https://github.com/gaboland"
+			className="bi bi-github"
+		/>
+		<TLink
+			as={Link}
+			key="about"
+			to="/about"
 			sx={{
 				// p: 24,
 				border: '2px solid',
-				borderColor: 'p700',
+				borderColor: 'warning',
 				cursor: 'pointer',
-				borderRadius: '0.3125rem',
+				textAlign: 'center',
+				textDecoration: 'none',
+				borderRadius: '8px',
+				minWidth: '8.125rem',
+				padding: '0.5rem',
+				fontSize: '0.875rem',
+				color: 'warning',
 			}}
 		>
-			About me
-		</Button>
-		<Box className="bi bi-instagram" />
+			About Me
+		</TLink>
+		<TLink
+			as={Link}
+			key="gaboland-instagram"
+			sx={{ fontSize: 24, color: 'gs200' }}
+			to="https://instagram.com/gaboland"
+			className="bi bi-instagram"
+		/>
 	</Flex>
 );
 const Footer = () => {
