@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex } from 'theme-ui';
+import { Box, Flex, Button } from 'theme-ui';
 
 const Copyright = () => (
 	<Flex
@@ -28,17 +28,27 @@ const FooterSocialLinks = () => (
 		}}
 		variant="layout.footer"
 	>
-		<Box as="footer">Github</Box>
-		<button>About me</button>
-		<Box as="footer">Insta</Box>
+		<Box className="bi bi-github" />
+		<Button
+			sx={{
+				// p: 24,
+				border: '2px solid',
+				borderColor: 'p700',
+				cursor: 'pointer',
+				borderRadius: '0.3125rem',
+			}}
+		>
+			About me
+		</Button>
+		<Box className="bi bi-instagram" />
 	</Flex>
 );
 const Footer = () => {
 	return (
-		<React.Fragment>
+		<Box as="footer">
 			<FooterSocialLinks />
 			<Copyright />
-		</React.Fragment>
+		</Box>
 	);
 };
 

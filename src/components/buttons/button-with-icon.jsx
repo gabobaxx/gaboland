@@ -1,7 +1,12 @@
 import * as React from 'react';
-import {Box, Button} from 'theme-ui';
+import { Box, Button } from 'theme-ui';
 
-const ButtonWithIcon = ({children, side = 'left', icon}) =>
+const ButtonWithIcon = ({
+	children,
+	side = 'left',
+	icon = 'github',
+	borderColor = 'p700',
+}) =>
 	side === 'right' ? (
 		<Button
 			sx={{
@@ -13,8 +18,8 @@ const ButtonWithIcon = ({children, side = 'left', icon}) =>
 				color: 'gs800',
 				// width: 108,
 				pt: '1rem',
-				pb: 0
-
+				pb: 0,
+				borderColor: borderColor,
 			}}
 		>
 			<Box
@@ -30,9 +35,7 @@ const ButtonWithIcon = ({children, side = 'left', icon}) =>
 				sx={{
 					fontSize: 24,
 				}}
-				className={
-					icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
-				}
+				className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
 			></Box>
 		</Button>
 	) : (
@@ -53,9 +56,7 @@ const ButtonWithIcon = ({children, side = 'left', icon}) =>
 				sx={{
 					fontSize: 24,
 				}}
-				className={
-					icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
-				}
+				className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
 			></Box>
 			<Box
 				sx={{

@@ -8,7 +8,7 @@ import useNavigation from '@lekoarts/gatsby-theme-emma/src/hooks/use-navigation'
 import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-metadata';
 
 // Third Party Components!
-import { Image, Card as CardUI, Flex } from 'theme-ui';
+import { Flex } from 'theme-ui';
 // Custom Components!
 import SkillCard from 'components/cards/skill-card';
 import CardContact from 'components/cards/contact-card';
@@ -17,12 +17,13 @@ import ProjectCard from 'components/cards/project-card';
 import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
 import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
 import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
+import Hero from 'components/hero';
 // Sections
-import Hero from '../../content/sections/hero';
 import Skills from '../../content/sections/skills';
 import Contact from '../../content/sections/contact';
 import Projects from '../../content/sections/projects';
 import Experiences from '../../content/sections/experiences';
+import HeroContent from '../../content/sections/hero';
 
 const components = {
 	CardContact,
@@ -35,34 +36,11 @@ const Home = () => {
 		<MDXProvider components={components}>
 			<Seo />
 			<Header meta={meta} nav={nav} />
+
 			<main className="container">
-				<CardUI
-					sx={{
-						width: 200,
-						mx: 'auto',
-						pt: 60,
-					}}
-				>
-					<Image
-						as={Image}
-						sx={{
-							borderRadius: '50%',
-							width: 200,
-							height: 200,
-						}}
-						src="me.jpg"
-						alt="Selfie Of Me"
-					/>
-				</CardUI>
-				<Flex
-					sx={{
-						flexDirection: 'column',
-						textAlign: 'center',
-						mb: 60,
-					}}
-				>
-					<Hero />
-				</Flex>
+				<Hero>
+					<HeroContent />
+				</Hero>
 				<h2>Projects</h2>
 				<Flex
 					sx={{
