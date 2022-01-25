@@ -1,5 +1,29 @@
 # Change Log
 
+### 0.5.7 (Jan 25, 2022)
+
+##### 🔥 Features
+
+NEW: Component -> Project Card v1.0 ([d44139381](https://github.com/gabrielba15/portfolio/commit/d44139381dd21d479737d89ac6537e9612eb2f2b)).
+
+NEW: Component -> Hero v0.1 ([929216ee1](https://github.com/gabrielba15/portfolio/commit/929216ee1e79b6cb9369d09b14b5b20c874dc30c)).
+
+##### 🔄 Refactor
+
+CHANGES: Page -> Home [[Hero Component Added To UI](https://github.com/gabrielba15/portfolio/commit/929216ee1e79b6cb9369d09b14b5b20c874dc30c)] ([88d43c3a7](https://github.com/gabrielba15/portfolio/commit/88d43c3a70028111efd2acac755852fe6c36d8d4)).
+
+CHANGES: Component -> Button With Icon [Border Color Changed] ([88d43c3a7](https://github.com/gabrielba15/portfolio/commit/88d43c3a70028111efd2acac755852fe6c36d8d4)).
+
+CHANGES: Component -> Footer [Icons Added, Button With Icon Added] ([88d43c3a7](https://github.com/gabrielba15/portfolio/commit/88d43c3a70028111efd2acac755852fe6c36d8d4)).
+
+CHANGES: Theme -> Button Styles Changed [Border Color Deleted] ([88d43c3a7](https://github.com/gabrielba15/portfolio/commit/88d43c3a70028111efd2acac755852fe6c36d8d4)).
+
+##### 🐞 Bugs 
+FIXED: Component -> Loop Skill Card ([1a6d5de25](https://github.com/gabrielba15/portfolio/commit/1a6d5de255ad25905211f1e8c978287dab52ff0f)).
+
+##### 📦 Packages 
+
+UPDATED: Bump -> nanoid ([c190ad0ee](https://github.com/gabrielba15/portfolio/commit/c190ad0eefdf9130a45b0ddc507cf3785973ea4e))
 ### 0.5.6 (Jan 23, 2022)
 
 ##### 🔥 Features
@@ -9,7 +33,9 @@
 ##### 🔄 Refactor
 
 - CHANGES: Page -> Home [[Skill Card Component Added To UI](https://github.com/gabrielba15/portfolio/commit/118490ea582c1941ffc3468bb448d5c79a6c1eb1)] ([7b4443dd7](https://github.com/gabrielba15/portfolio/commit/7b4443dd727acfb4892ea5ba78b5ade29b356b36)).
+
 - CHANGES: Component -> Button With Icon [Side Prop, New Default Styles]  ([8a446cbc4](https://github.com/gabrielba15/portfolio/commit/8a446cbc4e6a53888a07acb90efaca0b0afa6a1f)).
+
 - CHANGES: Component -> Contact Card [Capitalizer Polyfill]  ([8a446cbc4](https://github.com/gabrielba15/portfolio/commit/8a446cbc4e6a53888a07acb90efaca0b0afa6a1f)).
 
 
