@@ -11,9 +11,9 @@ import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-meta
 import { Image, Card as CardUI, Flex } from 'theme-ui';
 // Custom Components!
 import SkillCard from 'components/cards/skill-card';
-import { CardVertical } from 'components/cards/card';
 import CardContact from 'components/cards/contact-card';
 import ExperienceCard from 'components/cards/experience-card';
+import ProjectCard from 'components/cards/project-card';
 import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
 import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
 import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
@@ -72,21 +72,16 @@ const Home = () => {
 					}}
 				>
 					<Projects />
-					<CardVertical title="Gaboland" borderColor="success">
-						My personal website or portfolio. This projects is built
-						with Gatsby, React and Theme UI.
-					</CardVertical>
-					<CardVertical title="Giffy">
-						Gifs App using React, Styled Components and consuming
-						giphy api.
-					</CardVertical>
-					<CardVertical
-						title="PHP & MYSQL Parcial"
-						borderColor="success"
-					>
-						CRUD App using PHP, MySQL and Bootstrap for a university
-						assessment.
-					</CardVertical>
+					<ProjectCard title="Gaboland" borderColor="success">
+						My personal website or portfolio. This projects is built with
+						Gatsby, React and Theme UI.
+					</ProjectCard>
+					<ProjectCard title="Giffy">
+						Gifs App using React, Styled Components and consuming giphy api.
+					</ProjectCard>
+					<ProjectCard title="PHP & MYSQL Parcial" borderColor="success">
+						CRUD App using PHP, MySQL and Bootstrap for a university assessment.
+					</ProjectCard>
 				</Flex>
 				<h2>Skills</h2>
 				<Flex
@@ -98,16 +93,16 @@ const Home = () => {
 				>
 					<Skills />
 					<SkillCard title="Programming" borderColor="success">
-						My life as a programmer started in 2019. I have 3 years
-						of experiences and I'm still learning.
+						My life as a programmer started in 2019. I have 3 years of
+						experiences and I'm still learning.
 					</SkillCard>
 					<SkillCard title="Design">
-						I have 2 year designing and learning technologies
-						associeted with it and I still don’t stop.{' '}
+						I have 2 year designing and learning technologies associeted with it
+						and I still don't stop.
 					</SkillCard>
 					<SkillCard title="Autodidact" borderColor="success">
-						since 2017 I haven't stopped learning somenthing new
-						every single day.
+						since 2017 I haven't stopped learning somenthing new every single
+						day.
 					</SkillCard>
 				</Flex>
 				<h2>Experiences</h2>
@@ -152,19 +147,17 @@ const Home = () => {
 						title="Work Contact"
 						icons={{ first: 'email', second: 'linkedin' }}
 					>
-						If you are an entrepreneur or somebody who are looking
-						for someone who develop your app or website, you can
-						contact me from 8:00h to 11:00h and from 15:00h to 18:h
-						ET. for an immediate response.
+						If you are an entrepreneur or somebody who are looking for someone
+						who develop your app or website, you can contact me from 8:00h to
+						11:00h and from 15:00h to 18:h ET. for an immediate response.
 					</CardContact>
 					<CardContact
 						title="Friendly Contact"
 						icons={{ first: 'telegram', second: 'twitter' }}
 					>
-						If you're an old friend or a stranger who wants to
-						contact me for anything (say hello, connection, etc.)
-						write at any time through the media but do not expect an
-						immediate response.
+						If you're an old friend or a stranger who wants to contact me for
+						anything (say hello, connection, etc.) write at any time through the
+						media but do not expect an immediate response.
 					</CardContact>
 				</Flex>
 			</main>
