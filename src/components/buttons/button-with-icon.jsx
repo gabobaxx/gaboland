@@ -1,7 +1,53 @@
 import * as React from 'react';
-import {Box, Button} from 'theme-ui';
+import { Box, Button, Link as TLink } from 'theme-ui';
+import { Link } from 'gatsby';
 
-const ButtonWithIcon = ({children, side = 'left', icon}) =>
+export const LinkWithIcon = () => (
+	<TLink
+		as={Link}
+		key="about"
+		to="/about"
+		sx={{
+			// p: 24,
+			border: '2px solid',
+			borderColor: 'warning',
+			cursor: 'pointer',
+			textAlign: 'center',
+			textDecoration: 'none',
+			borderRadius: '8px',
+			minWidth: '8.125rem',
+			padding: '0.5rem',
+			fontSize: '0.875rem',
+			color: 'warning',
+			display: 'flex',
+			flexDirection: 'row',
+		}}
+	>
+		<Box
+			sx={{
+				m: '0 auto',
+				fontSize: '1rem',
+				fontFamily: 'body',
+				fontWeight: 'bold',
+			}}
+		>
+			About Me
+		</Box>
+		<Box
+			sx={{
+				fontSize: 24,
+			}}
+			className="bi bi-arrow-right-short"
+		></Box>
+	</TLink>
+);
+
+const ButtonWithIcon = ({
+	children,
+	side = 'left',
+	icon = 'github',
+	borderColor = 'p700',
+}) =>
 	side === 'right' ? (
 		<Button
 			sx={{
@@ -13,8 +59,8 @@ const ButtonWithIcon = ({children, side = 'left', icon}) =>
 				color: 'gs800',
 				// width: 108,
 				pt: '1rem',
-				pb: 0
-
+				pb: 0,
+				borderColor: borderColor,
 			}}
 		>
 			<Box

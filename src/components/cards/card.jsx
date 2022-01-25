@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Card, Box } from 'theme-ui';
 
-const CardProject = ({ _title, _borderColor }) => <h1>H</h1>;
 export const CardVertical = ({
 	children,
 	borderColor = 'p700',

@@ -9,6 +9,5 @@ export const buttons = {
 		//py: 2,
 		//ml: 3,
 		fontFamily: 'body',
-		boderRadius: 5,
 	},
 };
