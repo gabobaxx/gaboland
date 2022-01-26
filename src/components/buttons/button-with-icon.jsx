@@ -42,78 +42,83 @@ export const LinkWithIcon = () => (
 	</TLink>
 );
 
+const ButtonWithIconDefault = ({ children, borderColor }) => (
+	<Button
+		sx={{
+			p: 0,
+			color: 'gs800',
+			display: 'flex',
+			cursor: 'pointer',
+			flexDirection: 'row',
+			borderColor: borderColor,
+			backgroundColor: 'transparent',
+		}}
+	>
+		{children}
+	</Button>
+);
+const ButtonWithIconRight = ({ children, icon, borderColor }) => (
+	<ButtonWithIconDefault borderColor={borderColor}>
+		<Box
+			sx={{
+				fontSize: '1rem',
+				fontFamily: 'body',
+				fontWeight: 'bold',
+			}}
+		>
+			{children}
+		</Box>
+		<Box
+			sx={{
+				fontSize: 24,
+			}}
+			className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
+		></Box>
+	</ButtonWithIconDefault>
+);
+
+const ButtonWithIconLeft = ({ children, icon, borderColor }) => (
+	<ButtonWithIconDefault borderColor={borderColor}>
+		<Box
+			sx={{
+				fontSize: 24,
+			}}
+			className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
+		></Box>
+		<Box
+			sx={{
+				ml: 10,
+				fontSize: '1rem',
+				fontFamily: 'body',
+				fontWeight: 'bold',
+			}}
+		>
+			{children}
+		</Box>
+	</ButtonWithIconDefault>
+);
+
 const ButtonWithIcon = ({
 	children,
 	side = 'left',
 	icon = 'github',
 	borderColor = 'p700',
-}) =>
-	side === 'right' ? (
-		<Button
-			sx={{
-				display: 'flex',
-				flexDirection: 'row',
-				backgroundColor: 'transparent',
-				pl: 0,
-				cursor: 'pointer',
-				color: 'gs800',
-				// width: 108,
-				pt: '1rem',
-				pb: 0,
-				borderColor: borderColor,
-			}}
-		>
-			<Box
-				sx={{
-					fontSize: '1rem',
-					fontFamily: 'body',
-					fontWeight: 'bold',
-				}}
-			>
-				{children}
-			</Box>
-			<Box
-				sx={{
-					fontSize: 24,
-				}}
-				className={
-					icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
-				}
-			></Box>
-		</Button>
-	) : (
-		<Button
-			sx={{
-				display: 'flex',
-				flexDirection: 'row',
-				// width: 108,
-				backgroundColor: 'transparent',
-				pl: 0,
-				cursor: 'pointer',
-				color: 'gs800',
-				pt: '1rem',
-				pb: 0,
-			}}
-		>
-			<Box
-				sx={{
-					fontSize: 24,
-				}}
-				className={
-					icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
-				}
-			></Box>
-			<Box
-				sx={{
-					ml: 10,
-					fontSize: '1rem',
-					fontFamily: 'body',
-					fontWeight: 'bold',
-				}}
-			>
-				{children}
-			</Box>
-		</Button>
-	);
+}) => {
+	if (side === 'right')
+		return (
+			<ButtonWithIconRight borderColor={borderColor} icon={icon}>
+				{children || 'Right'}
+			</ButtonWithIconRight>
+		);
+
+	if (side === 'left')
+		return (
+			<ButtonWithIconLeft borderColor={borderColor} icon={icon}>
+				{children || 'Left'}
+			</ButtonWithIconLeft>
+		);
+
+	return 'Side Missing';
+};
 
 export default ButtonWithIcon;
