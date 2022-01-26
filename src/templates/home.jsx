@@ -29,6 +29,7 @@ const components = {
 	CardContact,
 };
 
+import SectionLinks from 'components/links/section-links';
 const Home = () => {
 	const meta = useSiteMetadata();
 	const nav = useNavigation();
@@ -83,6 +84,12 @@ const Home = () => {
 						day.
 					</SkillCard>
 				</Flex>
+				<SectionLinks
+					icon="github"
+					text="All Experiences"
+					to="https://github.com"
+				/>
+
 				<h2>Experiences</h2>
 				<Flex
 					sx={{
