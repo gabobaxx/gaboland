@@ -9,15 +9,25 @@ const Hero = ({
 	imageAlt = 'Selfie of Me',
 	occu = 'Future Systems Engineer',
 }) => (
-	<React.Fragment>
-		<Box sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
+	<Box as="container">
+		<Box as="section" sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
 			<Image
 				as={Image}
 				src={imageSrc}
 				alt={imageAlt}
 				sx={{ borderRadius: '50%', width: '100%', height: 200 }}
 			/>
-			<Box as="section" sx={{ width: '100%', textAlign: 'center' }}>
+			<Box
+				sx={{
+					mt: '1.5rem',
+					width: '100%',
+					gap: '0.75rem',
+					color: 'gs800',
+					display: 'flex',
+					textAlign: 'center',
+					flexDirection: 'column',
+				}}
+			>
 				<Box as="h2">Hi, I am {name}.</Box>
 				<Box as="h5">{occu}.</Box>
 				<Box as="h4">
@@ -29,8 +39,20 @@ const Hero = ({
 				</Box>
 			</Box>
 		</Box>
-		<Box sx={{ mb: 60, textAlign: 'center' }}>{children}</Box>
-	</React.Fragment>
+		<Box
+			as="section"
+			sx={{
+				mx: '1.5rem',
+				my: '3.75rem',
+				color: 'gs800',
+				fontSize: '1rem',
+				textAlign: 'center',
+				fontWeight: 'regular',
+			}}
+		>
+			{children}
+		</Box>
+	</Box>
 );
 
 export default Hero;
