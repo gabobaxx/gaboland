@@ -6,13 +6,16 @@ import ButtonWithIcon from 'components/buttons/button-with-icon';
 const SectionLinks = ({
 	text = 'Section Links',
 	icon = 'github',
-	to = '/',
+	to = { button: '/', link: '/' },
 }) => (
 	<Flex
 		sx={{ justifyContent: 'space-between', alignItems: 'center', mt: '3rem' }}
 	>
-		<ButtonWithIcon icon={icon}>{icon.capitalizer()}</ButtonWithIcon>
-		<LinkWithIcon to={to}> {text} </LinkWithIcon>
+		{/* el link se parece a un boton y el boton se parece a un link */}
+		<ButtonWithIcon icon={icon} to={to.link}>
+			{icon.capitalizer()}
+		</ButtonWithIcon>
+		<LinkWithIcon to={to.button}>{text}</LinkWithIcon>
 	</Flex>
 );
 
