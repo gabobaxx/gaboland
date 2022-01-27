@@ -1,58 +1,76 @@
 import React from 'react';
-import { Box, Flex, Button, Link as TLink } from 'theme-ui';
+import { Box, Flex, Link as TLink } from 'theme-ui';
 import { Link } from 'gatsby';
+
+const bg = 'var(--theme-ui-colors-pgradient)';
+
+{
+	/* <TLink
+	as={Link}
+	key="about"
+	to="/about"
+	sx={{
+		
+	}}
+>
+	About Me
+</TLink>; */
+}
 
 const Copyright = () => (
 	<Flex
-		sx={{
-			display: 'flex',
-			backgroundColor: 'primary',
-			justifyContent: 'space-between',
-		}}
 		variant="layout.footer"
+		sx={{ justifyContent: 'space-between', fontSize: '0.8rem' }}
 	>
-		<Box as="footer">
-			&copy; {new Date().getFullYear()}. All rights reserved.
+		<Box as="p">&copy; {new Date().getFullYear()}. All rights reserved.</Box>
+		<Box as="p">
+			Made with{' '}
+			<Box
+				as="i"
+				className="bi bi-heart-fill"
+				style={{
+					background: 'var(--theme-ui-colors-sgradient',
+					webkitBackgroundClip: 'text',
+					webkitTextFillColor: 'transparent',
+				}}
+			></Box>{' '}
+			by gabriel.
 		</Box>
-		<Box as="footer">Made with LOVE by gaboland team.</Box>
 	</Flex>
 );
 
 const FooterSocialLinks = () => (
 	<Flex
+		variant="layout.footer"
 		sx={{
 			py: 40,
 			mt: 48,
-			display: 'flex',
-			backgroundColor: 'primary',
-			justifyContent: 'space-between',
 			alignItems: 'center',
+			justifyContent: 'space-between',
 		}}
-		variant="layout.footer"
 	>
 		<TLink
 			as={Link}
 			key="gaboland-github"
-			sx={{ fontSize: 24, color: 'gs200' }}
-			to="https://github.com/gaboland"
 			className="bi bi-github"
+			to="https://github.com/gaboland"
+			sx={{ fontSize: 24, color: 'gs200' }}
 		/>
 		<TLink
 			as={Link}
 			key="about"
 			to="/about"
 			sx={{
-				// p: 24,
-				border: '2px solid',
-				borderColor: 'warning',
-				cursor: 'pointer',
-				textAlign: 'center',
-				textDecoration: 'none',
-				borderRadius: '8px',
-				minWidth: '8.125rem',
-				padding: '0.5rem',
-				fontSize: '0.875rem',
 				color: 'warning',
+				cursor: 'pointer',
+				padding: '0.5rem',
+				border: '2px solid',
+				borderRadius: '8px',
+				textAlign: 'center',
+				fontSize: '0.875rem',
+				minWidth: '8.125rem',
+				borderColor: 'warning',
+				textDecoration: 'none',
 			}}
 		>
 			About Me
@@ -60,15 +78,15 @@ const FooterSocialLinks = () => (
 		<TLink
 			as={Link}
 			key="gaboland-instagram"
-			sx={{ fontSize: 24, color: 'gs200' }}
-			to="https://instagram.com/gaboland"
 			className="bi bi-instagram"
+			to="https://instagram.com/gaboland"
+			sx={{ fontSize: 24, color: 'gs200' }}
 		/>
 	</Flex>
 );
 const Footer = () => {
 	return (
-		<Box as="footer">
+		<Box as="footer" sx={{ background: bg }}>
 			<FooterSocialLinks />
 			<Copyright />
 		</Box>
