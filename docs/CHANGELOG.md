@@ -1,5 +1,16 @@
 # Change Log
 
+### 🧪 Patch [0.5.8](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.8) (Jan 27, 2022) 
+
+##### 🔥 Features
+
+- NEW: Component -> Link With Icon v1.0 ([e661cef83](https://github.com/gabrielba15/portfolio/commit/e661cef836914fd55dfb1dd641289bba1d2c61bd)).
+- NEW: Component -> Section Links v1.0 ([e661cef83](https://github.com/gabrielba15/portfolio/commit/e661cef836914fd55dfb1dd641289bba1d2c61bd)).
+##### 🔄 Refactor
+
+- CHANGES: Component → Button With Icon [Padding Right from 10 to 0.] ([1329a3e76](https://github.com/gabrielba15/portfolio/commit/1329a3e7605e803a77dec314d98daaf866a068a9)).
+- CHANGES: Component -> Hero [Letter Spacing Added] ([e8b9f166f](https://github.com/gabrielba15/portfolio/commit/e8b9f166f3a3b95af3cfec34cf33d3a05569fd0d)).
+
 ### 🧪 Patch [0.5.7](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.7) (Jan 25, 2022) 
 
 ##### 🔥 Features
