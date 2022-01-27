@@ -52,18 +52,33 @@ const ProjectsSection = () => (
 			}}
 		>
 			<Projects />
-			<ProjectCard title="Gaboland" borderColor="success">
+			<ProjectCard
+				title="Gaboland"
+				borderColor="success"
+				to="https://github.com/gabrielba15/portfolio"
+			>
 				My personal website or portfolio. This projects is built with Gatsby,
 				React and Theme UI.
 			</ProjectCard>
-			<ProjectCard title="Giffy">
+			<ProjectCard
+				title="Giffy"
+				to="https://github.com/gabrielba15/react-giffy"
+			>
 				Gifs App using React, Styled Components and consuming giphy api.
 			</ProjectCard>
-			<ProjectCard title="PHP & MYSQL Parcial" borderColor="success">
+			<ProjectCard
+				title="PHP & MYSQL Parcial"
+				borderColor="success"
+				to="https://github.com/gabrielba15/php_mysql_parcial"
+			>
 				CRUD App using PHP, MySQL and Bootstrap for a university assessment.
 			</ProjectCard>
 		</Flex>
-		<SectionLinks icon="github" text="All Projects" to="/projects" />
+		<SectionLinks
+			icon="github"
+			text="All Projects"
+			to={{ link: 'https://github.com/gaboland', button: '/projects' }}
+		/>
 	</Box>
 );
 
@@ -78,19 +93,31 @@ const SkillsSection = () => (
 			}}
 		>
 			<Skills />
-			<SkillCard title="Programming" borderColor="success">
+			<SkillCard
+				title="Programming"
+				borderColor="success"
+				to="/skills/programming"
+			>
 				My life as a programmer started in 2019. I have 3 years of experiences
 				and I'm still learning.
 			</SkillCard>
-			<SkillCard title="Design">
+			<SkillCard title="Design" to="/skills/design">
 				I have 2 year designing and learning technologies associeted with it and
 				I still don't stop.
 			</SkillCard>
-			<SkillCard title="Autodidact" borderColor="success">
+			<SkillCard
+				title="Autodidact"
+				borderColor="success"
+				to="/skills/autodidact"
+			>
 				since 2017 I haven't stopped learning somenthing new every single day.
 			</SkillCard>
 		</Flex>
-		<SectionLinks icon="linkedin" text="All Skills" to="/skills" />
+		<SectionLinks
+			icon="linkedin"
+			text="All Skills"
+			to={{ link: 'https://linkedin/in/gabrielbencomo', button: '/skills' }}
+		/>
 	</Box>
 );
 const ExperiencesSection = () => (
@@ -124,7 +151,14 @@ const ExperiencesSection = () => (
 				year="1 year"
 			/>
 		</Flex>
-		<SectionLinks icon="linkedin" text="All Experiences" to="/experiences" />
+		<SectionLinks
+			icon="linkedin"
+			text="All Experiences"
+			to={{
+				link: 'https://linkedin/in/gabrielbencomo',
+				button: '/experiences',
+			}}
+		/>
 	</Box>
 );
 const ContactSection = () => (
@@ -141,6 +175,10 @@ const ContactSection = () => (
 			<CardContact
 				title="Work Contact"
 				icons={{ first: 'email', second: 'linkedin' }}
+				to={{
+					first: 'https://linkedin.com/in/gabrielbencomo',
+					second: 'https://linkedin.com/in/gabrielbencomo',
+				}}
 			>
 				If you are an entrepreneur or somebody who are looking for someone who
 				develop your app or website, you can contact me from 8:00h to 11:00h and
@@ -149,6 +187,10 @@ const ContactSection = () => (
 			<CardContact
 				title="Friendly Contact"
 				icons={{ first: 'telegram', second: 'twitter' }}
+				to={{
+					first: 'https://t.me/gabrielba15',
+					second: 'https://twitter.com/gabrielbca15',
+				}}
 			>
 				If you're an old friend or a stranger who wants to contact me for
 				anything (say hello, connection, etc.) write at any time through the
