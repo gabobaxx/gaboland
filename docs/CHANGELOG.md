@@ -1,5 +1,6 @@
 # Change Log
 
+
 ## 🛸 Minor [0.6.0](https://github.com/gabrielba15/portfolio/releases/tag/v0.6.0) (Jan 28, 2022)
 
 ##### 🔥 Features
@@ -9,6 +10,9 @@
 ##### 🐞 Bugs 
 
 - FIXED: Theme -> Gradient Color Disaster ([e6e6baa61](https://github.com/gabrielba15/portfolio/commit/e6e6baa61732b8f5e02861157e12b1153295e5ec)).
+
+
+### 0.5.1 (Jan 14, 2022)
 
 
 ### 🧪 Patch [0.5.8](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.8) (Jan 27, 2022) 
@@ -136,14 +140,18 @@
 
 - Vercel Deploy ([6e104402c](https://github.com/gaboland/portfolio/commit/6e104402c58dee9b96443e6d093c8cc0d6e9bd33)).
 
+
 ## 🛸 Minor [0.3.0](https://github.com/gabrielba15/portfolio/releases/tag/v0.3.0) (Jan 10, 2022)
+
 
 - Vertical Card v.0.0.1 ([673f1147c](https://github.com/gaboland/portfolio/commit/673f1147cc51d5eb824a924255da60bef07645bc)).
 - Content Card v.0.0.1 ([673f1147c](https://github.com/gaboland/portfolio/commit/673f1147cc51d5eb824a924255da60bef07645bc)).
 
 #### Features
 
+
 ### 🧪 Patch [0.2.1](https://github.com/gabrielba15/portfolio/releases/tag/v0.2.1) (Jan 9, 2022)
+
 
 #### Features
 
