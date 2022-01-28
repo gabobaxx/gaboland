@@ -111,7 +111,7 @@ const SkillsSection = () => (
 		<SectionLinks
 			icon="linkedin"
 			text="All Skills"
-			to={{ link: 'https://linkedin/in/gabrielbencomo', button: '/skills' }}
+			to={{ link: 'https://linkedin.com/in/gabrielbencomo', button: '/skills' }}
 		/>
 	</Box>
 );
@@ -144,7 +144,7 @@ const ExperiencesSection = () => (
 			icon="linkedin"
 			text="All Experiences"
 			to={{
-				link: 'https://linkedin/in/gabrielbencomo',
+				link: 'https://linkedin.com/in/gabrielbencomo',
 				button: '/experiences',
 			}}
 		/>
