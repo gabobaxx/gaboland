@@ -16,7 +16,7 @@ export const colors = {
 	p700: '#7A3939',
 	p800: '#6B3232',
 	p900: '#5C2B2B',
-	pgradient: 'linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%);',
+	pgradient: 'linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)',
 
 	secondary: '#D1917F',
 	s100: '#e3bdb2',
@@ -27,7 +27,7 @@ export const colors = {
 	s700: '#a77466',
 	s800: '#926659',
 	s900: '#7d574c',
-	sgradient: 'linear-gradient(180deg, #D1917F 0%, #F2C94C 100%);',
+	sgradient: 'linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)',
 
 	tertiary: '#6A767C',
 	t100: '#a6adb0',
@@ -38,7 +38,7 @@ export const colors = {
 	t700: '#555e63',
 	t800: '#4a5357',
 	t900: '#40474a',
-	tgradient: 'linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%);',
+	tgradient: 'linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)',
 
 	grayscale: '#BDBDBD',
 	gs100: '#F8F8F8',
