@@ -27,15 +27,22 @@ import HeroContent from '../../content/sections/hero';
 
 import SectionLinks from 'components/links/section-links';
 
-// Section Links
-// to={{
-// 				link: "https://github.com/gaboland",
-// 				button: "/skills"
-// 			}}
-
 const components = {
 	CardContact,
 };
+
+const FlexContent = ({ children }) => (
+	<Flex
+		sx={{
+			gap: '1.5rem',
+			textAlign: 'center',
+			alignItems: 'center',
+			flexDirection: 'column',
+		}}
+	>
+		{children}
+	</Flex>
+);
 const HeroSection = () => (
 	<Hero>
 		<HeroContent />
@@ -44,13 +51,7 @@ const HeroSection = () => (
 const ProjectsSection = () => (
 	<Box as="section">
 		<h2>Projects</h2>
-		<Flex
-			sx={{
-				flexDirection: 'column',
-				textAlign: 'center',
-				alignItems: 'center',
-			}}
-		>
+		<FlexContent>
 			<Projects />
 			<ProjectCard
 				title="Gaboland"
@@ -73,7 +74,7 @@ const ProjectsSection = () => (
 			>
 				CRUD App using PHP, MySQL and Bootstrap for a university assessment.
 			</ProjectCard>
-		</Flex>
+		</FlexContent>
 		<SectionLinks
 			icon="github"
 			text="All Projects"
@@ -85,13 +86,7 @@ const ProjectsSection = () => (
 const SkillsSection = () => (
 	<Box as="section">
 		<h2>Skills</h2>
-		<Flex
-			sx={{
-				flexDirection: 'column',
-				textAlign: 'center',
-				alignItems: 'center',
-			}}
-		>
+		<FlexContent>
 			<Skills />
 			<SkillCard
 				title="Programming"
@@ -112,7 +107,7 @@ const SkillsSection = () => (
 			>
 				since 2017 I haven't stopped learning somenthing new every single day.
 			</SkillCard>
-		</Flex>
+		</FlexContent>
 		<SectionLinks
 			icon="linkedin"
 			text="All Skills"
@@ -123,13 +118,7 @@ const SkillsSection = () => (
 const ExperiencesSection = () => (
 	<Box as="section">
 		<h2>Experiences</h2>
-		<Flex
-			sx={{
-				flexDirection: 'column',
-				textAlign: 'center',
-				alignItems: 'center',
-			}}
-		>
+		<FlexContent>
 			<Experiences />
 			<ExperienceCard
 				title="Designer"
@@ -150,7 +139,7 @@ const ExperiencesSection = () => (
 				location="Barinas, Venezuela"
 				year="1 year"
 			/>
-		</Flex>
+		</FlexContent>
 		<SectionLinks
 			icon="linkedin"
 			text="All Experiences"
@@ -164,13 +153,7 @@ const ExperiencesSection = () => (
 const ContactSection = () => (
 	<Box as="section">
 		<h2>Contact</h2>
-		<Flex
-			sx={{
-				flexDirection: 'column',
-				textAlign: 'center',
-				alignItems: 'center',
-			}}
-		>
+		<FlexContent>
 			<Contact />
 			<CardContact
 				title="Work Contact"
@@ -196,7 +179,7 @@ const ContactSection = () => (
 				anything (say hello, connection, etc.) write at any time through the
 				media but do not expect an immediate response.
 			</CardContact>
-		</Flex>
+		</FlexContent>
 	</Box>
 );
 
@@ -207,7 +190,16 @@ const Home = () => {
 		<MDXProvider components={components}>
 			<Seo />
 			<Header meta={meta} nav={nav} />
-			<Box as="main" sx={{ width: '90%', margin: '0 auto', padding: '0 24px' }}>
+			<Box
+				as="main"
+				sx={{
+					display: 'grid',
+					gridGap: '3rem',
+					maxWidth: 720,
+					margin: '0 auto',
+					padding: '0 24px',
+				}}
+			>
 				<HeroSection />
 				<ProjectsSection />
 				<SkillsSection />

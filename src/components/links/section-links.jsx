@@ -9,7 +9,12 @@ const SectionLinks = ({
 	to = { button: '/', link: '/' },
 }) => (
 	<Flex
-		sx={{ justifyContent: 'space-between', alignItems: 'center', mt: '3rem' }}
+		sx={{
+			mt: '1.5rem',
+			mx: '0.3125rem',
+			alignItems: 'center',
+			justifyContent: 'space-between',
+		}}
 	>
 		{/* el link se parece a un boton y el boton se parece a un link */}
 		<ButtonWithIcon icon={icon} to={to.link}>

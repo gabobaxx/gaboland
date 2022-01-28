@@ -39,18 +39,8 @@ const Hero = ({
 				</Box>
 			</Box>
 		</Box>
-		<Box
-			sx={{
-				mx: '1.5rem',
-				my: '3.75rem',
-				color: 'gs800',
-				fontSize: '1rem',
-				textAlign: 'center',
-				fontWeight: 'regular',
-			}}
-		>
-			{children}
-		</Box>
+
+		{children}
 	</Box>
 );
 
