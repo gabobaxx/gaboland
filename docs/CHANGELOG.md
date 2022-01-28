@@ -1,11 +1,23 @@
 # Change Log
 
+## 🛸 Minor [0.6.0](https://github.com/gabrielba15/portfolio/releases/tag/v0.6.0) (Jan 28, 2022)
+
+##### 🔥 Features
+
+- NEW: Page -> Home Page v1.0-beta ([e42c5db3c](https://github.com/gabrielba15/portfolio/commit/e42c5db3c4ae633b8b4e13860b976739658c204e)).
+
+##### 🐞 Bugs 
+
+- FIXED: Theme -> Gradient Color Disaster ([e6e6baa61](https://github.com/gabrielba15/portfolio/commit/e6e6baa61732b8f5e02861157e12b1153295e5ec)).
+
+
 ### 🧪 Patch [0.5.8](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.8) (Jan 27, 2022) 
 
 ##### 🔥 Features
 
 - NEW: Component -> Link With Icon v1.0 ([e661cef83](https://github.com/gabrielba15/portfolio/commit/e661cef836914fd55dfb1dd641289bba1d2c61bd)).
 - NEW: Component -> Section Links v1.0 ([e661cef83](https://github.com/gabrielba15/portfolio/commit/e661cef836914fd55dfb1dd641289bba1d2c61bd)).
+
 ##### 🔄 Refactor
 
 - CHANGES: Component → Button With Icon [Padding Right from 10 to 0.] ([1329a3e76](https://github.com/gabrielba15/portfolio/commit/1329a3e7605e803a77dec314d98daaf866a068a9)).
