@@ -4,11 +4,8 @@ import SmallCard from './small-card';
 import { BadgeWithIcon } from 'components/badges/badge';
 import ButtonWithIcon from 'components/buttons/button-with-icon';
 
-/**
- * TODO: padding-right isn't necessary at button (kill it).
- */
-
 const ProjectCard = ({
+	to = '/projects',
 	tag = 'Coding',
 	title = 'Skill Card',
 	children = 'Children',
@@ -55,7 +52,7 @@ const ProjectCard = ({
 			}}
 			as="footer"
 		>
-			<ButtonWithIcon icon="arrow-right-short" side="right">
+			<ButtonWithIcon icon="arrow-right-short" side="right" to={to}>
 				Github
 			</ButtonWithIcon>
 		</Box>

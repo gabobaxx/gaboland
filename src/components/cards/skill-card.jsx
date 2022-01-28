@@ -7,6 +7,7 @@ const SkillCard = ({
 	title = 'Skill Card',
 	borderColor = 'p700',
 	children = 'Children',
+	to = '/',
 }) => (
 	<SmallCard borderColor={borderColor}>
 		<Box
@@ -45,7 +46,7 @@ const SkillCard = ({
 			}}
 			as="footer"
 		>
-			<ButtonWithIcon icon="arrow-right-short" side="right">
+			<ButtonWithIcon icon="arrow-right-short" side="right" to={to}>
 				Know More
 			</ButtonWithIcon>
 		</Box>

@@ -1,5 +1,5 @@
 export const cards = {
-	mt: 24,
+	// mt: 24,
 	padding: 24,
 	display: 'flex',
 	borderRadius: 20,
@@ -42,11 +42,8 @@ export const cards = {
 			width: 318,
 			overflow: 'hidden',
 		},
-		elements: {
-			two: {
-				display: 'flex',
-				justifyContent: 'space-between',
-			},
+		footer: {
+			mt: '0.5rem',
 		},
 	},
 };

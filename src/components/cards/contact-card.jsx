@@ -12,16 +12,17 @@ const ContactCard = ({
 	borderColor = 'p700',
 	title = 'Contact Card',
 	icons = { first: 'github', second: 'linkedin' },
+	to = { first: '/', second: '/' },
 }) => (
 	<Card sx={{ variant: 'cards', borderColor }} variant="cards.large">
 		<Card as="section" variant="cards.large.content">
 			<Box as="header">{title} </Box>
 			<Box as="p">{children}</Box>
 			<Box as="footer">
-				<ButtonWithIcon icon={icons.first}>
+				<ButtonWithIcon icon={icons.first} to={to.first}>
 					{icons.first.capitalizer()}
 				</ButtonWithIcon>
-				<ButtonWithIcon icon={icons.second}>
+				<ButtonWithIcon icon={icons.second} to={to.second}>
 					{icons.second.capitalizer()}
 				</ButtonWithIcon>
 			</Box>

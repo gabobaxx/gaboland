@@ -9,8 +9,8 @@ const Hero = ({
 	imageAlt = 'Selfie of Me',
 	occu = 'Future Systems Engineer',
 }) => (
-	<Box as="container">
-		<Box as="section" sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
+	<Box as="section">
+		<Box sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
 			<Image
 				as={Image}
 				src={imageSrc}
@@ -39,19 +39,8 @@ const Hero = ({
 				</Box>
 			</Box>
 		</Box>
-		<Box
-			as="section"
-			sx={{
-				mx: '1.5rem',
-				my: '3.75rem',
-				color: 'gs800',
-				fontSize: '1rem',
-				textAlign: 'center',
-				fontWeight: 'regular',
-			}}
-		>
-			{children}
-		</Box>
+
+		{children}
 	</Box>
 );
 

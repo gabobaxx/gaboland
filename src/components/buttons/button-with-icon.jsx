@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { Box, Button } from 'theme-ui';
+import { Link } from 'gatsby';
+import { Box, /*Button,*/ Link as TLink } from 'theme-ui';
 
-const ButtonWithIconDefault = ({ children, borderColor }) => (
-	<Button
+const ButtonWithIconDefault = ({ children, borderColor, to }) => (
+	<TLink
+		as={Link}
+		to={to}
 		sx={{
 			p: 0,
 			color: 'gs800',
@@ -14,10 +17,10 @@ const ButtonWithIconDefault = ({ children, borderColor }) => (
 		}}
 	>
 		{children}
-	</Button>
+	</TLink>
 );
-const ButtonWithIconRight = ({ children, icon, borderColor }) => (
-	<ButtonWithIconDefault borderColor={borderColor}>
+const ButtonWithIconRight = ({ children, icon, borderColor, to }) => (
+	<ButtonWithIconDefault borderColor={borderColor} to={to}>
 		<Box
 			sx={{
 				fontSize: '1rem',
@@ -36,8 +39,8 @@ const ButtonWithIconRight = ({ children, icon, borderColor }) => (
 	</ButtonWithIconDefault>
 );
 
-const ButtonWithIconLeft = ({ children, icon, borderColor }) => (
-	<ButtonWithIconDefault borderColor={borderColor}>
+const ButtonWithIconLeft = ({ children, icon, borderColor, to }) => (
+	<ButtonWithIconDefault borderColor={borderColor} to={to}>
 		<Box
 			sx={{
 				fontSize: 24,
@@ -58,6 +61,7 @@ const ButtonWithIconLeft = ({ children, icon, borderColor }) => (
 );
 
 const ButtonWithIcon = ({
+	to = '/',
 	children,
 	side = 'left',
 	icon = 'github',
@@ -65,14 +69,14 @@ const ButtonWithIcon = ({
 }) => {
 	if (side === 'right')
 		return (
-			<ButtonWithIconRight borderColor={borderColor} icon={icon}>
+			<ButtonWithIconRight borderColor={borderColor} icon={icon} to={to}>
 				{children || 'Right'}
 			</ButtonWithIconRight>
 		);
 
 	if (side === 'left')
 		return (
-			<ButtonWithIconLeft borderColor={borderColor} icon={icon}>
+			<ButtonWithIconLeft borderColor={borderColor} icon={icon} to={to}>
 				{children || 'Left'}
 			</ButtonWithIconLeft>
 		);
