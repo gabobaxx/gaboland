@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import Navigation from '@lekoarts/gatsby-theme-emma/src/components/navigation';
 // import SocialLinks from '@lekoarts/gatsby-theme-emma/src/components/social-links';
 
-const Header = ({ meta, nav }) => {
+const Header = ({ meta, nav, title }) => {
 	const { siteTitle } = meta;
 	const navEmpty = nav.length === 0;
 
@@ -35,7 +35,7 @@ const Header = ({ meta, nav }) => {
 					}}
 					to="/"
 				>
-					{siteTitle}
+					{title || siteTitle}
 				</TLink>
 			</Flex>
 			{/* Menu Links */}
