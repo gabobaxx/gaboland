@@ -22,8 +22,11 @@ export const styles = {
 		mt: 2,
 	},
 	h2: {
-		fontSize: [4, 5],
 		mt: 2,
+		fontSize: 20,
+		fontFamily: 'head',
+		fontWeight: 'bold',
+		textAlign: 'start',
 	},
 	h3: {
 		fontSize: [3, 4],

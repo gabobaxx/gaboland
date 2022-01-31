@@ -8,7 +8,6 @@ import useNavigation from '@lekoarts/gatsby-theme-emma/src/hooks/use-navigation'
 import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-metadata';
 
 // Third Party Components!
-
 import { Flex, Box } from 'theme-ui';
 // Custom Components!
 import SkillCard from 'components/cards/skill-card';
@@ -24,11 +23,9 @@ import Skills from '../../content/sections/skills';
 import Contact from '../../content/sections/contact';
 import Projects from '../../content/sections/projects';
 import Experiences from '../../content/sections/experiences';
-
 import HeroContent from '../../content/sections/hero';
 
 import SectionLinks from 'components/links/section-links';
-
 
 const components = {
 	CardContact,
@@ -114,7 +111,7 @@ const SkillsSection = () => (
 		<SectionLinks
 			icon="linkedin"
 			text="All Skills"
-			to={{ link: 'https://linkedin/in/gabrielbencomo', button: '/skills' }}
+			to={{ link: 'https://linkedin.com/in/gabrielbencomo', button: '/skills' }}
 		/>
 	</Box>
 );
@@ -147,7 +144,7 @@ const ExperiencesSection = () => (
 			icon="linkedin"
 			text="All Experiences"
 			to={{
-				link: 'https://linkedin/in/gabrielbencomo',
+				link: 'https://linkedin.com/in/gabrielbencomo',
 				button: '/experiences',
 			}}
 		/>
