@@ -10,7 +10,6 @@
 
 - FIXED: Theme -> Gradient Color Disaster ([e6e6baa61](https://github.com/gabrielba15/portfolio/commit/e6e6baa61732b8f5e02861157e12b1153295e5ec)).
 
-
 ### 🧪 Patch [0.5.8](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.8) (Jan 27, 2022) 
 
 ##### 🔥 Features
