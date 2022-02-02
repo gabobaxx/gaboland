@@ -1,4 +1,52 @@
-# Change Log
+# Change Log (v0.0.1 - v1.0.0)
+
+## 🛸 Minor [0.8.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.7.0) (Feb 2, 2022)
+
+##### 🔥 Features
+
+- NEW: UI | Page → All Projects v1.0 ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
+
+- NEW: CODE | Component → Large Project Card ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
+- NEW: CODE | Prop → Badge [now can set a border color] ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
+
+##### 🔄 Refactor
+
+- CHANGES: Component → Button With Icon [margin left set to 8px] ([5d3f00fd9](https://github.com/gabrielba15/gaboland/commit/5d3f00fd9bcd82cce5ea8ec1a01acff16d60ebae)).
+
+## 🛸 Minor [0.7.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.7.0) (Feb 1, 2122)
+
+##### 📰 Content
+
+- ADDED: Page → About ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+- ADDED: Page → Contact ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+- ADDED: Page → Experiences ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+- ADDED: Page → Project ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+- ADDED: Page → Projects ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+- ADDED: Page → Skills ([5e40ab5c0](https://github.com/gabrielba15/gaboland/commit/5e40ab5c0d06a12214b15e3e33bc44359d05ddd1)).
+
+##### 🔄 Refactor
+
+- CHANGES: Config → Gatsby Node [Cover Image Now Its Optional] ([5d3f00fd9](https://github.com/gabrielba15/gaboland/commit/5d3f00fd9bcd82cce5ea8ec1a01acff16d60ebae)).
+- CHANGES: Component → Hero [Letter Spacing Added] ([59bf27165](https://github.com/gabrielba15/gaboland/commit/59bf27165d32635fbde18fbce3b8379357124e27)).
+
+##### 🔥 Features
+
+- NEW: UI | Page → About v1.0 ([3d0b009a9](https://github.com/gabrielba15/gaboland/commit/3d0b009a9c03c9ac45dc8f81659630df91bec8fa)).
+- NEW: UI | Styles → All H2 ([3d0b009a9](https://github.com/gabrielba15/gaboland/commit/3d0b009a9c03c9ac45dc8f81659630df91bec8fa)).
+
+- NEW: CODE | Function → Header Title [Page Title now its header title] ([59bf27165](https://github.com/gabrielba15/gaboland/commit/59bf27165d32635fbde18fbce3b8379357124e27)).
+- NEW: CODE | Component → Page query ([5d3f00fd9](https://github.com/gabrielba15/gaboland/commit/5d3f00fd9bcd82cce5ea8ec1a01acff16d60ebae)).
+- NEW: CODE | Component → Working On It v1.0 ([b712a7470](https://github.com/gabrielba15/gaboland/commit/b712a7470fb3cd581986b951467555b30972c65a)).
+- NEW: CODE | Component → Normal Card v1.0 ([5d4304fce](https://github.com/gabrielba15/gaboland/commit/5d4304fcee1bd26262d3b285a1f1806b95302b93)).
+- NEW: CODE | Component → Tools Card v1.0 ([5d4304fce](https://github.com/gabrielba15/gaboland/commit/5d4304fcee1bd26262d3b285a1f1806b95302b93)).
+- NEW: CODE | Component → Paragraph With Icon v1.0 ([5d4304fce](https://github.com/gabrielba15/gaboland/commit/5d4304fcee1bd26262d3b285a1f1806b95302b93)).
+- NEW: CODE | Config → JS Config [jsx support for tsx file] ([3d0b009a9](https://github.com/gabrielba15/gaboland/commit/3d0b009a9c03c9ac45dc8f81659630df91bec8fa)).
+
+### 🧪 Patch [0.6.1](https://github.com/gabrielba15/portfolio/releases/tag/v0.5.8) (Jan 29, 2022) 
+
+##### 🐞 Bugs 
+
+- FIXED: Components[section links] -> Linkedin link ([e6e6baa61](https://github.com/gabrielba15/gaboland/commit/21fd395614a0b50d5c6ee915b834816b8ba52791)).
 
 ## 🛸 Minor [0.6.0](https://github.com/gabrielba15/portfolio/releases/tag/v0.6.0) (Jan 28, 2022)
 
