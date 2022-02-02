@@ -26,15 +26,16 @@ const ButtonWithIconRight = ({ children, icon, borderColor, to }) => (
 				fontSize: '1rem',
 				fontFamily: 'body',
 				fontWeight: 'bold',
+				mr: '0.5rem',
 			}}
 		>
 			{children}
 		</Box>
 		<Box
-			sx={{
-				fontSize: 24,
-			}}
-			className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
+			sx={{ fontSize: 24 }}
+			className={
+				icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
+			}
 		></Box>
 	</ButtonWithIconDefault>
 );
@@ -45,7 +46,9 @@ const ButtonWithIconLeft = ({ children, icon, borderColor, to }) => (
 			sx={{
 				fontSize: 24,
 			}}
-			className={icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon}
+			className={
+				icon === 'email' ? 'bi bi-inboxes-fill' : 'bi bi-' + icon
+			}
 		></Box>
 		<Box
 			sx={{

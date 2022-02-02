@@ -10,6 +10,7 @@ import ToolsCard from 'components/cards/tools-card';
 import ParagraphWithIcon from 'components/paragraph-with-icon';
 import WorkingOnIt from 'components/working-on-it';
 import { NormalCard } from 'components/cards/card';
+import ProjectCard, { LargeProjectCard } from 'components/cards/project-card';
 import SEO from '@lekoarts/gatsby-theme-emma/src/components/seo';
 
 type PageProps = {
@@ -29,6 +30,8 @@ const components = {
 	NormalCard,
 	ToolsCard,
 	ParagraphWithIcon,
+	ProjectCard,
+	LargeProjectCard,
 	WorkingOnIt,
 };
 

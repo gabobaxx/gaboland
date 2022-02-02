@@ -1,20 +1,20 @@
 import React from 'react';
 import { Box } from 'theme-ui';
 
-const Badge = ({ children }) => (
+const Badge = ({ children, borderColor = 't900' }) => (
 	<Box
 		sx={{
 			width: 80,
 			height: '1.25rem',
 			border: '2px solid',
-			borderColor: 't900',
+			borderColor: borderColor,
 			borderRadius: 30,
 			fontFamily: 'body',
 			fontSize: '0.5rem',
 			display: 'flex',
 			alignItems: 'center',
 			justifyContent: 'center',
-			color: 't900',
+			color: 'gs700',
 			fontWeight: 'bold',
 			lineHeight: '170%',
 		}}
