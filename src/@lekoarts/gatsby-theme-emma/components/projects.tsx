@@ -7,6 +7,10 @@ import ProjectItem from './project-item';
 
 type ProjectsProps = {
 	projects: {
+		repo: string;
+		badges: string[];
+		preview: string;
+		description: string;
 		color: string;
 		slug: string;
 		title: string;

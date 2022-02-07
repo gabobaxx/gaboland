@@ -27,62 +27,137 @@ exports.createSchemaCustomization = ({ actions }) => {
 	createTypes(`
     interface Project implements Node {
       id: ID!
-      slug: String! @slugify
-      title: String!
-      defer: Boolean @defaultFalse
+			body: String!
+			repo: String!
+      color: String!
+			title: String!
       client: String!
       service: String!
-      color: String!
+			preview: String!
+			badges: [String!]
+			description: String!
+      slug: String! @slugify
       date: Date! @dateformat
+      defer: Boolean @defaultFalse
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
     }
 
     interface Page implements Node {
       id: ID!
       slug: String!
-      defer: Boolean @defaultFalse
       title: String!
+      defer: Boolean @defaultFalse
       cover: File @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
     }
 
     type MdxProject implements Node & Project {
+			repo: String!
+      color: String!
       title: String!
-      defer: Boolean @defaultFalse
-      slug: String! @slugify
       client: String!
       service: String!
-      color: String!
+			preview: String!
+			badges: [String!]
+			description: String!
+      slug: String! @slugify
       date: Date! @dateformat
+      defer: Boolean @defaultFalse
       cover: File! @fileByRelativePath
-      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+    }
+
+		type MdxProject2 implements Node & Project {
+			repo: String!
+      color: String!
+      title: String!
+      client: String!
+      service: String!
+			preview: String!
+			badges: [String!]
+			description: String!
+      slug: String! @slugify
+      date: Date! @dateformat
+      defer: Boolean @defaultFalse
+      cover: File! @fileByRelativePath
+      body: String! @mdxpassthrough(fieldName: "body")
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
     }
 
     type MdxPage implements Node & Page {
       slug: String!
-      defer: Boolean @defaultFalse
       title: String!
+      defer: Boolean @defaultFalse
       cover: File @fileByRelativePath
-      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
     }
   `);
 };
 
+exports.onCreateNode = (
+	{ node, actions, getNode, createNodeId, createContentDigest },
+	themeOptions
+) => {
+	const { createNode, createParentChildLink } = actions;
+
+	const { projectsPath } = withDefaults(themeOptions);
+
+	// Make sure that it's an MDX node
+	if (node.internal.type !== 'Mdx') return;
+
+	// Create a source field
+	// And grab the sourceInstanceName to differentiate the different sources
+	// In this case "projectsPath" and "pagesPath"
+	const fileNode = getNode(node.parent);
+	const source = fileNode.sourceInstanceName;
+
+	// Check for "projects" and create the "Project" type
+	if (node.internal.type === 'Mdx' && source === projectsPath) {
+		const fieldData = {
+			slug: node.frontmatter.slug ? node.frontmatter.slug : undefined,
+			title: node.frontmatter.title,
+			client: node.frontmatter.client,
+			cover: node.frontmatter.cover,
+			date: node.frontmatter.date,
+			service: node.frontmatter.service,
+			color: node.frontmatter.color,
+			defer: node.frontmatter.defer,
+			badges: node.frontmatter.badges,
+			repo: node.frontmatter.repo,
+			preview: node.frontmatter.preview,
+			description: node.frontmatter.description,
+		};
+
+		const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`);
+
+		createNode({
+			...fieldData,
+			// Required fields
+			id: mdxProjectId,
+			parent: node.id,
+			children: [],
+			internal: {
+				type: 'MdxProject2',
+				contentDigest: createContentDigest(fieldData),
+				content: JSON.stringify(fieldData),
+				description: 'Mdx implementation of the Project interface',
+			},
+		});
+
+		createParentChildLink({ parent: node, child: getNode(mdxProjectId) });
+	}
+};
+
 const projectTemplate = require.resolve(
-	'./node_modules/@lekoarts/gatsby-theme-emma-core/src/templates/project-query.tsx'
+	'./src/@lekoarts/gatsby-theme-emma/@lekoarts/gatsby-theme-emma-core/templates/project-query.tsx'
 );
 const projectsTemplate = require.resolve(
-	'./node_modules/@lekoarts/gatsby-theme-emma-core/src/templates/projects-query.tsx'
+	'./src/@lekoarts/gatsby-theme-emma/@lekoarts/gatsby-theme-emma-core/templates/projects-query.tsx'
 );
-
 const pageTemplate = require.resolve('./src/templates/page-query.tsx');
-// const projectTemplate = require.resolve('./src/templates/project-query.tsx');
-// const projectsTemplate = require.resolve('./src/templates/projects-query.tsx');
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 	const { createPage } = actions;

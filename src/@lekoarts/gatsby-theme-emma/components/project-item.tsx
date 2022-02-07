@@ -8,6 +8,10 @@ import { LargeProjectCard } from 'components/cards/project-card';
 
 type ProjectItemProps = {
 	node: {
+		repo: string;
+		badges: string[];
+		preview: string;
+		description: string;
 		color: string;
 		title: string;
 		slug: string;
@@ -22,6 +26,8 @@ type ProjectItemProps = {
 	style: any;
 	eager?: boolean;
 };
+
+const remote = 'https://github.com';
 
 const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
 	<animated.div>
@@ -38,7 +44,14 @@ const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
 			}}
 		>
 			<Link to={node.slug} aria-label={`View detail page of ${node.title}`}>
-				<LargeProjectCard title={node.title} />
+				<LargeProjectCard
+					title={node.title}
+					badges={node.badges}
+					github={`${remote}/${node.repo}`}
+					preview={'https://' + node.preview}
+				>
+					{node.description}
+				</LargeProjectCard>
 			</Link>
 		</div>
 	</animated.div>
