@@ -1,11 +1,45 @@
-import React from 'react';
-import { Flex, Link as TLink } from 'theme-ui';
-import { Link } from 'gatsby';
-// Components
+/** @jsx jsx */
+import { Link as GLink } from 'gatsby';
+import { Flex, jsx, Link } from 'theme-ui';
 import Navigation from '@lekoarts/gatsby-theme-emma/src/components/navigation';
-// import SocialLinks from '@lekoarts/gatsby-theme-emma/src/components/social-links';
 
-const Header = ({ meta, nav, title }) => {
+type PageTitleProps = {
+	nav: boolean;
+	title: string;
+};
+const PageTitle = ({ nav, title }: PageTitleProps) => (
+	<Flex
+		sx={{
+			flex: 1,
+			fontSize: 20,
+			justifyContent: nav ? 'center' : 'flex-start',
+		}}
+	>
+		<Link
+			to="/" // ! Typescript problem
+			aria-label={`${title}, Back to homepage`}
+			as={GLink}
+			sx={{
+				color: 'p700',
+				':hover': { color: 'p300', textDecoration: 'none' },
+			}}
+		>
+			{title}
+		</Link>
+	</Flex>
+);
+
+type HeaderProps = {
+	title?: string;
+	meta: {
+		[key: string]: string;
+	};
+	nav: {
+		title: string;
+		slug: string;
+	}[];
+};
+const Header = ({ meta, nav, title }: HeaderProps) => {
 	const { siteTitle } = meta;
 	const navEmpty = nav.length === 0;
 
@@ -18,26 +52,7 @@ const Header = ({ meta, nav, title }) => {
 				fontWeight: 'bold',
 			}}
 		>
-			{/* Site Title (Gaboland) */}
-			<Flex
-				sx={{
-					flex: 1,
-					fontSize: 20,
-					justifyContent: navEmpty ? 'center' : 'flex-start',
-				}}
-			>
-				<TLink
-					aria-label={`${siteTitle}, Back to homepage`}
-					as={Link}
-					sx={{
-						color: 'p700',
-						':hover': { color: 'p300', textDecoration: 'none' },
-					}}
-					to="/"
-				>
-					{title || siteTitle}
-				</TLink>
-			</Flex>
+			<PageTitle nav={navEmpty} title={title || siteTitle} />
 			{/* Menu Links */}
 			<Flex
 				sx={{

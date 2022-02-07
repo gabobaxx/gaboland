@@ -4,7 +4,7 @@ import { Box, Link as TLink } from 'theme-ui';
 
 /* This component is a link with a button outline styles*/
 
-const LinkWithIcon = ({ children, to = '/about' }) => (
+const LinkWithIcon = ({ children, to = '/about', borderColor = 'p700' }) => (
 	<TLink
 		as={Link}
 		key="link-with-icon"
@@ -12,7 +12,7 @@ const LinkWithIcon = ({ children, to = '/about' }) => (
 		sx={{
 			// p: 24,
 			border: '2px solid',
-			borderColor: 'p700',
+			borderColor: borderColor,
 			cursor: 'pointer',
 			textAlign: 'center',
 			textDecoration: 'none',
@@ -21,7 +21,7 @@ const LinkWithIcon = ({ children, to = '/about' }) => (
 			padding: '0.5rem',
 			pl: '0.8rem',
 			fontSize: '0.875rem',
-			color: 'p700',
+			color: borderColor,
 			display: 'flex',
 			flexDirection: 'row',
 		}}
