@@ -81,6 +81,7 @@ const Projects = ({ projects }: ProjectsProps) => {
 					margin: '24px auto',
 					alignItems: 'center',
 					justifyContent: 'center',
+					minHeight: '100vh'
 				}}
 			>
 				{trail.map((style, index) => (

@@ -1,16 +1,113 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from 'react-spring';
-import { Container, jsx, Flex, Heading } from 'theme-ui';
+import { Container, jsx, Flex, Heading, Box, Card } from 'theme-ui';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from './layout';
 import SEO from '@lekoarts/gatsby-theme-emma/src/components/seo';
 import Hero from '@lekoarts/gatsby-theme-emma/src/components/hero';
 import ProjectInfo from './project-info';
+import Badge, { BadgeWithIcon } from 'components/badges/badge';
+import ButtonWithIcon from 'components/buttons/button-with-icon';
+import LinkWithIcon from 'components/links/link-with-icon';
+
+const LargeProjectCard = ({
+	title = 'Large Project Card',
+	github = 'https://github.com/',
+	preview = '/',
+	badges = ['Design', 'Programming', 'Web', 'Frontend'],
+	tag = 'Full Stack',
+	children = 'Children',
+	borderColor = 'p700',
+}) => (
+	<Card
+		sx={{
+			variant: 'cards',
+			minHeight: 343,
+			borderColor: borderColor,
+			maxWidth: 'none',
+			width: '100%',
+		}}
+		variant="cards.small"
+	>
+		<Card as="section" variant="cards.small.content" sx={{ width: '90%' }}>
+			<Box
+				as="header"
+				sx={{
+					fontSize: 24,
+					color: 'gs800',
+					fontFamily: 'head',
+					fontStyle: 'normal',
+					fontWeight: 'bold',
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+				}}
+			>
+				{title}
+				<BadgeWithIcon>{tag}</BadgeWithIcon>
+			</Box>
+			<Flex
+				sx={{
+					flexDirection: 'row',
+					my: '1.5rem',
+					gap: '5px',
+					justifyContent: 'space-around',
+				}}
+			>
+				{badges.map((badgeText) => (
+					<Badge borderColor="gs800" key={badgeText}>
+						{badgeText}
+					</Badge>
+				))}
+			</Flex>
+			<Box
+				sx={{
+					mb: '1.5rem',
+					fontFamily: 'body',
+					fontWeight: 'light',
+					fontSize: '0.875rem',
+					color: 'gs800',
+					textAlign: 'center',
+				}}
+				as="p"
+			>
+				{children}
+			</Box>
+			<Flex
+				sx={{
+					justifyContent: 'space-between',
+					alignItems: 'center',
+					fontFamily: 'body',
+					fontStyle: 'normal',
+					fontWeight: 'normal',
+					fontSize: '1rem',
+					p: 0,
+				}}
+				as="footer"
+			>
+				<ButtonWithIcon
+					icon="github"
+					side="left"
+					to={'https://github.com/' + github}
+				>
+					Github
+				</ButtonWithIcon>
+				<LinkWithIcon to={preview} borderColor={borderColor}>
+					Preview
+				</LinkWithIcon>
+			</Flex>
+		</Card>
+	</Card>
+);
 
 type ProjectProps = {
 	data: {
 		project: {
+			repo: string;
+			badges: string[];
+			preview: string;
+			description: string;
 			body: string;
 			excerpt: string;
 			client: string;
@@ -61,7 +158,7 @@ const Project = ({ data: { project } }: ProjectProps) => {
 			/>
 			<Hero
 				image={project.cover.childImageSharp.gatsbyImageData}
-				color={project.color}
+				color="#333"
 			>
 				<Flex
 					sx={{
@@ -81,14 +178,42 @@ const Project = ({ data: { project } }: ProjectProps) => {
 							{project.title}
 						</Heading>
 					</animated.div>
-					<animated.div style={infoProps}>
-						<ProjectInfo project={project} />
-					</animated.div>
 				</Flex>
 			</Hero>
 			<Container>
-				<animated.div style={contentProps}>
-					<MDXRenderer>{project.body}</MDXRenderer>
+				<animated.div
+					style={contentProps}
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						gap: '1.5rem',
+						alignItems: 'center',
+					}}
+				>
+					<LargeProjectCard
+						tag={project.service}
+						title={project.title}
+						badges={project.badges}
+						github={project.repo}
+						preview={'https://' + project.preview}
+						borderColor={project.color}
+					>
+						{project.description}
+					</LargeProjectCard>
+					<div sx={{ width: '100%' }}>
+						<MDXRenderer>{project.body}</MDXRenderer>
+					</div>
+					<img
+						sx={{
+							width: '100%',
+							height: '100%',
+							boxSizing: 'border-box',
+							borderRadius: '1.25rem',
+							boxShadow: '0 4px 8px 0 rgb(0 0 0 / 20%)',
+						}}
+						src={project.cover.childImageSharp.resize.src}
+						alt={`${project.title} preview image`}
+					/>
 				</animated.div>
 			</Container>
 		</Layout>
