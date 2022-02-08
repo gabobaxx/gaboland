@@ -9,7 +9,7 @@ const Hero = ({
 	imageAlt = 'Selfie of Me',
 	occu = 'Future Systems Engineer',
 }) => (
-	<Box as="section">
+	<Box as="section" sx={{ gridColumn: '1/-1' }}>
 		<Box sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
 			<Image
 				as={Image}
