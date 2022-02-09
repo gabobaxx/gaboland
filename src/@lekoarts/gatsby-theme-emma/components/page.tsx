@@ -68,8 +68,7 @@ const Page = ({ data: { page } }: PageProps) => {
 						justifyContent: 'center',
 
 						display: 'grid',
-						gridTemplateColumns:
-							'repeat(auto-fit, minmax(366px, auto))',
+						gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
 					}}
 				>
 					<MDXRenderer>{page.body}</MDXRenderer>

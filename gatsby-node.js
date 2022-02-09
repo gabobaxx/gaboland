@@ -2,6 +2,57 @@ const fs = require('fs');
 const path = require('path');
 const withDefaults = require('./utils/default-options');
 
+exports.createSchemaCustomization = ({ actions }) => {
+	const { createTypes } = actions;
+
+	createTypes(`
+    interface Project implements Node {
+      id: ID!
+      slug: String! @slugify
+      title: String!
+      defer: Boolean @defaultFalse
+      client: String!
+      service: String!
+      color: String!
+      date: Date! @dateformat
+      cover: File! @fileByRelativePath
+      excerpt(pruneLength: Int = 160): String!
+      body: String!
+    }
+
+    interface Page implements Node {
+      id: ID!
+      slug: String!
+      defer: Boolean @defaultFalse
+      title: String!
+      cover: File @fileByRelativePath
+      excerpt(pruneLength: Int = 160): String!
+      body: String!
+    }
+
+    type MdxProject implements Node & Project {
+      title: String!
+      defer: Boolean @defaultFalse
+      slug: String! @slugify
+      client: String!
+      service: String!
+      color: String!
+      date: Date! @dateformat
+      cover: File! @fileByRelativePath
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+      body: String! @mdxpassthrough(fieldName: "body")
+    }
+
+    type MdxPage implements Node & Page {
+      slug: String!
+      defer: Boolean @defaultFalse
+      title: String!
+      cover: File @fileByRelativePath
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+      body: String! @mdxpassthrough(fieldName: "body")
+    }
+  `);
+};
 exports.onCreateWebpackConfig = ({ actions }, options) => {
 	const srcPath = options.srcPath || path.resolve(__dirname, './src');
 
