@@ -56,21 +56,23 @@ const Page = ({ data: { page } }: PageProps) => {
 					description={page.excerpt}
 					pathname={page.slug}
 				/>
-				<Container>
-					<animated.div
-						style={contentProps}
-						sx={{
-							display: 'grid',
-							gridGap: '3rem',
-							maxWidth: 720,
-							margin: '0 auto',
-							padding: '0 24px',
-							justifyItems: 'center',
-						}}
-					>
-						<MDXRenderer>{page.body}</MDXRenderer>
-					</animated.div>
-				</Container>
+				<animated.div
+					style={contentProps}
+					sx={{
+						maxWidth: 800,
+						margin: '0 auto',
+						padding: '0 24px',
+						minHeight: '77.2vh',
+
+						gap: '2rem 1rem',
+						justifyContent: 'center',
+
+						display: 'grid',
+						gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
+					}}
+				>
+					<MDXRenderer>{page.body}</MDXRenderer>
+				</animated.div>
 			</Layout>
 		</MDXProvider>
 	);

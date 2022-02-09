@@ -1,11 +1,31 @@
 # Change Log (v0.0.1 - v1.0.0)
 
-## 🛸 Minor [0.8.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.7.0) (Feb 2, 2022)
+## 🛸 Minor [0.9.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.9.0) (Feb 9, 2022)
+
+##### 📰 Content
+
+- ADDED: Project Page → Giffy ([5d568140e](https://github.com/gabrielba15/gaboland/commit/5d568140ef7f6c8097efb0a51f477602c3f34b98)).
+- ADDED: Project Page → Gaboland ([5d568140e](https://github.com/gabrielba15/gaboland/commit/5d568140ef7f6c8097efb0a51f477602c3f34b98)).
+- ADDED: Project Page → Partial Store ([5d568140e](https://github.com/gabrielba15/gaboland/commit/5d568140ef7f6c8097efb0a51f477602c3f34b98)).
+
+##### 🔥 Features
+
+- NEW: UI | Page → All Projects v2.0 [grid layout] ([880524d0d](https://github.com/gabrielba15/gaboland/commit/880524d0d73a43c17949b907d2efa10d952103df)).
+- NEW: UI | Page → About v2.0 [layout now support large screen (desktop)] ([a1a5c22eb](https://github.com/gabrielba15/gaboland/commit/a1a5c22eb30c930e5c5495fad3dc038ef59bb73e)).
+- NEW: CODE | Config → Gql Types [new gql types for projects |badges, description, preview, repo|] ([85dc1fa9e](https://github.com/gabrielba15/gaboland/commit/85dc1fa9e6df60b4b6a265ea4eb86870d5bf4c5b)).
+- NEW: CODE | Component → Project Template ([2b7db6214](https://github.com/gabrielba15/gaboland/commit/2b7db6214f20c73fc15ac24c4e1c5359939d0df7)).
+- NEW: CODE | Layout → Project and Projects [Projects and Project Layout] ([e19b625f8](https://github.com/gabrielba15/gaboland/commit/e19b625f8cd6785765c798bc66081ece79a13b0c)).
+
+##### 🔄 Refactor
+
+- CHANGES: Component → Layout [new header title optional prop] ([cee35d727](https://github.com/gabrielba15/gaboland/commit/cee35d727c5904041bc7e03d839315171c6c2210)).
+- CHANGES: Config → Gatsby Node [projects page template changed.] ([8da880612](https://github.com/gabrielba15/gaboland/commit/8da8806129bdd9714c808eb120ff1620d97484b2)).
+
+## 🛸 Minor [0.8.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.8.0) (Feb 2, 2022)
 
 ##### 🔥 Features
 
 - NEW: UI | Page → All Projects v1.0 ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
-
 - NEW: CODE | Component → Large Project Card ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
 - NEW: CODE | Prop → Badge [now can set a border color] ([e56587a81](https://github.com/gabrielba15/gaboland/commit/e56587a813f1c25c476c09d416d914178426f27a)).
 
