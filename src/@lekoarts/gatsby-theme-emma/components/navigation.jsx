@@ -16,8 +16,12 @@ const Navigation = ({ nav }) => {
 					) : null
 				)
 			)}
-			<TLink as={Link} key="/projects" to="/projects">
+			<TLink as={Link} to="/projects">
 				Projects
+			</TLink>
+
+			<TLink as={Link} to="#contact">
+				Contact
 			</TLink>
 			{/* <ThemeChangerButton /> */}
 		</Flex>
