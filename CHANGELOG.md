@@ -1,5 +1,41 @@
 # Change Log (v0.0.1 - v1.0.0)
 
+## 🚀 Major [1.0.0](https://github.com/gabrielba15/gaboland/releases/tag/v1.0.0) (Feb 15, 2022)
+
+#### 🔥 Recap
+
+##### Support (responsive)
+
+- Mobile (414 px)
+- Tablets
+- Desktop (+1200 px)
+
+##### Pages (3)
+- Home. 
+- About. 
+- Projects.
+
+##### Sections (5) 
+- Hero.
+- Projects.
+- Skills.
+- Experiences.
+- Contact.
+
+##### Layout 
+
+- Header. 
+- Footer.
+- Home [Flex].
+- About [Grid].
+- Projects [Grid].
+
+##### Projects (3)
+
+- Giffy.
+- Gaboland.
+- Partial Store.
+
 ## 🛸 Minor [0.9.0](https://github.com/gabrielba15/gaboland/releases/tag/v0.9.0) (Feb 9, 2022)
 
 ##### 📰 Content

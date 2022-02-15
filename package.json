@@ -1,40 +1,57 @@
 {
-	"private": true,
-	"name": "gaboland",
-	"description": "Gabriel's Portfolio",
-	"version": "0.9.0",
-	"author": "@gabrielba15",
-	"license": "none",
-	"starter-name": "gatsby-starter-portfolio-cara",
-	"scripts": {
-		"build": "gatsby build",
-		"build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-		"develop": "gatsby develop",
-		"develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-		"start": "gatsby develop",
-		"serve": "gatsby serve",
-		"clean": "gatsby clean",
-		"lint": "eslint .",
-		"lint:fix": "eslint --fix .",
-		"prepare": "husky install"
-	},
-	"dependencies": {
-		"@lekoarts/gatsby-theme-cara": "3.0.0",
-		"@lekoarts/gatsby-theme-emma": "3.0.2",
-		"gatsby": "4.4.0",
-		"gatsby-plugin-manifest": "4.0.0",
-		"react": "17.0.2",
-		"react-dom": "17.0.2"
-	},
-	"devDependencies": {
-		"cross-env": "7.0.3",
-		"eslint": "7.19.0",
-		"eslint-plugin-react": "7.28.0",
-		"husky": "7.0.4"
-	},
-	"lint-staged": {
-		"*.{jsx,js}": [
-			"yarn lint:fix"
-		]
-	}
+  "private": true,
+  "name": "gaboland",
+  "description": "Gabriel's Portfolio",
+  "version": "1.0.0",
+  "author": "@gabrielba15",
+  "license": "MIT",
+  "starter-name": "gatsby-starter-portfolio-caremaland",
+  "scripts": {
+    "build": "gatsby build",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@lekoarts/gatsby-theme-cara": "3.0.0",
+    "@lekoarts/gatsby-theme-emma": "3.0.2",
+    "gatsby": "4.4.0",
+    "gatsby-plugin-manifest": "4.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "eslint": "7.19.0",
+    "eslint-plugin-react": "7.28.0",
+    "husky": "7.0.4"
+  },
+  "lint-staged": {
+    "*.{jsx,js}": [
+      "yarn lint:fix"
+    ]
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabrielba15/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gabrielba15/portfolio/issues"
+  },
+  "homepage": "https://github.com/gabrielba15/portfolio#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "personal"
+  ]
 }
