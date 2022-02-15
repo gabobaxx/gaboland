@@ -20,7 +20,7 @@ const Navigation = ({ nav }) => {
 				Projects
 			</TLink>
 
-			<TLink as={Link} to="#contact">
+			<TLink as={Link} to="/#contact">
 				Contact
 			</TLink>
 			{/* <ThemeChangerButton /> */}

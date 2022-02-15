@@ -15,7 +15,7 @@ import SkillCard from 'components/cards/skill-card';
 import CardContact from 'components/cards/contact-card';
 import ExperienceCard from 'components/cards/experience-card';
 import ProjectCard from 'components/cards/project-card';
-import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import Seo from '../@lekoarts/gatsby-theme-emma/components/seo';
 import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
 import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
 import Hero from 'components/hero';
@@ -27,6 +27,10 @@ import Experiences from '../../content/sections/experiences';
 import HeroContent from '../../content/sections/hero';
 
 import SectionLinks from 'components/links/section-links';
+
+const linkedin = 'https://linkedin.com/in/gabrielbencomo';
+const twitter = 'https://twitter.com/gabrielbca15';
+const github = 'https://github.com/gabrielba15';
 
 const components = {
 	CardContact,
@@ -49,15 +53,28 @@ const HeroSection = () => (
 		<HeroContent />
 	</Hero>
 );
+const CardsContainer = ({ children }) => (
+	<Box
+		sx={{
+			maxWidth: 1200,
+
+			gap: '1rem',
+			display: 'grid',
+			gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
+		}}
+	>
+		{children}
+	</Box>
+);
 const ProjectsSection = () => (
 	<Box as="section">
 		<h2>Projects</h2>
+		<Projects />
 		<FlexContent>
-			<Projects />
 			<ProjectCard
 				title="Gaboland"
 				borderColor="success"
-				to="https://github.com/gabrielba15/portfolio"
+				to="https://github.com/gabrielba15/gaboland"
 			>
 				My personal website or portfolio. This projects is built with
 				Gatsby, React and Theme UI.
@@ -80,7 +97,7 @@ const ProjectsSection = () => (
 		<SectionLinks
 			icon="github"
 			text="All Projects"
-			to={{ link: 'https://github.com/gaboland', button: '/projects' }}
+			to={{ link: github, button: '/projects' }}
 		/>
 	</Box>
 );
@@ -149,8 +166,8 @@ const ContactSection = () => (
 				title="Work Contact"
 				icons={{ first: 'email', second: 'linkedin' }}
 				to={{
-					first: 'https://linkedin.com/in/gabrielbencomo',
-					second: 'https://linkedin.com/in/gabrielbencomo',
+					first: linkedin,
+					second: linkedin,
 				}}
 			>
 				If you are an entrepreneur or somebody who are looking for
@@ -163,7 +180,7 @@ const ContactSection = () => (
 				icons={{ first: 'telegram', second: 'twitter' }}
 				to={{
 					first: 'https://t.me/gabrielba15',
-					second: 'https://twitter.com/gabrielbca15',
+					second: twitter,
 				}}
 			>
 				If you're an old friend or a stranger who wants to contact me

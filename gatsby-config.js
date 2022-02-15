@@ -3,12 +3,12 @@ require('dotenv').config(); // read .env file
 module.exports = {
 	siteMetadata: {
 		siteTitle: 'Gaboland',
-		siteTitleAlt: 'Gaboland - Make Solutions, Dont Problems',
-		siteHeadline: 'Gaboland - Portfolio by @gabrielba15',
-		siteUrl: 'https://testing.gaboland.vercel.app',
+		siteTitleAlt: 'Gaboland - Make Solutions, Don\'t Problems',
+		siteHeadline: 'Gaboland - Portfolio by gabrielba15',
+		siteUrl: 'https://gabo.land',
 		siteDescription: 'Portfolio by Gabriel',
 		siteLanguage: 'en',
-		siteImage: '/banner.jpg',
+		siteImage: '/lion-banner.jpg',
 		author: '@gabrielba15',
 	},
 	plugins: [
@@ -19,7 +19,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Gaboland - Make Solutions, Dont Problems',
+				name: 'Gaboland - Make Solutions, Don\'t Problems',
 				short_name: 'Gaboland',
 				description: 'Portfolio by Gabriel',
 				start_url: '/',

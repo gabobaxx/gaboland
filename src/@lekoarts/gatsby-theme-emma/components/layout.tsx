@@ -5,7 +5,7 @@ import useNavigation from '@lekoarts/gatsby-theme-emma/src/hooks/use-navigation'
 // Components!
 import Header from './header';
 import Footer from '@lekoarts/gatsby-theme-emma/src/components/footer';
-import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import Seo from './seo';
 
 type LayoutProps = {
 	children: React.ReactNode;

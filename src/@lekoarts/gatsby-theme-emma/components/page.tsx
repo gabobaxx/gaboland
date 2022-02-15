@@ -11,7 +11,7 @@ import ParagraphWithIcon from 'components/paragraph-with-icon';
 import WorkingOnIt from 'components/working-on-it';
 import { NormalCard } from 'components/cards/card';
 import ProjectCard, { LargeProjectCard } from 'components/cards/project-card';
-import SEO from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import SEO from './seo';
 
 type PageProps = {
 	data: {
@@ -68,7 +68,8 @@ const Page = ({ data: { page } }: PageProps) => {
 						justifyContent: 'center',
 
 						display: 'grid',
-						gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
+						gridTemplateColumns:
+							'repeat(auto-fit, minmax(366px, auto))',
 					}}
 				>
 					<MDXRenderer>{page.body}</MDXRenderer>

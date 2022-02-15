@@ -4,7 +4,7 @@ import { Container, jsx, Flex, Heading, Box, Card } from 'theme-ui';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from './layout';
-import SEO from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import SEO from './seo';
 import Hero from '@lekoarts/gatsby-theme-emma/src/components/hero';
 import ProjectInfo from './project-info';
 import Badge, { BadgeWithIcon } from 'components/badges/badge';
@@ -174,7 +174,11 @@ const Project = ({ data: { project } }: ProjectProps) => {
 					}}
 				>
 					<animated.div style={titleProps}>
-						<Heading as="h1" variant="styles.h1">
+						<Heading
+							as="h1"
+							variant="styles.h1"
+							sx={{ color: 'gs100' }}
+						>
 							{project.title}
 						</Heading>
 					</animated.div>
