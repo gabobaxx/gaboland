@@ -69,8 +69,8 @@ const CardsContainer = ({ children }) => (
 const ProjectsSection = () => (
 	<Box as="section">
 		<h2>Projects</h2>
-		<Projects />
 		<FlexContent>
+			<Projects />
 			<ProjectCard
 				title="Gaboland"
 				borderColor="success"
