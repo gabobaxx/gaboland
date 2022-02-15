@@ -10,11 +10,12 @@ import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-meta
 // Third Party Components!
 import { Flex, Box } from 'theme-ui';
 // Custom Components!
+import LinkWithIcon from 'components/links/link-with-icon';
 import SkillCard from 'components/cards/skill-card';
 import CardContact from 'components/cards/contact-card';
 import ExperienceCard from 'components/cards/experience-card';
 import ProjectCard from 'components/cards/project-card';
-import Seo from '@lekoarts/gatsby-theme-emma/src/components/seo';
+import Seo from '../@lekoarts/gatsby-theme-emma/components/seo';
 import Footer from '@lekoarts/gatsby-theme-emma/components/footer';
 import Header from '@lekoarts/gatsby-theme-emma/src/components/header';
 import Hero from 'components/hero';
@@ -26,6 +27,10 @@ import Experiences from '../../content/sections/experiences';
 import HeroContent from '../../content/sections/hero';
 
 import SectionLinks from 'components/links/section-links';
+
+const linkedin = 'https://linkedin.com/in/gabrielbencomo';
+const twitter = 'https://twitter.com/gabrielbca15';
+const github = 'https://github.com/gabrielba15';
 
 const components = {
 	CardContact,
@@ -48,18 +53,31 @@ const HeroSection = () => (
 		<HeroContent />
 	</Hero>
 );
+const CardsContainer = ({ children }) => (
+	<Box
+		sx={{
+			maxWidth: 1200,
+
+			gap: '1rem',
+			display: 'grid',
+			gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
+		}}
+	>
+		{children}
+	</Box>
+);
 const ProjectsSection = () => (
 	<Box as="section">
 		<h2>Projects</h2>
+		<Projects />
 		<FlexContent>
-			<Projects />
 			<ProjectCard
 				title="Gaboland"
 				borderColor="success"
-				to="https://github.com/gabrielba15/portfolio"
+				to="https://github.com/gabrielba15/gaboland"
 			>
-				My personal website or portfolio. This projects is built with Gatsby,
-				React and Theme UI.
+				My personal website or portfolio. This projects is built with
+				Gatsby, React and Theme UI.
 			</ProjectCard>
 			<ProjectCard
 				title="Giffy"
@@ -72,13 +90,14 @@ const ProjectsSection = () => (
 				borderColor="success"
 				to="https://github.com/gabrielba15/php_mysql_parcial"
 			>
-				CRUD App using PHP, MySQL and Bootstrap for a university assessment.
+				CRUD App using PHP, MySQL and Bootstrap for a university
+				assessment.
 			</ProjectCard>
 		</FlexContent>
 		<SectionLinks
 			icon="github"
 			text="All Projects"
-			to={{ link: 'https://github.com/gaboland', button: '/projects' }}
+			to={{ link: github, button: '/projects' }}
 		/>
 	</Box>
 );
@@ -93,26 +112,22 @@ const SkillsSection = () => (
 				borderColor="success"
 				to="/skills/programming"
 			>
-				My life as a programmer started in 2019. I have 3 years of experiences
-				and I'm still learning.
+				My life as a programmer started in 2019. I have 3 years of
+				experiences and I'm still learning.
 			</SkillCard>
 			<SkillCard title="Design" to="/skills/design">
-				I have 2 year designing and learning technologies associeted with it and
-				I still don't stop.
+				I have 2 year designing and learning technologies associeted
+				with it and I still don't stop.
 			</SkillCard>
 			<SkillCard
 				title="Autodidact"
 				borderColor="success"
 				to="/skills/autodidact"
 			>
-				since 2017 I haven't stopped learning somenthing new every single day.
+				since 2017 I haven't stopped learning somenthing new every
+				single day.
 			</SkillCard>
 		</FlexContent>
-		<SectionLinks
-			icon="linkedin"
-			text="All Skills"
-			to={{ link: 'https://linkedin.com/in/gabrielbencomo', button: '/skills' }}
-		/>
 	</Box>
 );
 const ExperiencesSection = () => (
@@ -140,18 +155,10 @@ const ExperiencesSection = () => (
 				year="1 year"
 			/>
 		</FlexContent>
-		<SectionLinks
-			icon="linkedin"
-			text="All Experiences"
-			to={{
-				link: 'https://linkedin.com/in/gabrielbencomo',
-				button: '/experiences',
-			}}
-		/>
 	</Box>
 );
 const ContactSection = () => (
-	<Box as="section">
+	<Box as="section" id="contact">
 		<h2>Contact</h2>
 		<FlexContent>
 			<Contact />
@@ -159,25 +166,26 @@ const ContactSection = () => (
 				title="Work Contact"
 				icons={{ first: 'email', second: 'linkedin' }}
 				to={{
-					first: 'https://linkedin.com/in/gabrielbencomo',
-					second: 'https://linkedin.com/in/gabrielbencomo',
+					first: linkedin,
+					second: linkedin,
 				}}
 			>
-				If you are an entrepreneur or somebody who are looking for someone who
-				develop your app or website, you can contact me from 8:00h to 11:00h and
-				from 15:00h to 18:h ET. for an immediate response.
+				If you are an entrepreneur or somebody who are looking for
+				someone who develop your app or website, you can contact me from
+				8:00h to 11:00h and from 15:00h to 18:h ET. for an immediate
+				response.
 			</CardContact>
 			<CardContact
 				title="Friendly Contact"
 				icons={{ first: 'telegram', second: 'twitter' }}
 				to={{
 					first: 'https://t.me/gabrielba15',
-					second: 'https://twitter.com/gabrielbca15',
+					second: twitter,
 				}}
 			>
-				If you're an old friend or a stranger who wants to contact me for
-				anything (say hello, connection, etc.) write at any time through the
-				media but do not expect an immediate response.
+				If you're an old friend or a stranger who wants to contact me
+				for anything (say hello, connection, etc.) write at any time
+				through the media but do not expect an immediate response.
 			</CardContact>
 		</FlexContent>
 	</Box>

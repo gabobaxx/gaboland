@@ -34,22 +34,6 @@ const SkillCard = ({
 		>
 			{children}
 		</Box>
-		<Box
-			sx={{
-				display: 'flex',
-				justifyContent: 'flex-end',
-				fontFamily: 'body',
-				fontStyle: 'normal',
-				fontWeight: 'normal',
-				fontSize: '1rem',
-				p: 0,
-			}}
-			as="footer"
-		>
-			<ButtonWithIcon icon="arrow-right-short" side="right" to={to}>
-				Know More
-			</ButtonWithIcon>
-		</Box>
 	</SmallCard>
 );
 

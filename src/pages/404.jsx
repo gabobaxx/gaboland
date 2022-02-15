@@ -9,7 +9,7 @@ import {
 	UpDownWide,
 } from '@lekoarts/gatsby-theme-cara/src/styles/animations';
 import Svg from '@lekoarts/gatsby-theme-cara/src/components/svg';
-import Seo from '@lekoarts/gatsby-theme-cara/src/components/seo';
+import Seo from '../@lekoarts/gatsby-theme-emma/components/seo';
 import Content from '@lekoarts/gatsby-theme-cara/src/elements/content';
 import Inner from '@lekoarts/gatsby-theme-cara/src/elements/inner';
 
@@ -162,7 +162,13 @@ const NotFound = () => (
 						left="5%"
 						top="90%"
 					/>
-					<Svg icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
+					<Svg
+						icon="box"
+						width={6}
+						color="icon_darkest"
+						left="10%"
+						top="10%"
+					/>
 					<Svg
 						icon="box"
 						width={12}
