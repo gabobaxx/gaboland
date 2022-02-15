@@ -33,13 +33,17 @@ Make solutions, don't mistakes 🧠🚀🦁
 If you see a bug, something in the UI you don't like or a simple feature that you'll wanna share with me, create a issue with a corresponding format. 
 
 Title: 💡Do it a blog. 
+
 Description: I just want a blog section... 
+
 Tags: 💡 Idea 
 
 💡 [Emoji corresponding to the tag] Feature name or title of the issue. 
 
 Feature 👉 💡
+
 Bug 👉 🐞
+
 UI 👉 📺
 
 You can add the tags what you want. 
