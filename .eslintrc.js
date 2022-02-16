@@ -24,7 +24,7 @@ module.exports = {
 		ecmaFeatures: {
 			jsx: true,
 		},
-		ecmaVersion: 6,
+		ecmaVersion: 10,
 		sourceType: 'module',
 	},
 	plugins: ['react'],
@@ -36,5 +36,5 @@ module.exports = {
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 	},
-	ignorePatterns: ['public/*']
+	ignorePatterns: ['public/*'],
 };
