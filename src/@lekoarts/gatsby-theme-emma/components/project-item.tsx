@@ -35,10 +35,10 @@ const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
 			sx={{
 				a: {
 					width: 500,
-					transition: `all 0.3s ease-in-out`,
-					textDecoration: `none`,
+					transition: 'all 0.3s ease-in-out',
+					textDecoration: 'none',
 					'&:hover': {
-						textDecoration: `none`,
+						textDecoration: 'none',
 					},
 				},
 			}}

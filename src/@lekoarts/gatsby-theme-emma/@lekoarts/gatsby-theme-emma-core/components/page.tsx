@@ -1,5 +1,5 @@
-import * as React from "react"
-import Page from "../../../components/page"
+import * as React from 'react';
+import Page from '../../../components/page';
 
 type Props = {
   data: {
@@ -10,5 +10,5 @@ type Props = {
 }
 
 export default function EmmaCorePage({ ...props }: Props) {
-  return <Page {...props} />
+	return <Page {...props} />;
 }
