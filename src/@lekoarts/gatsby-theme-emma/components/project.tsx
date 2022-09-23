@@ -132,8 +132,8 @@ type ProjectProps = {
 const Project = ({ data: { project } }: ProjectProps) => {
 	const titleProps = useSpring({
 		config: config.slow,
-		from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
-		to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
+		from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
+		to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
 	});
 	const infoProps = useSpring({
 		config: config.slow,
@@ -162,15 +162,15 @@ const Project = ({ data: { project } }: ProjectProps) => {
 			>
 				<Flex
 					sx={{
-						position: `absolute`,
+						position: 'absolute',
 						bottom: 0,
 						left: 0,
 						right: 0,
-						maxWidth: `5xl`,
-						margin: `0 auto`,
+						maxWidth: '5xl',
+						margin: '0 auto',
 						padding: 4,
 						zIndex: 2,
-						flexDirection: `column`,
+						flexDirection: 'column',
 					}}
 				>
 					<animated.div style={titleProps}>

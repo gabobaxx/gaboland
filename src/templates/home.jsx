@@ -10,7 +10,6 @@ import useSiteMetadata from '@lekoarts/gatsby-theme-emma/src/hooks/use-site-meta
 // Third Party Components!
 import { Flex, Box } from 'theme-ui';
 // Custom Components!
-import LinkWithIcon from 'components/links/link-with-icon';
 import SkillCard from 'components/cards/skill-card';
 import CardContact from 'components/cards/contact-card';
 import ExperienceCard from 'components/cards/experience-card';
@@ -53,19 +52,6 @@ const HeroSection = () => (
 		<HeroContent />
 	</Hero>
 );
-const CardsContainer = ({ children }) => (
-	<Box
-		sx={{
-			maxWidth: 1200,
-
-			gap: '1rem',
-			display: 'grid',
-			gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
-		}}
-	>
-		{children}
-	</Box>
-);
 const ProjectsSection = () => (
 	<Box as="section">
 		<h2>Projects</h2>
@@ -76,8 +62,8 @@ const ProjectsSection = () => (
 				borderColor="success"
 				to="https://github.com/gabrielba15/gaboland"
 			>
-				My personal website or portfolio. This projects is built with
-				Gatsby, React and Theme UI.
+				My personal website or portfolio. This projects is built with Gatsby,
+				React and Theme UI.
 			</ProjectCard>
 			<ProjectCard
 				title="Giffy"
@@ -90,8 +76,7 @@ const ProjectsSection = () => (
 				borderColor="success"
 				to="https://github.com/gabrielba15/php_mysql_parcial"
 			>
-				CRUD App using PHP, MySQL and Bootstrap for a university
-				assessment.
+				CRUD App using PHP, MySQL and Bootstrap for a university assessment.
 			</ProjectCard>
 		</FlexContent>
 		<SectionLinks
@@ -112,20 +97,19 @@ const SkillsSection = () => (
 				borderColor="success"
 				to="/skills/programming"
 			>
-				My life as a programmer started in 2019. I have 3 years of
-				experiences and I'm still learning.
+				My life as a programmer started in 2019. I have 3 years of experiences
+				and I'm still learning.
 			</SkillCard>
 			<SkillCard title="Design" to="/skills/design">
-				I have 2 year designing and learning technologies associeted
-				with it and I still don't stop.
+				I have 2 year designing and learning technologies associeted with it and
+				I still don't stop.
 			</SkillCard>
 			<SkillCard
 				title="Autodidact"
 				borderColor="success"
 				to="/skills/autodidact"
 			>
-				since 2017 I haven't stopped learning somenthing new every
-				single day.
+				since 2017 I haven't stopped learning somenthing new every single day.
 			</SkillCard>
 		</FlexContent>
 	</Box>
@@ -170,10 +154,9 @@ const ContactSection = () => (
 					second: linkedin,
 				}}
 			>
-				If you are an entrepreneur or somebody who are looking for
-				someone who develop your app or website, you can contact me from
-				8:00h to 11:00h and from 15:00h to 18:h ET. for an immediate
-				response.
+				If you are an entrepreneur or somebody who are looking for someone who
+				develop your app or website, you can contact me from 8:00h to 11:00h and
+				from 15:00h to 18:h ET. for an immediate response.
 			</CardContact>
 			<CardContact
 				title="Friendly Contact"
@@ -183,9 +166,9 @@ const ContactSection = () => (
 					second: twitter,
 				}}
 			>
-				If you're an old friend or a stranger who wants to contact me
-				for anything (say hello, connection, etc.) write at any time
-				through the media but do not expect an immediate response.
+				If you're an old friend or a stranger who wants to contact me for
+				anything (say hello, connection, etc.) write at any time through the
+				media but do not expect an immediate response.
 			</CardContact>
 		</FlexContent>
 	</Box>

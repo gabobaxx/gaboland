@@ -9,15 +9,15 @@ module.exports = {
 			version: 'detect',
 		},
 	},
-	// parser: '@typescript-eslint/parser',
+	parser: '@typescript-eslint/parser',
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		// 'plugin:@typescript-eslint/recommended',
+		'plugin:@typescript-eslint/recommended',
 	],
 	overrides: [
 		{
-			files: ['*.jsx', '*.js' /*, '*.tsx'*/],
+			files: ['*.jsx', '*.js', '*.tsx'],
 		},
 	],
 	parserOptions: {
@@ -28,6 +28,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react'],
+	ignorePatterns: ['public/*', 'gatsby-node.js', 'gatsby-config.js'],
 	rules: {
 		'react/prop-types': 'off',
 		'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
@@ -36,5 +37,4 @@ module.exports = {
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 	},
-	ignorePatterns: ['public/*'],
 };
