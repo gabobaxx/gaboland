@@ -13,7 +13,11 @@ import ProjectCard from 'components/cards/project-card';
 import SectionLinks from 'components/links/section-links';
 import ExperienceCard from 'components/cards/experience-card';
 
-import { linkedin, twitter, github } from 'utils';
+// import { linkedin, twitter, github } from 'utils/options';
+
+const linkedin = '';
+const twitter = '';
+const github = '';
 
 import { Flex, Box } from 'theme-ui';
 
