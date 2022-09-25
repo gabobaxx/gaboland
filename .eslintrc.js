@@ -11,9 +11,11 @@ module.exports = {
 	},
 	parser: '@typescript-eslint/parser',
 	extends: [
+		// '@remix-run/eslint-config',
+		// '@remix-run/eslint-config/node',
 		'eslint:recommended',
-		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
+		'plugin:react/recommended',
 	],
 	overrides: [
 		{
@@ -28,7 +30,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react'],
-	ignorePatterns: ['public/*', 'gatsby-node.js', 'gatsby-config.js'],
+	ignorePatterns: ['public/*', 'gatsby-node.js', 'gatsby-config.js', 'api/*'],
 	rules: {
 		'react/prop-types': 'off',
 		'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
