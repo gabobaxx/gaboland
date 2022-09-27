@@ -19,18 +19,18 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@lekoarts/gatsby-theme-cara": "^3.0.11",
+		"@lekoarts/gatsby-theme-emma": "^3.0.12",
 		"@remix-run/node": "1.7.2",
 		"@remix-run/react": "1.7.2",
 		"@remix-run/vercel": "1.7.2",
 		"@vercel/node": "2.5.18",
-		"marked": "4.1.0",
-		"tiny-invariant": "1.2.0",
-		"@lekoarts/gatsby-theme-cara": "^3.0.11",
-		"@lekoarts/gatsby-theme-emma": "^3.0.12",
 		"gatsby": "4.23.1",
 		"gatsby-plugin-manifest": "4.0.0",
+		"marked": "4.1.0",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"tiny-invariant": "1.2.0"
 	},
 	"devDependencies": {
 		"@remix-run/dev": "1.7.2",
