@@ -11,7 +11,10 @@ export default function Index() {
 					</Link>
 				</li>
 				<li>
-					<a href="/gatsby" className="text-xl text-blue-600 underline">
+					<a
+						href="https://gatsby.gabo.land"
+						className="text-xl text-blue-600 underline"
+					>
 						Gaboland v1.0.0-beta
 					</a>
 				</li>
