@@ -1,7 +1,5 @@
 export const styles = {
 	root: {
-		margin: 0,
-		padding: 0,
 		color: 'gs800',
 		backgroundColor: 'bg',
 		boxSizing: 'border-box',

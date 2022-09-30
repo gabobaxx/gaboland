@@ -11,19 +11,18 @@ import {
 	styles,
 	layout,
 	buttons,
-
 	cards,
-
 } from './styles/index';
 
 export default merge(tailwind, {
+	styles,
 	fonts,
 	/*fontSizes,*/
 	fontWeights,
 	lineHeights,
 	colors,
 	cards,
-	styles,
+
 	layout,
 	buttons,
 	initialColorModeName: 'light',

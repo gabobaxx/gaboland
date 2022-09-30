@@ -7,6 +7,7 @@ export const layout = {
 		display: 'block',
 		fontWeight: 'bold',
 		textAlign: 'center',
+		backgroundColor: 'red',
 	},
 	header: {
 		my: 24,
