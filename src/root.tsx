@@ -1,10 +1,12 @@
-import type { ReactNode } from 'react';
 import { useContext, useEffect } from 'react';
 import { ThemeProvider } from '@theme-ui/core';
 import { withEmotionCache } from '@emotion/react';
-import type { MetaFunction } from '@remix-run/node';
 
-import theme from 'styles/theme';
+import type { ReactNode } from 'react';
+import type { MetaFunction, LinksFunction } from '@remix-run/node';
+
+import Theme from 'styles/theme';
+import Layout from 'components/layout';
 import { ServerStyleContext, ClientStyleContext } from './styles/context';
 
 import {
@@ -16,6 +18,14 @@ import {
 	ScrollRestoration,
 } from '@remix-run/react';
 
+import { stylesheet } from 'styles';
+
+export const links: LinksFunction = () => [
+	stylesheet.reset,
+	stylesheet.fonts,
+	stylesheet.icons,
+];
+
 export const meta: MetaFunction = () => ({
 	charset: 'utf-8',
 	title: 'Gaboland - Solution Maker',
@@ -26,7 +36,7 @@ type DocumentProps = {
 	children: ReactNode;
 };
 const Document = withEmotionCache(
-	({ children }: DocumentProps, emotionCache) => {
+	({ children }: DocumentProps, _emotionCache) => {
 		const serverStyleData = useContext(ServerStyleContext);
 		const clientStyleData = useContext(ClientStyleContext);
 		const resetClientStyleData = clientStyleData?.reset || function () {};
@@ -64,8 +74,10 @@ const Document = withEmotionCache(
 export default function App() {
 	return (
 		<Document>
-			<ThemeProvider theme={theme}>
-				<Outlet />
+			<ThemeProvider theme={Theme}>
+				<Layout>
+					<Outlet />
+				</Layout>
 			</ThemeProvider>
 		</Document>
 	);

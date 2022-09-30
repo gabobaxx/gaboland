@@ -62,7 +62,9 @@ typings/
 
 .cache
 **/.cache
-public
+public/build 
+public/gatsby
+build
 
 .idea
 .vscode
