@@ -2,7 +2,7 @@
 import { animated, useSpring, config } from 'react-spring';
 import { Container, jsx, Flex, Heading, Box, Card } from 'theme-ui';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from './layout';
 import SEO from './seo';
 import Hero from '@lekoarts/gatsby-theme-emma/src/components/hero';

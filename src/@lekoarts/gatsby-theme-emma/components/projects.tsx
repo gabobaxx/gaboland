@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Container, Themed } from 'theme-ui';
 import { useTrail } from 'react-spring';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from './layout';
 import ProjectItem from './project-item';
 
