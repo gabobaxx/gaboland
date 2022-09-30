@@ -1,20 +1,22 @@
-import * as React from 'react';
+import type { ReactNode } from 'react';
 import { Image, Box } from 'theme-ui';
 
-const Hero = ({
-	children,
-	name = 'Gabriel',
-	imageSrc = 'me.jpg',
-	location = 'Venezuela',
-	imageAlt = 'Selfie of Me',
-	occu = 'Future Systems Engineer',
-}) => (
+type HeroProps = {
+	children?: ReactNode;
+	name?: string;
+	imageSrc?: string;
+	imageAlt?: string;
+	country?: string;
+	occupation?: string;
+};
+
+const Hero = (props: HeroProps) => (
 	<Box as="section" sx={{ gridColumn: '1/-1' }}>
 		<Box sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
 			<Image
 				as={Image}
-				src={imageSrc}
-				alt={imageAlt}
+				src={props.imageSrc || 'assets/me.jpg'}
+				alt={props.imageAlt || 'Selfie'}
 				sx={{ borderRadius: '50%', width: '100%', height: 200 }}
 			/>
 			<Box
@@ -28,19 +30,19 @@ const Hero = ({
 					flexDirection: 'column',
 				}}
 			>
-				<Box as="h2">Hi, I am {name}.</Box>
-				<Box as="h5">{occu}.</Box>
+				<Box as="h2">Hi, I am {props.name || 'Gabriel'}.</Box>
+				<Box as="h5">{props.occupation || 'Software Engineer'}.</Box>
 				<Box as="h4">
 					<i
 						style={{ marginRight: 5 + 'px' }}
 						className="bi bi-geo-alt-fill"
 					></i>
-					{location}
+					{props.country || 'Venezuela'}
 				</Box>
 			</Box>
 		</Box>
 
-		{children}
+		{props.children}
 	</Box>
 );
 
