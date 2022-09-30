@@ -1,24 +1,29 @@
-/* eslint-disable react/react-in-jsx-scope */
-import { Link } from '@remix-run/react';
+import { Box } from 'theme-ui';
+import Hero from 'components/hero';
+// import Contact from 'components/contact';
+// import Skills from 'components/skills';
+// import Projects from 'components/projects';
+import Experiences from 'components/experiencies';
 
 export default function Index() {
 	return (
-		<div className="mx-auto mt-16 max-w-7xl text-center">
-			<ul>
-				<li>
-					<Link to="/posts" className="text-xl text-blue-600 underline">
-						Blog Posts
-					</Link>
-				</li>
-				<li>
-					<a
-						href="https://gatsby.gabo.land"
-						className="text-xl text-blue-600 underline"
-					>
-						Gaboland v1.0.0-beta
-					</a>
-				</li>
-			</ul>
+		<div style={{ minHeight: '55vh' }}>
+			<Box
+				as="main"
+				sx={{
+					display: 'grid',
+					gridGap: '3rem',
+					maxWidth: 720,
+					margin: '0 auto',
+					padding: '0 24px',
+				}}
+			>
+				<Hero />
+				{/*<Projects /> ! Making page refresh */}
+				{/* <Contact /> ! Making page refresh */}
+				{/* <Skills /> ! Making page refresh */}
+				<Experiences />
+			</Box>
 		</div>
 	);
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 
