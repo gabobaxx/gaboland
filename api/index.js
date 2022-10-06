@@ -106,181 +106,10 @@ __export(root_exports, {
   links: () => links,
   meta: () => meta
 });
-var import_react7 = require("react"), import_core = require("@theme-ui/core"), import_react8 = require("@emotion/react");
+var import_react7 = require("react"), import_react8 = require("@emotion/react");
 
 // src/styles/theme/index.js
-var import_theme_ui = require("theme-ui"), import_presets2 = require("@theme-ui/presets");
-
-// src/styles/theme/styles/buttons.js
-var buttons = {
-  toggle: {
-    color: "gs800",
-    border: "none",
-    backgroundColor: "primary",
-    cursor: "pointer",
-    alignSelf: "center",
-    fontFamily: "body"
-  }
-};
-
-// src/styles/theme/styles/fonts.js
-var fonts = {
-  head: "Noto Sans HK",
-  body: "Manrope"
-};
-var fontWeights = {
-  thin: 100,
-  extraLight: 200,
-  light: 300,
-  regular: 400,
-  bold: 700
-}, lineHeights = {
-  body: "160%"
-};
-
-// src/styles/theme/styles/layout.js
-var layout = {
-  footer: {
-    py: 20,
-    px: 24,
-    fontSize: 10,
-    color: "gs100",
-    display: "block",
-    fontWeight: "bold",
-    textAlign: "center",
-    backgroundColor: "red"
-  },
-  header: {
-    my: 24,
-    px: [48, 50],
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "center"
-  },
-  main: {
-    position: "relative"
-  },
-  container: {
-    padding: 4,
-    maxWidth: "5xl"
-  }
-};
-
-// src/styles/theme/styles/styles.js
-var styles = {
-  root: {
-    color: "gs800",
-    backgroundColor: "bg",
-    boxSizing: "border-box",
-    MozOsxFontSmoothing: "grayscale",
-    WebkitFontSmoothing: "antialiased",
-    textRendering: "optimizeLegibility"
-  },
-  p: {
-    fontSize: [1, 2],
-    lineHeight: "body",
-    letterSpacing: "-0.003em",
-    gridColumn: "1/-1",
-    "--x-height-multiplier": 0.35,
-    "--baseline-multiplier": 0.179
-  },
-  h1: {
-    fontSize: [5, 6],
-    mt: 2,
-    gridColumn: "1/-1"
-  },
-  h2: {
-    mt: 2,
-    fontSize: [20, 30],
-    fontFamily: "head",
-    fontWeight: "bold",
-    textAlign: "start",
-    gridColumn: "1/-1"
-  },
-  h3: {
-    fontSize: [3, 4],
-    mt: 3,
-    gridColumn: "1/-1"
-  },
-  h4: {
-    fontSize: [2, 3],
-    gridColumn: "1/-1"
-  },
-  h5: {
-    fontSize: [1, 2],
-    gridColumn: "1/-1"
-  },
-  h6: {
-    fontSize: 1,
-    mb: 2,
-    gridColumn: "1/-1"
-  }
-};
-
-// src/styles/theme/styles/modes.js
-var import_presets = require("@theme-ui/presets"), modes = {
-  dark: {
-    text: import_presets.tailwind.colors.white,
-    primary: import_presets.tailwind.colors.pink[4],
-    background: import_presets.tailwind.colors.gray[8],
-    textMuted: import_presets.tailwind.colors.gray[5]
-  }
-};
-
-// src/styles/theme/styles/colors.js
-var colors = {
-  modes,
-  primary: "#994747",
-  p100: "#C29191",
-  p200: "#B87E7E",
-  p300: "#AD6C6C",
-  p400: "#A35959",
-  p600: "#8A4040",
-  p700: "#7A3939",
-  p800: "#6B3232",
-  p900: "#5C2B2B",
-  pgradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
-  secondary: "#D1917F",
-  s100: "#e3bdb2",
-  s200: "#dfb2a5",
-  s300: "#daa799",
-  s400: "#d69c8c",
-  s600: "#bc8372",
-  s700: "#a77466",
-  s800: "#926659",
-  s900: "#7d574c",
-  sgradient: "linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)",
-  tertiary: "#6A767C",
-  t100: "#a6adb0",
-  t200: "#979fa3",
-  t300: "#E1D5DD",
-  t400: "#798489",
-  t600: "#5f6a70",
-  t700: "#555e63",
-  t800: "#4a5357",
-  t900: "#40474a",
-  tgradient: "linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)",
-  grayscale: "#BDBDBD",
-  gs100: "#F8F8F8",
-  gs200: "#EBEBEB",
-  gs300: "#DEDEDE",
-  gs400: "#D1D1D1",
-  gs600: "#848484",
-  gs700: "#5F5F5F",
-  gs800: "#393939",
-  gs900: "#131313",
-  alert: "#BE342D",
-  warning: "#F2C94C",
-  success: "#3CB96E",
-  bg: "#FCFCFC",
-  bgInput: "#EFF0F6",
-  bgCard: "#FCFCFC",
-  checks: "#F7F7FC",
-  light: "#E4DAFF",
-  shadowFigma: "rgba(0,0,0,.8)",
-  strokeButton: "#D9DBE9",
-  figmaTitle: "#6E7191"
-};
+var import_theme_ui = require("theme-ui"), import_presets = require("@theme-ui/presets");
 
 // src/styles/theme/styles/cards.js
 var cards = {
@@ -331,21 +160,185 @@ var cards = {
   }
 };
 
+// src/styles/theme/styles/styles.js
+var styles = {
+  root: {
+    color: "gs800",
+    boxSizing: "border-box",
+    MozOsxFontSmoothing: "grayscale",
+    WebkitFontSmoothing: "antialiased",
+    textRendering: "optimizeLegibility"
+  },
+  p: {
+    fontSize: [1, 2],
+    lineHeight: "body",
+    letterSpacing: "-0.003em",
+    gridColumn: "1/-1",
+    "--x-height-multiplier": 0.35,
+    "--baseline-multiplier": 0.179
+  },
+  h1: {
+    fontSize: [5, 6],
+    mt: 2,
+    gridColumn: "1/-1"
+  },
+  h2: {
+    mt: 2,
+    fontSize: [20, 30],
+    fontFamily: "head",
+    fontWeight: "bold",
+    textAlign: "start",
+    gridColumn: "1/-1"
+  },
+  h3: {
+    fontSize: [3, 4],
+    mt: 3,
+    gridColumn: "1/-1"
+  },
+  h4: {
+    fontSize: [2, 3],
+    gridColumn: "1/-1"
+  },
+  h5: {
+    fontSize: [1, 2],
+    gridColumn: "1/-1"
+  },
+  h6: {
+    fontSize: 1,
+    mb: 2,
+    gridColumn: "1/-1"
+  }
+};
+
+// src/styles/theme/styles/layout.js
+var layout = {
+  footer: {
+    py: 20,
+    px: 24,
+    fontSize: 10,
+    color: "gs100",
+    display: "block",
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "red"
+  },
+  header: {
+    my: 24,
+    px: [48, 50],
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center"
+  },
+  main: {
+    position: "relative"
+  },
+  container: {
+    padding: 4,
+    maxWidth: "5xl"
+  }
+};
+
+// src/styles/theme/styles/buttons.js
+var buttons = {
+  toggle: {
+    color: "gs800",
+    border: "none",
+    backgroundColor: "primary",
+    cursor: "pointer",
+    alignSelf: "center",
+    fontFamily: "body"
+  }
+};
+
+// src/styles/theme/styles/fonts.js
+var fonts = {
+  head: "Noto Sans HK",
+  body: "Manrope"
+};
+var fontWeights = {
+  thin: 100,
+  extraLight: 200,
+  light: 300,
+  regular: 400,
+  bold: 700
+}, lineHeights = {
+  body: "160%"
+};
+
 // src/styles/theme/index.js
-var theme_default = (0, import_theme_ui.merge)(import_presets2.tailwind, {
+var theme_default = (0, import_theme_ui.merge)(import_presets.tailwind, {
+  config: {
+    initialColorModeName: "light"
+  },
+  colors: {
+    primary: "#994747",
+    p100: "#C29191",
+    p200: "#B87E7E",
+    p300: "#AD6C6C",
+    p400: "#A35959",
+    p600: "#8A4040",
+    p700: "#7A3939",
+    p800: "#6B3232",
+    p900: "#5C2B2B",
+    pgradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
+    secondary: "#D1917F",
+    s100: "#e3bdb2",
+    s200: "#dfb2a5",
+    s300: "#daa799",
+    s400: "#d69c8c",
+    s600: "#bc8372",
+    s700: "#a77466",
+    s800: "#926659",
+    s900: "#7d574c",
+    sgradient: "linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)",
+    tertiary: "#6A767C",
+    t100: "#a6adb0",
+    t200: "#979fa3",
+    t300: "#E1D5DD",
+    t400: "#798489",
+    t600: "#5f6a70",
+    t700: "#555e63",
+    t800: "#4a5357",
+    t900: "#40474a",
+    tgradient: "linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)",
+    grayscale: "#BDBDBD",
+    gs100: "#F8F8F8",
+    gs200: "#EBEBEB",
+    gs300: "#DEDEDE",
+    gs400: "#D1D1D1",
+    gs600: "#848484",
+    gs700: "#5F5F5F",
+    gs800: "#393939",
+    gs900: "#131313",
+    alert: "#BE342D",
+    warning: "#F2C94C",
+    success: "#3CB96E",
+    bg: "#FCFCFC",
+    bgInput: "#EFF0F6",
+    bgCard: "#FCFCFC",
+    checks: "#F7F7FC",
+    light: "#E4DAFF",
+    shadowFigma: "rgba(0,0,0,.8)",
+    strokeButton: "#D9DBE9",
+    figmaTitle: "#6E7191",
+    background: "#fff",
+    modes: {
+      dark: {
+        background: "#0E0E0E"
+      }
+    }
+  },
   styles,
   fonts,
   fontWeights,
   lineHeights,
-  colors,
   cards,
   layout,
-  buttons,
-  initialColorModeName: "light",
-  config: {
-    useCustomProperties: !0
-  }
+  buttons
 });
+
+// src/root.tsx
+var import_theme_ui8 = require("theme-ui");
 
 // src/components/header/index.tsx
 var import_theme_ui4 = require("theme-ui"), import_react5 = require("@remix-run/react");
@@ -679,12 +672,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), links = () => [
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Meta, {}, void 0, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 52,
+              lineNumber: 53,
               columnNumber: 6
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Links, {}, void 0, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 53,
+              lineNumber: 54,
               columnNumber: 6
             }, this),
             serverStyleData == null ? void 0 : serverStyleData.map(({ key, ids, css }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("style", {
@@ -692,13 +685,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), links = () => [
               dangerouslySetInnerHTML: { __html: css }
             }, key, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 55,
+              lineNumber: 56,
               columnNumber: 7
             }, this))
           ]
         }, void 0, !0, {
           fileName: "src/root.tsx",
-          lineNumber: 51,
+          lineNumber: 52,
           columnNumber: 5
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
@@ -706,56 +699,56 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), links = () => [
             children,
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.ScrollRestoration, {}, void 0, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 65,
+              lineNumber: 66,
               columnNumber: 6
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Scripts, {}, void 0, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 66,
+              lineNumber: 67,
               columnNumber: 6
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.LiveReload, {}, void 0, !1, {
               fileName: "src/root.tsx",
-              lineNumber: 67,
+              lineNumber: 68,
               columnNumber: 6
             }, this)
           ]
         }, void 0, !0, {
           fileName: "src/root.tsx",
-          lineNumber: 63,
+          lineNumber: 64,
           columnNumber: 5
         }, this)
       ]
     }, void 0, !0, {
       fileName: "src/root.tsx",
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 4
     }, this);
   }
 );
 function App() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Document, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_core.ThemeProvider, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.ThemeProvider, {
       theme: theme_default,
       children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, {
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Outlet, {}, void 0, !1, {
           fileName: "src/root.tsx",
-          lineNumber: 79,
+          lineNumber: 80,
           columnNumber: 6
         }, this)
       }, void 0, !1, {
         fileName: "src/root.tsx",
-        lineNumber: 78,
+        lineNumber: 79,
         columnNumber: 5
       }, this)
     }, void 0, !1, {
       fileName: "src/root.tsx",
-      lineNumber: 77,
+      lineNumber: 78,
       columnNumber: 4
     }, this)
   }, void 0, !1, {
     fileName: "src/root.tsx",
-    lineNumber: 76,
+    lineNumber: 77,
     columnNumber: 3
   }, this);
 }
@@ -1176,18 +1169,18 @@ var routes_exports = {};
 __export(routes_exports, {
   default: () => Index
 });
-var import_theme_ui13 = require("theme-ui");
+var import_theme_ui15 = require("theme-ui");
 
 // src/components/hero/index.tsx
-var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Hero = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+var import_theme_ui9 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Hero = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
   as: "section",
   sx: { gridColumn: "1/-1" },
   children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
       sx: { maxWidth: 200, mx: "auto", mt: 60 },
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Image, {
-          as: import_theme_ui8.Image,
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Image, {
+          as: import_theme_ui9.Image,
           src: props.imageSrc || "assets/me.jpg",
           alt: props.imageAlt || "Selfie",
           sx: { borderRadius: "50%", width: "100%", height: 200 }
@@ -1196,7 +1189,7 @@ var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("re
           lineNumber: 16,
           columnNumber: 4
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
           sx: {
             mt: "1.5rem",
             width: "100%",
@@ -1207,7 +1200,7 @@ var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("re
             flexDirection: "column"
           },
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
               as: "h2",
               children: [
                 "Hi, I am ",
@@ -1219,7 +1212,7 @@ var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("re
               lineNumber: 33,
               columnNumber: 5
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
               as: "h5",
               children: [
                 props.occupation || "Software Engineer",
@@ -1230,7 +1223,7 @@ var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("re
               lineNumber: 34,
               columnNumber: 5
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui8.Box, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
               as: "h4",
               children: [
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("i", {
@@ -1269,13 +1262,13 @@ var import_theme_ui8 = require("theme-ui"), import_jsx_dev_runtime = require("re
 }, this), hero_default = Hero;
 
 // src/components/experiencies/index.tsx
-var import_theme_ui12 = require("theme-ui");
+var import_theme_ui13 = require("theme-ui");
 
 // src/components/cards/experience-card.jsx
-var React3 = require("react"), import_theme_ui11 = require("theme-ui");
+var React3 = require("react"), import_theme_ui12 = require("theme-ui");
 
 // src/components/badges/badge.jsx
-var import_react15 = require("react"), import_theme_ui9 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Badge = ({ children, borderColor = "t900" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui9.Box, {
+var import_react15 = require("react"), import_theme_ui10 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Badge = ({ children, borderColor = "t900" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui10.Box, {
   sx: {
     width: 80,
     height: "1.25rem",
@@ -1300,10 +1293,10 @@ var import_react15 = require("react"), import_theme_ui9 = require("theme-ui"), i
 var badge_default = Badge;
 
 // src/components/cards/small-card.jsx
-var React2 = require("react"), import_theme_ui10 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), SmallCard = ({ children, borderColor = "p700" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui10.Card, {
+var React2 = require("react"), import_theme_ui11 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), SmallCard = ({ children, borderColor = "p700" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Card, {
   sx: { variant: "cards", borderColor },
   variant: "cards.small",
-  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui10.Card, {
+  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Card, {
     as: "section",
     variant: "cards.small.content",
     children
@@ -1328,7 +1321,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ExperienceCard = 
 }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(small_card_default, {
   borderColor,
   children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Box, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Box, {
       as: "header",
       sx: {
         textAlign: "start",
@@ -1345,7 +1338,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ExperienceCard = 
       lineNumber: 46,
       columnNumber: 3
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Box, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Box, {
       as: "p",
       sx: {
         textAlign: "start",
@@ -1373,7 +1366,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ExperienceCard = 
       lineNumber: 60,
       columnNumber: 3
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Box, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Box, {
       as: "footer",
       sx: {
         display: "flex",
@@ -1389,7 +1382,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ExperienceCard = 
         lineHeight: "170%"
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui11.Box, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Box, {
           as: "p",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("i", {
@@ -1430,7 +1423,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ExperienceCard = 
 // src/components/experiencies/index.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Experiences() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Box, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui13.Box, {
     as: "section",
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", {
@@ -1440,7 +1433,7 @@ function Experiences() {
         lineNumber: 7,
         columnNumber: 4
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui12.Flex, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui13.Flex, {
         sx: {
           gap: "1.5rem",
           textAlign: "center",
@@ -1493,12 +1486,30 @@ function Experiences() {
   }, this);
 }
 
+// src/components/buttons/theme-changer-button.jsx
+var import_theme_ui14 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ThemeChangerButton = () => {
+  let [colorMode, setColorMode] = (0, import_theme_ui14.useColorMode)(), isDark = colorMode === "dark";
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", {
+    sx: { variant: "buttons.toggle", fontWeight: "semibold" },
+    onClick: (_e) => {
+      setColorMode(isDark ? "light" : "dark");
+    },
+    type: "button",
+    "aria-label": "Toggle dark mode",
+    children: isDark ? "Light" : "Dark"
+  }, void 0, !1, {
+    fileName: "src/components/buttons/theme-changer-button.jsx",
+    lineNumber: 10,
+    columnNumber: 3
+  }, this);
+}, theme_changer_button_default = ThemeChangerButton;
+
 // src/routes/index.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Index() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
     style: { minHeight: "55vh" },
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui13.Box, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui15.Box, {
       as: "main",
       sx: {
         display: "grid",
@@ -1508,31 +1519,36 @@ function Index() {
         padding: "0 24px"
       },
       children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(theme_changer_button_default, {}, void 0, !1, {
+          fileName: "src/routes/index.tsx",
+          lineNumber: 23,
+          columnNumber: 5
+        }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(hero_default, {}, void 0, !1, {
           fileName: "src/routes/index.tsx",
-          lineNumber: 21,
+          lineNumber: 24,
           columnNumber: 5
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Experiences, {}, void 0, !1, {
           fileName: "src/routes/index.tsx",
-          lineNumber: 25,
+          lineNumber: 28,
           columnNumber: 5
         }, this)
       ]
     }, void 0, !0, {
       fileName: "src/routes/index.tsx",
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 4
     }, this)
   }, void 0, !1, {
     fileName: "src/routes/index.tsx",
-    lineNumber: 10,
+    lineNumber: 12,
     columnNumber: 3
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "17e4d8ef", entry: { module: "/build/entry.client-RLAEMVOP.js", imports: ["/build/_shared/chunk-CZ3VUE3C.js", "/build/_shared/chunk-A5PINL2N.js", "/build/_shared/chunk-QXX53SGV.js", "/build/_shared/chunk-MLBUYSNZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-R4PHDCCL.js", imports: ["/build/_shared/chunk-M43XCF7P.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-VGP2K7FD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-G7MTH2HZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-H2ADLMH7.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-O52J522H.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-E7Q2UUVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-XHSJF6Z4.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-5IBOQTUA.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-17E4D8EF.js" };
+var assets_manifest_default = { version: "5a7c4f6b", entry: { module: "/build/entry.client-GVWTJI32.js", imports: ["/build/_shared/chunk-CZ3VUE3C.js", "/build/_shared/chunk-JBG5D5FT.js", "/build/_shared/chunk-QXX53SGV.js", "/build/_shared/chunk-MLBUYSNZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-N4WNTIXH.js", imports: ["/build/_shared/chunk-EZCKECFQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-VGP2K7FD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GUP6QEAS.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-H2ADLMH7.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-O52J522H.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-E7Q2UUVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-XHSJF6Z4.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-5IBOQTUA.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-5A7C4F6B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

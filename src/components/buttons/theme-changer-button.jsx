@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { useColorMode, jsx } from 'theme-ui';
+import { useColorMode } from 'theme-ui';
 
 const ThemeChangerButton = () => {
 	const [colorMode, setColorMode] = useColorMode();

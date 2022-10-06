@@ -1,13 +1,14 @@
 import { useContext, useEffect } from 'react';
-import { ThemeProvider } from '@theme-ui/core';
 import { withEmotionCache } from '@emotion/react';
-
+// * Types/Interfaces
 import type { ReactNode } from 'react';
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
-
+// * Theme
 import Theme from 'styles/theme';
-import Layout from 'components/layout';
+import { ThemeProvider } from 'theme-ui';
 import { ServerStyleContext, ClientStyleContext } from './styles/context';
+
+import Layout from 'components/layout';
 
 import {
 	Links,

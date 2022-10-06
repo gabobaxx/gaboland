@@ -5,6 +5,8 @@ import Hero from 'components/hero';
 // import Projects from 'components/projects';
 import Experiences from 'components/experiencies';
 
+import ThemeChangerButton from 'components/buttons/theme-changer-button';
+
 export default function Index() {
 	return (
 		<div style={{ minHeight: '55vh' }}>
@@ -18,6 +20,7 @@ export default function Index() {
 					padding: '0 24px',
 				}}
 			>
+				<ThemeChangerButton />
 				<Hero />
 				{/*<Projects /> ! Making page refresh */}
 				{/* <Contact /> ! Making page refresh */}
