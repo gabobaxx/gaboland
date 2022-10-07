@@ -1,83 +1,93 @@
-import './styles/global.css';
 import { merge } from 'theme-ui';
 import { tailwind } from '@theme-ui/presets';
 
 import { cards } from './styles/cards';
+import { colors } from './styles/colors';
 import { styles } from './styles/styles';
 import { layout } from './styles/layout';
 import { buttons } from './styles/buttons';
 import { fonts, fontSizes, fontWeights, lineHeights } from './styles/fonts';
+
+const DarkModeColors = {
+	faztweb: '#0E0E0E',
+	kentcdodds: '#1F2028',
+};
 
 export default merge(tailwind, {
 	config: {
 		initialColorModeName: 'light',
 	},
 	colors: {
-		primary: '#994747',
-		p100: '#C29191',
-		p200: '#B87E7E',
-		p300: '#AD6C6C',
-		p400: '#A35959',
-		p600: '#8A4040',
-		p700: '#7A3939',
-		p800: '#6B3232',
-		p900: '#5C2B2B',
-		pgradient: 'linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)',
+		primary: colors.primary[500],
+		P100: colors.primary[100],
+		P200: colors.primary[200],
+		P300: colors.primary[300],
+		P400: colors.primary[400],
+		P600: colors.primary[600],
+		P700: colors.primary[700],
+		P800: colors.primary[800],
+		P900: colors.primary[900],
 
-		secondary: '#D1917F',
-		s100: '#e3bdb2',
-		s200: '#dfb2a5',
-		s300: '#daa799',
-		s400: '#d69c8c',
-		s600: '#bc8372',
-		s700: '#a77466',
-		s800: '#926659',
-		s900: '#7d574c',
-		sgradient: 'linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)',
+		secondary: colors.secondary[500],
+		S100: colors.secondary[100],
+		S200: colors.secondary[200],
+		S300: colors.secondary[300],
+		S400: colors.secondary[400],
+		S600: colors.secondary[600],
+		S700: colors.secondary[700],
+		S800: colors.secondary[800],
+		S900: colors.secondary[900],
 
-		tertiary: '#6A767C',
-		t100: '#a6adb0',
-		t200: '#979fa3',
-		t300: '#E1D5DD',
-		t400: '#798489',
-		t600: '#5f6a70',
-		t700: '#555e63',
-		t800: '#4a5357',
-		t900: '#40474a',
-		tgradient: 'linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)',
+		tertiary: colors.tertiary[500],
+		T100: colors.tertiary[100],
+		T200: colors.tertiary[200],
+		T300: colors.tertiary[300],
+		T400: colors.tertiary[400],
+		T600: colors.tertiary[600],
+		T700: colors.tertiary[700],
+		T800: colors.tertiary[800],
+		T900: colors.tertiary[900],
 
-		grayscale: '#BDBDBD',
-		gs100: '#F8F8F8',
-		gs200: '#EBEBEB',
-		gs300: '#DEDEDE',
-		gs400: '#D1D1D1',
-		gs600: '#848484',
-		gs700: '#5F5F5F',
-		gs800: '#393939',
-		gs900: '#131313',
+		grayscale: colors.grayscale[500],
+		GS100: colors.grayscale[100],
+		GS200: colors.grayscale[200],
+		GS300: colors.grayscale[300],
+		GS400: colors.grayscale[400],
+		GS600: colors.grayscale[600],
+		GS700: colors.grayscale[700],
+		GS800: colors.grayscale[800],
+		GS900: colors.grayscale[900],
 
 		alert: '#BE342D',
 		warning: '#F2C94C',
 		success: '#3CB96E',
 
-		// Extras
+		// ? Extras
 		bg: '#FCFCFC',
-		bgInput: '#EFF0F6',
-		bgCard: '#FCFCFC',
-		checks: '#F7F7FC',
 		light: '#E4DAFF',
-		shadowFigma: 'rgba(0,0,0,.8)',
-		strokeButton: '#D9DBE9',
+		bgCard: '#FCFCFC',
+		bgInput: '#EFF0F6',
 		figmaTitle: '#6E7191',
-		background: '#fff',
+		strokeButton: '#D9DBE9',
+		shadowFigma: 'rgba(0,0,0,.8)',
+
+		// ! Gradients problems: Document does not read gradient colors.
+		PGradient: 'linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)',
+		sgradient: 'linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)',
+		tgradient: 'linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)',
+
+		// * Light Theme
+		HeaderText: colors.primary[700],
+
 		modes: {
 			dark: {
-				background: '#0E0E0E',
+				HeaderText: colors.primary[500],
+				background: DarkModeColors.faztweb,
 			},
 		},
 	},
 
-	/*fontSizes,*/
+	fontSizes,
 	styles,
 	fonts,
 	fontWeights,

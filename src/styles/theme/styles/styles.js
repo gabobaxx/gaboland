@@ -1,6 +1,7 @@
 export const styles = {
 	root: {
 		color: 'gs800',
+		fontSize: '16px',
 		boxSizing: 'border-box',
 		MozOsxFontSmoothing: 'grayscale',
 		WebkitFontSmoothing: 'antialiased',

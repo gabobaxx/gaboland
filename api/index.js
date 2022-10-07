@@ -164,6 +164,7 @@ var cards = {
 var styles = {
   root: {
     color: "gs800",
+    fontSize: "16px",
     boxSizing: "border-box",
     MozOsxFontSmoothing: "grayscale",
     WebkitFontSmoothing: "antialiased",
@@ -227,7 +228,13 @@ var layout = {
     px: [48, 50],
     display: "flex",
     flexWrap: "wrap",
-    alignItems: "center"
+    alignItems: "center",
+    fontFamily: "head",
+    fontWeight: "bold",
+    a: {
+      color: "HeaderText",
+      ":hover": { color: "P300", textDecoration: "none" }
+    }
   },
   main: {
     position: "relative"
@@ -254,8 +261,20 @@ var buttons = {
 var fonts = {
   head: "Noto Sans HK",
   body: "Manrope"
-};
-var fontWeights = {
+}, fontSizes = [
+  "0.62rem",
+  "0.75rem",
+  "0.87rem",
+  "1.00rem",
+  "1.12rem",
+  "1.25rem",
+  "1.50rem",
+  "1.87rem",
+  "2.34rem",
+  "2.93rem",
+  "3.66rem",
+  "4.57rem"
+], fontWeights = {
   thin: 100,
   extraLight: 200,
   light: 300,
@@ -266,21 +285,36 @@ var fontWeights = {
 };
 
 // src/styles/theme/index.js
-var theme_default = (0, import_theme_ui.merge)(import_presets.tailwind, {
+var DarkModeColors = {
+  faztweb: "#0E0E0E",
+  kentcdodds: "#1F2028"
+}, colors = {
+  primary: {
+    100: "#C29191",
+    200: "#B87E7E",
+    300: "#AD6C6C",
+    500: "#994747",
+    400: "#A35959",
+    600: "#8A4040",
+    700: "#7A3939",
+    800: "#6B3232",
+    900: "#5C2B2B"
+  }
+}, theme_default = (0, import_theme_ui.merge)(import_presets.tailwind, {
   config: {
     initialColorModeName: "light"
   },
   colors: {
-    primary: "#994747",
-    p100: "#C29191",
-    p200: "#B87E7E",
-    p300: "#AD6C6C",
-    p400: "#A35959",
-    p600: "#8A4040",
-    p700: "#7A3939",
-    p800: "#6B3232",
-    p900: "#5C2B2B",
-    pgradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
+    primary: colors.primary[500],
+    P100: colors.primary[100],
+    P200: colors.primary[200],
+    P300: colors.primary[300],
+    P400: colors.primary[400],
+    P600: colors.primary[600],
+    P700: colors.primary[700],
+    P800: colors.primary[800],
+    P900: colors.primary[900],
+    PGradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
     secondary: "#D1917F",
     s100: "#e3bdb2",
     s200: "#dfb2a5",
@@ -321,13 +355,15 @@ var theme_default = (0, import_theme_ui.merge)(import_presets.tailwind, {
     shadowFigma: "rgba(0,0,0,.8)",
     strokeButton: "#D9DBE9",
     figmaTitle: "#6E7191",
-    background: "#fff",
+    HeaderText: colors.primary[700],
     modes: {
       dark: {
-        background: "#0E0E0E"
+        HeaderText: colors.primary[500],
+        background: DarkModeColors.faztweb
       }
     }
   },
+  fontSizes,
   styles,
   fonts,
   fontWeights,
@@ -371,60 +407,18 @@ var import_theme_ui3 = require("theme-ui"), import_react4 = require("@remix-run/
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function NavLinks() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui3.Flex, {
-    sx: {
-      ml: 1,
-      order: 4,
-      display: "flex",
-      justifyContent: "flex-end",
-      a: {
-        fontSize: 10,
-        color: "p700",
-        display: "flex",
-        alignItems: "center",
-        "&:hover": {
-          color: "p300",
-          textDecoration: "none"
-        },
-        "a:not(:last-of-type)": {
-          mr: 2
-        },
-        "&:not(:first-of-type)": {
-          ml: 1
-        }
-      }
-    },
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui3.Flex, {
-      as: "nav",
-      sx: {
-        flex: ["1 0 50%", 1],
-        justifyContent: "flex-start",
-        "a:not(:last-of-type)": {
-          mr: 3
-        }
-      },
-      "aria-label": "Primary Navigation",
-      children: navLinks.length !== 0 && navLinks.map((n) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(links_default, {
-        sx: (t) => {
-          var _a;
-          return {
-            ...(_a = t.styles) == null ? void 0 : _a.a,
-            color: "text",
-            ":hover": { color: "primary", textDecoration: "none" }
-          };
-        },
-        to: n.slug,
-        as: import_react4.Link,
-        children: n.title
-      }, n.slug, !1, {
-        fileName: "src/components/nav/index.tsx",
-        lineNumber: 46,
-        columnNumber: 7
-      }, this))
-    }, void 0, !1, {
+    as: "nav",
+    "aria-label": "Primary Navigation",
+    sx: { gap: ["10px", "24px"], a: { fontSize: 0 } },
+    children: navLinks.length !== 0 && navLinks.map((n) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(links_default, {
+      as: import_react4.Link,
+      to: n.slug,
+      children: n.title
+    }, n.slug, !1, {
       fileName: "src/components/nav/index.tsx",
-      lineNumber: 33,
-      columnNumber: 4
-    }, this)
+      lineNumber: 16,
+      columnNumber: 6
+    }, this))
   }, void 0, !1, {
     fileName: "src/components/nav/index.tsx",
     lineNumber: 9,
@@ -436,10 +430,6 @@ function NavLinks() {
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Header = ({ title = "Gaboland" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui4.Flex, {
   as: "header",
   variant: "layout.header",
-  sx: {
-    fontFamily: "head",
-    fontWeight: "bold"
-  },
   children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui4.Flex, {
       sx: {
@@ -451,24 +441,20 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Header = ({ title
         to: "/",
         as: import_react5.Link,
         "aria-label": `${title}, Back to homepage`,
-        sx: {
-          color: "p700",
-          ":hover": { color: "p300", textDecoration: "none" }
-        },
         children: title
       }, void 0, !1, {
         fileName: "src/components/header/index.tsx",
-        lineNumber: 28,
+        lineNumber: 21,
         columnNumber: 5
       }, this)
     }, void 0, !1, {
       fileName: "src/components/header/index.tsx",
-      lineNumber: 21,
+      lineNumber: 14,
       columnNumber: 4
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(NavLinks, {}, void 0, !1, {
       fileName: "src/components/header/index.tsx",
-      lineNumber: 40,
+      lineNumber: 25,
       columnNumber: 4
     }, this)
   ]
@@ -1548,7 +1534,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "5a7c4f6b", entry: { module: "/build/entry.client-GVWTJI32.js", imports: ["/build/_shared/chunk-CZ3VUE3C.js", "/build/_shared/chunk-JBG5D5FT.js", "/build/_shared/chunk-QXX53SGV.js", "/build/_shared/chunk-MLBUYSNZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-N4WNTIXH.js", imports: ["/build/_shared/chunk-EZCKECFQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-VGP2K7FD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GUP6QEAS.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-H2ADLMH7.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-O52J522H.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-E7Q2UUVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-XHSJF6Z4.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-5IBOQTUA.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-5A7C4F6B.js" };
+var assets_manifest_default = { version: "e5f183e8", entry: { module: "/build/entry.client-GVWTJI32.js", imports: ["/build/_shared/chunk-CZ3VUE3C.js", "/build/_shared/chunk-JBG5D5FT.js", "/build/_shared/chunk-QXX53SGV.js", "/build/_shared/chunk-MLBUYSNZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-JZ2PRQQP.js", imports: ["/build/_shared/chunk-EZCKECFQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-VGP2K7FD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GUP6QEAS.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-H2ADLMH7.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-O52J522H.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-E7Q2UUVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-XHSJF6Z4.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-5IBOQTUA.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E5F183E8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

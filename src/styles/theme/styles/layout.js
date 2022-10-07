@@ -11,10 +11,16 @@ export const layout = {
 	},
 	header: {
 		my: 24,
-		px: [48, 50] /* [breakpoints] */,
+		px: [48, 50] /* [phone, desktop] */,
 		display: 'flex',
 		flexWrap: 'wrap',
 		alignItems: 'center',
+		fontFamily: 'head',
+		fontWeight: 'bold',
+		a: {
+			color: 'HeaderText',
+			':hover': { color: 'P300', textDecoration: 'none' },
+		},
 	},
 	main: {
 		position: 'relative',
