@@ -10,14 +10,7 @@ type HeaderProps = {
 };
 const Header = ({ title = 'Gaboland' }: HeaderProps) => {
 	return (
-		<Flex
-			as="header"
-			variant="layout.header"
-			sx={{
-				fontFamily: 'head',
-				fontWeight: 'bold',
-			}}
-		>
+		<Flex as="header" variant="layout.header">
 			<Flex
 				sx={{
 					flex: 1,
@@ -25,15 +18,7 @@ const Header = ({ title = 'Gaboland' }: HeaderProps) => {
 					justifyContent: navLinks.length === 0 ? 'center' : 'flex-start',
 				}}
 			>
-				<Link
-					to="/"
-					as={RLink}
-					aria-label={`${title}, Back to homepage`}
-					sx={{
-						color: 'p700',
-						':hover': { color: 'p300', textDecoration: 'none' },
-					}}
-				>
+				<Link to="/" as={RLink} aria-label={`${title}, Back to homepage`}>
 					{title}
 				</Link>
 			</Flex>
