@@ -160,6 +160,54 @@ var cards = {
   }
 };
 
+// src/styles/theme/styles/colors.ts
+var colors = {
+  primary: {
+    100: "#C29191",
+    200: "#B87E7E",
+    300: "#AD6C6C",
+    500: "#994747",
+    400: "#A35959",
+    600: "#8A4040",
+    700: "#7A3939",
+    800: "#6B3232",
+    900: "#5C2B2B"
+  },
+  secondary: {
+    100: "#e3bdb2",
+    200: "#dfb2a5",
+    300: "#daa799",
+    500: "#D1917F",
+    400: "#d69c8c",
+    600: "#bc8372",
+    700: "#a77466",
+    800: "#926659",
+    900: "#7d574c"
+  },
+  tertiary: {
+    100: "#a6adb0",
+    200: "#979fa3",
+    300: "#E1D5DD",
+    400: "#798489",
+    500: "#6A767C",
+    600: "#5f6a70",
+    700: "#555e63",
+    800: "#4a5357",
+    900: "#40474a"
+  },
+  grayscale: {
+    100: "#F8F8F8",
+    200: "#EBEBEB",
+    300: "#DEDEDE",
+    400: "#D1D1D1",
+    500: "#BDBDBD",
+    600: "#848484",
+    700: "#5F5F5F",
+    800: "#393939",
+    900: "#131313"
+  }
+};
+
 // src/styles/theme/styles/styles.js
 var styles = {
   root: {
@@ -288,18 +336,6 @@ var fonts = {
 var DarkModeColors = {
   faztweb: "#0E0E0E",
   kentcdodds: "#1F2028"
-}, colors = {
-  primary: {
-    100: "#C29191",
-    200: "#B87E7E",
-    300: "#AD6C6C",
-    500: "#994747",
-    400: "#A35959",
-    600: "#8A4040",
-    700: "#7A3939",
-    800: "#6B3232",
-    900: "#5C2B2B"
-  }
 }, theme_default = (0, import_theme_ui.merge)(import_presets.tailwind, {
   config: {
     initialColorModeName: "light"
@@ -314,47 +350,46 @@ var DarkModeColors = {
     P700: colors.primary[700],
     P800: colors.primary[800],
     P900: colors.primary[900],
-    PGradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
-    secondary: "#D1917F",
-    s100: "#e3bdb2",
-    s200: "#dfb2a5",
-    s300: "#daa799",
-    s400: "#d69c8c",
-    s600: "#bc8372",
-    s700: "#a77466",
-    s800: "#926659",
-    s900: "#7d574c",
-    sgradient: "linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)",
-    tertiary: "#6A767C",
-    t100: "#a6adb0",
-    t200: "#979fa3",
-    t300: "#E1D5DD",
-    t400: "#798489",
-    t600: "#5f6a70",
-    t700: "#555e63",
-    t800: "#4a5357",
-    t900: "#40474a",
-    tgradient: "linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)",
-    grayscale: "#BDBDBD",
-    gs100: "#F8F8F8",
-    gs200: "#EBEBEB",
-    gs300: "#DEDEDE",
-    gs400: "#D1D1D1",
-    gs600: "#848484",
-    gs700: "#5F5F5F",
-    gs800: "#393939",
-    gs900: "#131313",
+    secondary: colors.secondary[500],
+    S100: colors.secondary[100],
+    S200: colors.secondary[200],
+    S300: colors.secondary[300],
+    S400: colors.secondary[400],
+    S600: colors.secondary[600],
+    S700: colors.secondary[700],
+    S800: colors.secondary[800],
+    S900: colors.secondary[900],
+    tertiary: colors.tertiary[500],
+    T100: colors.tertiary[100],
+    T200: colors.tertiary[200],
+    T300: colors.tertiary[300],
+    T400: colors.tertiary[400],
+    T600: colors.tertiary[600],
+    T700: colors.tertiary[700],
+    T800: colors.tertiary[800],
+    T900: colors.tertiary[900],
+    grayscale: colors.grayscale[500],
+    GS100: colors.grayscale[100],
+    GS200: colors.grayscale[200],
+    GS300: colors.grayscale[300],
+    GS400: colors.grayscale[400],
+    GS600: colors.grayscale[600],
+    GS700: colors.grayscale[700],
+    GS800: colors.grayscale[800],
+    GS900: colors.grayscale[900],
     alert: "#BE342D",
     warning: "#F2C94C",
     success: "#3CB96E",
     bg: "#FCFCFC",
-    bgInput: "#EFF0F6",
-    bgCard: "#FCFCFC",
-    checks: "#F7F7FC",
     light: "#E4DAFF",
-    shadowFigma: "rgba(0,0,0,.8)",
-    strokeButton: "#D9DBE9",
+    bgCard: "#FCFCFC",
+    bgInput: "#EFF0F6",
     figmaTitle: "#6E7191",
+    strokeButton: "#D9DBE9",
+    shadowFigma: "rgba(0,0,0,.8)",
+    PGradient: "linear-gradient(96.38deg, #994747 34.72%, #40474A 83.72%)",
+    sgradient: "linear-gradient(180deg, #D1917F 0%, #F2C94C 100%)",
+    tgradient: "linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)",
     HeaderText: colors.primary[700],
     modes: {
       dark: {
@@ -739,6 +774,132 @@ function App() {
   }, this);
 }
 
+// src/routes/projects/projects.ts
+var projects_exports = {};
+__export(projects_exports, {
+  projects: () => projects
+});
+var projects = [
+  {
+    slug: "gaboland",
+    title: "Gaboland",
+    preview: "https://gabo.land",
+    description: "Personal website or a simple portfolio",
+    markdown: `### This is the [page] of Projects
+		# This is so amazing`
+  }
+];
+
+// src/routes/projects/$slug.tsx
+var slug_exports = {};
+__export(slug_exports, {
+  default: () => ProjectSlug,
+  loader: () => loader
+});
+var import_node = require("@remix-run/node"), import_react10 = require("@remix-run/react"), import_marked = require("marked"), import_tiny_invariant = __toESM(require("tiny-invariant"));
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader = async ({ params }) => {
+  (0, import_tiny_invariant.default)(params.slug, "params.slug is required");
+  let project = projects.find((project2) => project2.slug === params.slug);
+  (0, import_tiny_invariant.default)(project, `Post not found: ${params.slug}`);
+  let html = (0, import_marked.marked)(project.markdown);
+  return (0, import_node.json)({ project, html });
+};
+function ProjectSlug() {
+  let { project, html } = (0, import_react10.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
+    className: "mx-auto max-w-4xl",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
+        className: "my-6 border-b-2 text-center text-3xl",
+        children: project.title
+      }, void 0, !1, {
+        fileName: "src/routes/projects/$slug.tsx",
+        lineNumber: 42,
+        columnNumber: 4
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+        dangerouslySetInnerHTML: { __html: html }
+      }, void 0, !1, {
+        fileName: "src/routes/projects/$slug.tsx",
+        lineNumber: 43,
+        columnNumber: 4
+      }, this)
+    ]
+  }, void 0, !0, {
+    fileName: "src/routes/projects/$slug.tsx",
+    lineNumber: 41,
+    columnNumber: 3
+  }, this);
+}
+
+// src/routes/projects/index.tsx
+var projects_exports2 = {};
+__export(projects_exports2, {
+  default: () => Projects,
+  loader: () => loader2
+});
+var import_react11 = require("@remix-run/react"), import_fs = __toESM(require("fs")), import_path = __toESM(require("path")), import_readline = __toESM(require("readline")), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = () => {
+  let pathP = import_path.default.join(__dirname, "../src/routes/projects");
+  return import_readline.default.createInterface({
+    input: import_fs.default.createReadStream("index.tsx")
+  }).on("line", (linea) => console.log(linea)), null;
+};
+function Projects() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
+        children: "Posts"
+      }, void 0, !1, {
+        fileName: "src/routes/projects/index.tsx",
+        lineNumber: 21,
+        columnNumber: 4
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", {
+        children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Link, {
+              to: "admin",
+              className: "text-red-600 underline",
+              children: "Admin"
+            }, void 0, !1, {
+              fileName: "src/routes/projects/index.tsx",
+              lineNumber: 25,
+              columnNumber: 6
+            }, this)
+          }, void 0, !1, {
+            fileName: "src/routes/projects/index.tsx",
+            lineNumber: 24,
+            columnNumber: 5
+          }, this),
+          projects.map((project) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Link, {
+              to: project.slug,
+              className: "text-blue-600 underline",
+              children: project.title
+            }, void 0, !1, {
+              fileName: "src/routes/projects/index.tsx",
+              lineNumber: 31,
+              columnNumber: 7
+            }, this)
+          }, project.slug, !1, {
+            fileName: "src/routes/projects/index.tsx",
+            lineNumber: 30,
+            columnNumber: 6
+          }, this))
+        ]
+      }, void 0, !0, {
+        fileName: "src/routes/projects/index.tsx",
+        lineNumber: 23,
+        columnNumber: 4
+      }, this)
+    ]
+  }, void 0, !0, {
+    fileName: "src/routes/projects/index.tsx",
+    lineNumber: 20,
+    columnNumber: 3
+  }, this);
+}
+
 // src/routes/about/index.tsx
 var about_exports = {};
 __export(about_exports, {
@@ -762,12 +923,12 @@ function About() {
 }
 
 // src/routes/posts/$slug.tsx
-var slug_exports = {};
-__export(slug_exports, {
+var slug_exports2 = {};
+__export(slug_exports2, {
   default: () => PostSlug,
-  loader: () => loader
+  loader: () => loader3
 });
-var import_marked = require("marked"), import_node = require("@remix-run/node"), import_react10 = require("@remix-run/react"), import_tiny_invariant = __toESM(require("tiny-invariant"));
+var import_node2 = require("@remix-run/node"), import_react12 = require("@remix-run/react"), import_marked2 = require("marked"), import_tiny_invariant2 = __toESM(require("tiny-invariant"));
 
 // src/models/posts.server.ts
 var posts = [
@@ -793,15 +954,15 @@ async function createPost(post) {
 }
 
 // src/routes/posts/$slug.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader = async ({ params }) => {
-  (0, import_tiny_invariant.default)(params.slug, "params.slug is required");
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async ({ params }) => {
+  (0, import_tiny_invariant2.default)(params.slug, "params.slug is required");
   let post = await getPost(params.slug);
-  (0, import_tiny_invariant.default)(post, `Post not found: ${params.slug}`);
-  let html = (0, import_marked.marked)(post.markdown);
-  return (0, import_node.json)({ post, html });
+  (0, import_tiny_invariant2.default)(post, `Post not found: ${params.slug}`);
+  let html = (0, import_marked2.marked)(post.markdown);
+  return (0, import_node2.json)({ post, html });
 };
 function PostSlug() {
-  let { post, html } = (0, import_react10.useLoaderData)();
+  let { post, html } = (0, import_react12.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
     className: "mx-auto max-w-4xl",
     children: [
@@ -810,20 +971,20 @@ function PostSlug() {
         children: post.title
       }, void 0, !1, {
         fileName: "src/routes/posts/$slug.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 4
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         dangerouslySetInnerHTML: { __html: html }
       }, void 0, !1, {
         fileName: "src/routes/posts/$slug.tsx",
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 4
       }, this)
     ]
   }, void 0, !0, {
     fileName: "src/routes/posts/$slug.tsx",
-    lineNumber: 28,
+    lineNumber: 29,
     columnNumber: 3
   }, this);
 }
@@ -832,12 +993,12 @@ function PostSlug() {
 var admin_exports = {};
 __export(admin_exports, {
   default: () => PostAdmin,
-  loader: () => loader2
+  loader: () => loader4
 });
-var import_node2 = require("@remix-run/node"), import_react11 = require("@remix-run/react");
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async () => (0, import_node2.json)({ posts: await getPosts() });
+var import_node3 = require("@remix-run/node"), import_react13 = require("@remix-run/react");
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader4 = async () => (0, import_node3.json)({ posts: await getPosts() });
 function PostAdmin() {
-  let { posts: posts2 } = (0, import_react11.useLoaderData)();
+  let { posts: posts2 } = (0, import_react13.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
     className: "mx-auto max-w-4xl",
     children: [
@@ -846,7 +1007,7 @@ function PostAdmin() {
         children: "Blog Admin"
       }, void 0, !1, {
         fileName: "src/routes/posts/admin.tsx",
-        lineNumber: 20,
+        lineNumber: 19,
         columnNumber: 4
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -856,52 +1017,52 @@ function PostAdmin() {
             className: "col-span-4 md:col-span-1",
             children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", {
               children: posts2.map((post) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Link, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react13.Link, {
                   to: post.slug,
                   className: "text-blue-600 underline",
                   children: post.title
                 }, void 0, !1, {
                   fileName: "src/routes/posts/admin.tsx",
-                  lineNumber: 26,
+                  lineNumber: 25,
                   columnNumber: 9
                 }, this)
               }, post.slug, !1, {
                 fileName: "src/routes/posts/admin.tsx",
-                lineNumber: 25,
+                lineNumber: 24,
                 columnNumber: 8
               }, this))
             }, void 0, !1, {
               fileName: "src/routes/posts/admin.tsx",
-              lineNumber: 23,
+              lineNumber: 22,
               columnNumber: 6
             }, this)
           }, void 0, !1, {
             fileName: "src/routes/posts/admin.tsx",
-            lineNumber: 22,
+            lineNumber: 21,
             columnNumber: 5
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
             className: "col-span-4 md:col-span-3",
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Outlet, {}, void 0, !1, {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react13.Outlet, {}, void 0, !1, {
               fileName: "src/routes/posts/admin.tsx",
-              lineNumber: 34,
+              lineNumber: 33,
               columnNumber: 6
             }, this)
           }, void 0, !1, {
             fileName: "src/routes/posts/admin.tsx",
-            lineNumber: 33,
+            lineNumber: 32,
             columnNumber: 5
           }, this)
         ]
       }, void 0, !0, {
         fileName: "src/routes/posts/admin.tsx",
-        lineNumber: 21,
+        lineNumber: 20,
         columnNumber: 4
       }, this)
     ]
   }, void 0, !0, {
     fileName: "src/routes/posts/admin.tsx",
-    lineNumber: 19,
+    lineNumber: 18,
     columnNumber: 3
   }, this);
 }
@@ -911,10 +1072,10 @@ var admin_exports2 = {};
 __export(admin_exports2, {
   default: () => AdminIndex
 });
-var import_react12 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react14 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function AdminIndex() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.Link, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react14.Link, {
       to: "new",
       className: "text-blue-600 underline",
       children: "Create a New Post"
@@ -936,19 +1097,19 @@ __export(new_exports, {
   action: () => action,
   default: () => NewPost
 });
-var import_node3 = require("@remix-run/node"), import_react13 = require("@remix-run/react");
-var import_tiny_invariant2 = __toESM(require("tiny-invariant")), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), action = async ({ request }) => {
+var import_node4 = require("@remix-run/node"), import_react15 = require("@remix-run/react");
+var import_tiny_invariant3 = __toESM(require("tiny-invariant")), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), action = async ({ request }) => {
   await new Promise((res) => setTimeout(res, 1e3));
   let formData = await request.formData(), title = formData.get("title"), slug = formData.get("slug"), markdown = formData.get("markdown"), errors = {
     title: title ? null : "Title is required",
     slug: slug ? null : "Slug is required",
     markdown: markdown ? null : "Markdown is required"
   };
-  return Object.values(errors).some((errorMessage) => errorMessage) ? (0, import_node3.json)(errors) : ((0, import_tiny_invariant2.default)(typeof title == "string", "title must be a string"), (0, import_tiny_invariant2.default)(typeof slug == "string", "slug must be a string"), (0, import_tiny_invariant2.default)(typeof markdown == "string", "markdown must be a string"), await createPost({ title, slug, markdown }), (0, import_node3.redirect)("/posts/admin"));
+  return Object.values(errors).some((errorMessage) => errorMessage) ? (0, import_node4.json)(errors) : ((0, import_tiny_invariant3.default)(typeof title == "string", "title must be a string"), (0, import_tiny_invariant3.default)(typeof slug == "string", "slug must be a string"), (0, import_tiny_invariant3.default)(typeof markdown == "string", "markdown must be a string"), await createPost({ title, slug, markdown }), (0, import_node4.redirect)("/posts/admin"));
 }, inputClassName = "w-full rounded border border-gray-500 px-2 py-1 text-lg";
 function NewPost() {
-  let errors = (0, import_react13.useActionData)(), transition = (0, import_react13.useTransition)(), isCreating = Boolean(transition.submission);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react13.Form, {
+  let errors = (0, import_react15.useActionData)(), transition = (0, import_react15.useTransition)(), isCreating = Boolean(transition.submission);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react15.Form, {
     method: "post",
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
@@ -1087,14 +1248,14 @@ function NewPost() {
 var posts_exports = {};
 __export(posts_exports, {
   default: () => Posts,
-  loader: () => loader3
+  loader: () => loader5
 });
-var import_node4 = require("@remix-run/node"), import_react14 = require("@remix-run/react");
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async () => (0, import_node4.json)({
+var import_node5 = require("@remix-run/node"), import_react16 = require("@remix-run/react");
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader5 = async () => (0, import_node5.json)({
   posts: await getPosts()
 });
 function Posts() {
-  let { posts: posts2 } = (0, import_react14.useLoaderData)();
+  let { posts: posts2 } = (0, import_react16.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
@@ -1107,7 +1268,7 @@ function Posts() {
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", {
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react14.Link, {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react16.Link, {
               to: "admin",
               className: "text-red-600 underline",
               children: "Admin"
@@ -1122,7 +1283,7 @@ function Posts() {
             columnNumber: 5
           }, this),
           posts2.map((post) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react14.Link, {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react16.Link, {
               to: post.slug,
               className: "text-blue-600 underline",
               children: post.title
@@ -1254,7 +1415,7 @@ var import_theme_ui13 = require("theme-ui");
 var React3 = require("react"), import_theme_ui12 = require("theme-ui");
 
 // src/components/badges/badge.jsx
-var import_react15 = require("react"), import_theme_ui10 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Badge = ({ children, borderColor = "t900" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui10.Box, {
+var import_react17 = require("react"), import_theme_ui10 = require("theme-ui"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), Badge = ({ children, borderColor = "t900" }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_theme_ui10.Box, {
   sx: {
     width: 80,
     height: "1.25rem",
@@ -1534,7 +1695,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "e5f183e8", entry: { module: "/build/entry.client-GVWTJI32.js", imports: ["/build/_shared/chunk-CZ3VUE3C.js", "/build/_shared/chunk-JBG5D5FT.js", "/build/_shared/chunk-QXX53SGV.js", "/build/_shared/chunk-MLBUYSNZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-JZ2PRQQP.js", imports: ["/build/_shared/chunk-EZCKECFQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-VGP2K7FD.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GUP6QEAS.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-H2ADLMH7.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-O52J522H.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-E7Q2UUVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-XHSJF6Z4.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-5IBOQTUA.js", imports: ["/build/_shared/chunk-UFM7OXHY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E5F183E8.js" };
+var assets_manifest_default = { version: "1576bf85", entry: { module: "/build/entry.client-RVBRHX5D.js", imports: ["/build/_shared/chunk-CRN43LGM.js", "/build/_shared/chunk-SRTWRCXI.js", "/build/_shared/chunk-ENUDX6JY.js", "/build/_shared/chunk-BPQL3L3K.js", "/build/_shared/chunk-5KL4PAQL.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-44K2PEYD.js", imports: ["/build/_shared/chunk-B2IAWX4E.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about/index": { id: "routes/about/index", parentId: "root", path: "about", index: !0, caseSensitive: void 0, module: "/build/routes/about/index-FAZKGFT4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-UXIR53QQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/$slug": { id: "routes/posts/$slug", parentId: "root", path: "posts/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/$slug-QV3FFVK4.js", imports: ["/build/_shared/chunk-52C552IL.js", "/build/_shared/chunk-URPXXGPM.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin": { id: "routes/posts/admin", parentId: "root", path: "posts/admin", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin-VHEXVMII.js", imports: ["/build/_shared/chunk-URPXXGPM.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/index": { id: "routes/posts/admin/index", parentId: "routes/posts/admin", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/posts/admin/index-K3LWHDM3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/admin/new": { id: "routes/posts/admin/new", parentId: "routes/posts/admin", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/posts/admin/new-NYFZSVHK.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts/index": { id: "routes/posts/index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts/index-VNZOFNBG.js", imports: ["/build/_shared/chunk-URPXXGPM.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects/$slug": { id: "routes/projects/$slug", parentId: "root", path: "projects/:slug", index: void 0, caseSensitive: void 0, module: "/build/routes/projects/$slug-FP5RQONC.js", imports: ["/build/_shared/chunk-W4MHAE63.js", "/build/_shared/chunk-52C552IL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects/index": { id: "routes/projects/index", parentId: "root", path: "projects", index: !0, caseSensitive: void 0, module: "/build/routes/projects/index-AQ3ZFU4Z.js", imports: ["/build/_shared/chunk-W4MHAE63.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/projects/projects": { id: "routes/projects/projects", parentId: "root", path: "projects/projects", index: void 0, caseSensitive: void 0, module: "/build/routes/projects/projects-F77R4WGV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-1576BF85.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -1545,6 +1706,30 @@ var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { mod
     index: void 0,
     caseSensitive: void 0,
     module: root_exports
+  },
+  "routes/projects/projects": {
+    id: "routes/projects/projects",
+    parentId: "root",
+    path: "projects/projects",
+    index: void 0,
+    caseSensitive: void 0,
+    module: projects_exports
+  },
+  "routes/projects/$slug": {
+    id: "routes/projects/$slug",
+    parentId: "root",
+    path: "projects/:slug",
+    index: void 0,
+    caseSensitive: void 0,
+    module: slug_exports
+  },
+  "routes/projects/index": {
+    id: "routes/projects/index",
+    parentId: "root",
+    path: "projects",
+    index: !0,
+    caseSensitive: void 0,
+    module: projects_exports2
   },
   "routes/about/index": {
     id: "routes/about/index",
@@ -1560,7 +1745,7 @@ var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { mod
     path: "posts/:slug",
     index: void 0,
     caseSensitive: void 0,
-    module: slug_exports
+    module: slug_exports2
   },
   "routes/posts/admin": {
     id: "routes/posts/admin",

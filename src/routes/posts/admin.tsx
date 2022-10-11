@@ -1,6 +1,5 @@
-/* eslint-disable react/react-in-jsx-scope */
-import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
+import type { LoaderFunction } from '@remix-run/node';
 import { Link, Outlet, useLoaderData } from '@remix-run/react';
 
 import { getPosts } from 'models/posts.server';
