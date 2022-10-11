@@ -1,6 +1,6 @@
 import { Flex } from 'theme-ui';
 import { Link as RLink } from '@remix-run/react';
-
+// * Custom
 import Link from 'components/links';
 import { navLinks as links } from 'config';
 
@@ -9,7 +9,7 @@ export default function NavLinks() {
 		<Flex
 			as="nav"
 			aria-label="Primary Navigation"
-			sx={{ gap: ['10px', '24px'], a: { fontSize: 0 } }}
+			sx={{ gap: ['12px', '24px'] }}
 		>
 			{links.length !== 0 &&
 				links.map((n) => (

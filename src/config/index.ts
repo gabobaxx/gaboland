@@ -1,19 +1,23 @@
 import type { NavLink } from 'types';
 export const navLinks: Array<NavLink> = [
 	{
+		title: 'Gaboland',
+		slug: '/',
+	},
+	{
 		title: 'About',
 		slug: 'about',
 	},
 	{
-		title: 'Projects',
-		slug: '/projects',
-	},
-	{
 		title: 'Posts',
-		slug: '/posts',
+		slug: 'posts',
 	},
-	{
-		title: 'Contact',
-		slug: '/#contact',
-	},
+	// {
+	// 	title: 'Projects',
+	// 	slug: 'projects',
+	// },
+	// {
+	// 	title: 'Contact',
+	// 	slug: '/#contact',
+	// },
 ];

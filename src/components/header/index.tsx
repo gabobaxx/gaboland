@@ -1,28 +1,29 @@
+// * Third Party
 import { Flex } from 'theme-ui';
-import { Link as RLink } from '@remix-run/react';
-
-import { navLinks } from 'config';
-import Link from 'components/links';
+// * Custom
 import NavLinks from 'components/nav';
+import { navLinks } from 'config/index';
+import BurguerMenu from 'components/buttons/burguer-menu';
+import ThemeChangerButton from 'components/buttons/theme-changer-button';
 
-type HeaderProps = {
-	title?: string;
-};
-const Header = ({ title = 'Gaboland' }: HeaderProps) => {
+const Header = () => {
+	// TODO -> make burguer menu works.
+	// ? Burguer Menu -> About - Contact - Projects - Dark Mode Button - Blog Button
 	return (
 		<Flex as="header" variant="layout.header">
 			<Flex
 				sx={{
 					flex: 1,
-					fontSize: 20,
+					alignItems: 'center',
 					justifyContent: navLinks.length === 0 ? 'center' : 'flex-start',
 				}}
 			>
-				<Link to="/" as={RLink} aria-label={`${title}, Back to homepage`}>
-					{title}
-				</Link>
+				<NavLinks />
 			</Flex>
-			<NavLinks />
+			<Flex sx={{ gap: '12px' }}>
+				<ThemeChangerButton />
+				<BurguerMenu />
+			</Flex>
 		</Flex>
 	);
 };

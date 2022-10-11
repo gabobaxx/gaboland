@@ -20,12 +20,17 @@ export default function Index() {
 					padding: '0 24px',
 				}}
 			>
-				<ThemeChangerButton />
+				{/**
+				 * * Header -> Layout
+				 * * Hero
+				 * * Featured -> Project & Post
+				 * * More Posts
+				 * * More Projects
+				 * * Footer -> Layout
+				 */}
 				<Hero />
 				{/*<Projects /> ! Making page refresh */}
 				{/* <Contact /> ! Making page refresh */}
-				{/* <Skills /> ! Making page refresh */}
-				<Experiences />
 			</Box>
 		</div>
 	);

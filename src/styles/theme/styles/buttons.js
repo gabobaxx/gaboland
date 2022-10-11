@@ -1,13 +1,13 @@
 export const buttons = {
 	toggle: {
-		color: 'gs800',
+		p: '0',
+		m: '0',
+		color: 'P900',
 		border: 'none',
-		backgroundColor: 'primary',
+		fontSize: '40px',
 		cursor: 'pointer',
-		alignSelf: 'center',
-		//px: 3,
-		//py: 2,
-		//ml: 3,
-		fontFamily: 'body',
+		background: 'none',
+		':hover': { color: 'P300' },
+		':focus': { border: 'none' },
 	},
 };
