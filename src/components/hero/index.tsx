@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Image, Box } from 'theme-ui';
+import { Image, Box, Flex } from 'theme-ui';
 
 type HeroProps = {
 	children?: ReactNode;
@@ -10,7 +10,40 @@ type HeroProps = {
 	occupation?: string;
 };
 
-const Hero = (props: HeroProps) => (
+// mt: '1.5rem',
+// width: '100%',
+// gap: '0.75rem',
+// color: 'gs800',
+// display: 'flex',
+// textAlign: 'center',
+// flexDirection: 'column',
+
+const Hero = () => {
+	return (
+		<Flex
+			sx={{
+				gridColumn: '1/-1',
+				alignItems: 'center',
+				flexDirection: 'column',
+			}}
+		>
+			<Image
+				as={Image}
+				alt="Selfie"
+				src="assets/me.jpg"
+				sx={{ borderRadius: '50%', width: 200, height: 200 }}
+			/>
+			<h2>Gabriel Bencomo.</h2>
+			<Box as="h5">Web Developer & Solution Maker.</Box>
+			<Box as="h4">
+				<i style={{ marginRight: 5 + 'px' }} className="bi bi-geo-alt-fill"></i>
+				Venezuela
+			</Box>
+		</Flex>
+	);
+};
+
+const HeroV1Beta = (props: HeroProps) => (
 	<Box as="section" sx={{ gridColumn: '1/-1' }}>
 		<Box sx={{ maxWidth: 200, mx: 'auto', mt: 60 }}>
 			<Image

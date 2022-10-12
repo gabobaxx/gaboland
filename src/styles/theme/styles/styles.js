@@ -22,7 +22,7 @@ export const styles = {
 	},
 	h2: {
 		mt: 2,
-		fontSize: [20, 30],
+		fontSize: [40, 40],
 		fontFamily: 'head',
 		fontWeight: 'bold',
 		textAlign: 'start',
