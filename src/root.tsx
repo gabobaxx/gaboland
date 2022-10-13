@@ -76,9 +76,7 @@ export default function App() {
 	return (
 		<Document>
 			<ThemeProvider theme={Theme}>
-				<Layout>
-					<Outlet />
-				</Layout>
+				<Outlet />
 			</ThemeProvider>
 		</Document>
 	);
