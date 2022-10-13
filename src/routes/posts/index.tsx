@@ -3,6 +3,8 @@ import { Link, useLoaderData } from '@remix-run/react';
 
 import { getPosts } from 'models/posts.server';
 
+import Header from 'components/header';
+
 type LoaderData = {
 	posts: Awaited<ReturnType<typeof getPosts>>;
 };
@@ -18,6 +20,7 @@ export default function Posts() {
 
 	return (
 		<main>
+			<Header />
 			<h1>Posts</h1>
 
 			<ul>

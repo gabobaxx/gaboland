@@ -1,4 +1,5 @@
 import type { NavLink } from 'types';
+
 export const navLinks: Array<NavLink> = [
 	{
 		title: 'Gaboland',
@@ -12,12 +13,9 @@ export const navLinks: Array<NavLink> = [
 		title: 'Posts',
 		slug: 'posts',
 	},
-	// {
-	// 	title: 'Projects',
-	// 	slug: 'projects',
-	// },
-	// {
-	// 	title: 'Contact',
-	// 	slug: '/#contact',
-	// },
 ];
+
+export const defaultLinks = {
+	default: [{ title: 'Home', slug: '/' }],
+	main: navLinks,
+};

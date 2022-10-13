@@ -1,15 +1,13 @@
 import { Box } from 'theme-ui';
+// * Custom Components
+import Header from 'components/header';
 import Hero from 'components/hero';
-// import Contact from 'components/contact';
-// import Skills from 'components/skills';
-// import Projects from 'components/projects';
-import Experiences from 'components/experiencies';
 
-import ThemeChangerButton from 'components/buttons/theme-changer-button';
-
+import { defaultLinks } from 'config';
 export default function Index() {
 	return (
 		<div style={{ minHeight: '55vh' }}>
+			<Header links={defaultLinks.main} />
 			<Box
 				as="main"
 				sx={{
@@ -28,7 +26,10 @@ export default function Index() {
 				 * * More Projects
 				 * * Footer -> Layout
 				 */}
+
 				<Hero />
+				<h1>Hola</h1>
+				<p>Hola soy un p</p>
 				{/*<Projects /> ! Making page refresh */}
 				{/* <Contact /> ! Making page refresh */}
 			</Box>

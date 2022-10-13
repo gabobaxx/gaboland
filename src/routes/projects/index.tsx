@@ -1,9 +1,12 @@
 import { projects } from './projects';
 import { Link } from '@remix-run/react';
 
+import Header from 'components/header';
+
 export default function Projects() {
 	return (
 		<main>
+			<Header />
 			<h1>Posts</h1>
 
 			<ul>
