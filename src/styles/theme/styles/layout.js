@@ -23,6 +23,70 @@ export const layout = {
 		textAlign: 'center',
 		backgroundColor: 'red',
 	},
+	hero: {
+		gap: 16,
+		gridColumn: '1/-1',
+		alignItems: 'center',
+		flexDirection: 'column',
+		h2: { fontSize: [40, 50] },
+		h4: { fontSize: [18, 24], fontWeight: 'regular' },
+		h5: { fontSize: [18, 24], fontWeight: 'regular', margin: 0 },
+	},
+	card: {
+		margin: 24,
+		padding: 24,
+		borderRadius: 24,
+		backgroundColor: 'BackgroundColorCard',
+		p: {
+			fontWeight: 'bold',
+			span: {
+				color: 'P900',
+			},
+		},
+		featured: {
+			margin: 24,
+			padding: 24,
+			borderRadius: 24,
+			backgroundColor: 'BackgroundColorCardFeatured',
+			p: {
+				fontWeight: 'bold',
+				span: {
+					color: 'P900',
+				},
+			},
+		},
+	},
+	button: {
+		outline: {
+			py: '8px',
+			px: [48, 64],
+			borderRadius: 8,
+			border: '2px solid',
+			borderColor: 'P900',
+			color: 'P900',
+			fontWeight: 'bold',
+			':hover': { color: 'primary', borderColor: 'primary' },
+		},
+	},
+	badge: {
+		py: '8px',
+		px: '16px',
+		gap: '8px',
+		borderRadius: 24,
+		alignItems: 'center',
+		i: { fontSize: '12px' },
+		p: {
+			fontSize: '10px',
+			fontWeight: 'bold',
+			span: { color: 'P900' },
+		},
+		a: {
+			color: 'P900',
+			fontSize: '10px',
+			fontWeight: 'bold',
+			':hover': { textDecoration: 'none' },
+		},
+	},
 
 	main: {
 		position: 'relative',

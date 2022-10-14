@@ -78,11 +78,16 @@ export default merge(tailwind, {
 
 		// * Light Theme
 		HeaderText: colors.primary[700],
-
+		BackgroundColorCardFeatured: '#FCFCFC',
+		BackgroundColorCard: colors.grayscale[100],
 		modes: {
+			altamira: {
+				background: DarkModeColors.kentcdodds,
+			},
 			dark: {
-				HeaderText: colors.primary[500],
+				HeaderText: colors.grayscale[100],
 				background: DarkModeColors.faztweb,
+				BackgroundColorCard: colors.grayscale[100],
 			},
 		},
 	},
