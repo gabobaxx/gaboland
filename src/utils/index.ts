@@ -4,9 +4,13 @@ export const github = 'https://github.com/gabrielba15';
 
 export const getIconClass = (IconProps: string) => {
 	const IconClasses = {
-		star: 'bi bi-star-fill',
 		cpu: 'bi bi-cpu-fill',
+		laptop: 'bi bi-laptop',
+		star: 'bi bi-star-fill',
 		article: 'bi bi-newspaper',
+		yingyang: 'bi bi-yin-yang',
+		instagram: 'bi bi-instagram',
+		laptopFill: 'bi bi-laptop-fill',
 	};
 	const classFound = Object.entries(IconClasses).find((icon) =>
 		icon[0] === IconProps ? icon[1] : null
