@@ -12,10 +12,10 @@ import Projects from 'components/projects';
 import Posts from 'components/posts';
 
 /**
- * * Header
- * * Hero
- * * Featured -> Project & Post
- * * More Posts
+ * * Header -> For Changelog: Header version 2023
+ * * Hero -> Hero version 2023
+ * * Featured -> Project & Post -> New Featured Component
+ * * More Posts -> New Section Title
  * * More Projects
  * ? Footer
  */
