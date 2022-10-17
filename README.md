@@ -29,6 +29,7 @@ If you want to fix that bug or just contribute:
 ## 🛠 Installation & Set Up
 
 
+
 1. [Fork](https://github.com/gabrielba15/gaboland/fork) this repo.
 
 2. Clone repo
@@ -50,7 +51,9 @@ If you want to fix that bug or just contribute:
    ```
 5. [Pull](https://github.com/gabrielba15/gaboland/pulls) to develop branch.
 
-## 🌟 ***Thank you so much, you just contributed to an open source project.***
+
+🌟 ***Thank you so much, you just contributed to an open source project.***
+
 
 <!--
 <p align="center">
@@ -71,8 +74,7 @@ This is my personal project, it is a simple website that works as m
 
 Make solutions, don't mistakes 🧠🚀🦁
 
-
-## 🌟 Special Thanks
+For details on how to use Vercel, check out our [documentation](https://vercel.com/docs).
 
 ## Contributing
 
