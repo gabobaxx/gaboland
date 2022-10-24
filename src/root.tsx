@@ -1,11 +1,11 @@
 import { useContext, useEffect } from 'react';
-import { withEmotionCache } from '@emotion/react';
 // * Types/Interfaces
 import type { ReactNode } from 'react';
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
 // * Theme
 import Theme from 'styles/theme';
 import { ThemeProvider } from 'theme-ui';
+import { withEmotionCache } from '@emotion/react';
 import { ServerStyleContext, ClientStyleContext } from './styles/context';
 
 import {
@@ -31,13 +31,18 @@ export const meta: MetaFunction = () => ({
 	viewport: 'width=device-width,initial-scale=1',
 });
 
-type DocumentProps = {
-	children: ReactNode;
-};
 const Document = withEmotionCache(
-	({ children }: DocumentProps, _emotionCache) => {
+	(
+		{
+			children,
+		}: {
+			children: ReactNode;
+		},
+		_emotionCache
+	) => {
 		const serverStyleData = useContext(ServerStyleContext);
 		const clientStyleData = useContext(ClientStyleContext);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		const resetClientStyleData = clientStyleData?.reset || function () {};
 
 		// Only executed on client

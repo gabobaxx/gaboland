@@ -1,15 +1,18 @@
+// * Third Party
 import { Fragment } from 'react';
 import { Box, Flex } from 'theme-ui';
 import { Link as RLink } from '@remix-run/react';
 // * Custom Components
 import Hero from 'components/hero';
-import Header from 'components/header';
 import Link from 'components/links';
-import SectionTitle from 'components/sections/title';
-import Featured from 'components/featured';
-
-import Projects from 'components/projects';
 import Posts from 'components/posts';
+import Header from 'components/header';
+import Featured from 'components/featured';
+import Projects from 'components/projects';
+import SectionTitle from 'components/sections/title';
+
+// * Config
+import { defaultLinks } from 'config';
 
 /**
  * * Header -> For Changelog: Header version 2023
@@ -20,8 +23,7 @@ import Posts from 'components/posts';
  * ? Footer
  */
 
-import { defaultLinks } from 'config';
-export default function Index() {
+export default function Index(): JSX.Element {
 	return (
 		<Fragment>
 			<Header links={defaultLinks.main} />
