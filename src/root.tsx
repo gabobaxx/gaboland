@@ -8,8 +8,6 @@ import Theme from 'styles/theme';
 import { ThemeProvider } from 'theme-ui';
 import { ServerStyleContext, ClientStyleContext } from './styles/context';
 
-import Layout from 'components/layout';
-
 import {
 	Links,
 	LiveReload,
