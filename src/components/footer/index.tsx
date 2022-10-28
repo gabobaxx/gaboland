@@ -1,13 +1,11 @@
-import { Box } from 'theme-ui';
-import Copyright from 'components/footer/copyright';
-import FooterSocialLinks from 'components/footer/social-links';
+import { Flex } from 'theme-ui';
+import { SocialLinksBadges } from 'components/links/social-links-badges';
 
 const Footer = () => {
 	return (
-		<Box as="footer">
-			<FooterSocialLinks />
-			<Copyright />
-		</Box>
+		<Flex as="footer" variant="layout.footer">
+			<SocialLinksBadges hidden={{ responsive: 'twitter' }} />
+		</Flex>
 	);
 };
 

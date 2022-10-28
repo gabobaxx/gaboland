@@ -7,21 +7,12 @@ import Hero from 'components/hero';
 import Link from 'components/links';
 import Posts from 'components/posts';
 import Header from 'components/header';
+import Footer from 'components/footer';
 import Featured from 'components/featured';
 import Projects from 'components/projects';
 import SectionTitle from 'components/sections/title';
-
 // * Config
 import { defaultLinks } from 'config';
-
-/**
- * * Header -> For Changelog: Header version 2023
- * * Hero -> Hero version 2023
- * * Featured -> Project & Post -> New Featured Component
- * * More Posts -> New Section Title
- * * More Projects
- * ? Footer
- */
 
 export default function Index(): JSX.Element {
 	return (
@@ -50,6 +41,7 @@ export default function Index(): JSX.Element {
 			<Posts />
 			<SectionTitle title="More Projects" icon="cpu" />
 			<Projects />
+			<Footer />
 		</Fragment>
 	);
 }
