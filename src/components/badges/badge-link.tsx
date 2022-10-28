@@ -1,21 +1,27 @@
-import { Link as RLink } from '@remix-run/react';
-import { Flex, Link } from 'theme-ui';
+// * Third Party
 import { getIconClass } from 'utils';
-
+import { Flex, Link } from 'theme-ui';
+import { Link as RLink } from '@remix-run/react';
+// * Custom
 import CustomLink from 'components/links';
+// * Interfaces/Types
+import type { AvailableIcons } from 'types';
+import type { ThemeUIStyleObject } from 'theme-ui';
 
 type BadgeProps = {
 	to?: string;
 	href?: string;
-	icon?: string;
 	title?: string;
+	icon?: AvailableIcons;
 	color?: {
 		background: string;
 		font: string;
 	};
+	sx?: ThemeUIStyleObject | undefined;
 	hover?: { background: string; color: string };
 };
 const Badge = ({
+	sx,
 	href,
 	to = '/',
 	icon = 'star',
@@ -31,6 +37,7 @@ const Badge = ({
 				color: color.font,
 				backgroundColor: color.background,
 				':hover': { backgroundColor: hover.background, color: hover.color },
+				...sx,
 			}}
 		>
 			<i className={IconBootstrapClass}></i>
