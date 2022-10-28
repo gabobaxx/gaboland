@@ -12,16 +12,13 @@ import Featured from 'components/featured';
 import Projects from 'components/projects';
 import SectionTitle from 'components/sections/title';
 // * Config
-import { defaultLinks } from 'config';
+import { defaultLinks, me as gabriel } from 'config';
 
 export default function Index(): JSX.Element {
 	return (
 		<Fragment>
 			<Header links={defaultLinks.main} />
-			<Hero
-				name="Gabriel Bencomo"
-				occupation="Web Developer & Solution Maker"
-			/>
+			<Hero name={gabriel.name} occupation={gabriel.occupation} />
 			<Box variant="layout.card">
 				<p style={{ fontSize: '24px' }}>
 					<span>Also, I’m an engineer</span> who loves to contribute{' '}

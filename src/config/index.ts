@@ -1,5 +1,10 @@
 import type { NavLink } from 'types';
 
+export const me = {
+	name: 'Gabriel Bencomo',
+	occupation: 'Web Developer & Solution Maker',
+};
+
 export const navLinks: Array<NavLink> = [
 	{
 		title: 'Gaboland',
@@ -20,7 +25,13 @@ export const defaultLinks = {
 	main: navLinks,
 };
 
-export const PageLinks = {
+export type PageLinksType = {
+	main: NavLink[];
+	posts: NavLink[];
+	about: NavLink[];
+	default: NavLink[];
+};
+export const PageLinks: PageLinksType = {
 	default: [{ title: 'Home', slug: '/' }],
 	main: [
 		{
