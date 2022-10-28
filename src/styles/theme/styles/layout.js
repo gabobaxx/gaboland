@@ -16,12 +16,14 @@ export const layout = {
 	footer: {
 		py: 20,
 		px: 24,
+		gap: 32,
 		fontSize: 10,
 		color: 'gs100',
 		display: 'block',
 		fontWeight: 'bold',
 		textAlign: 'center',
 		backgroundColor: 'red',
+		justifyContent: 'center',
 	},
 	hero: {
 		gap: 16,
