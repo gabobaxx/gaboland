@@ -34,7 +34,7 @@ export const PageNavLinks: PageLinksType = {
 		},
 		{
 			title: 'Posts',
-			slug: 'posts',
+			slug: '/posts',
 		},
 		{
 			title: 'Contact',
@@ -48,7 +48,7 @@ export const PageNavLinks: PageLinksType = {
 		},
 		{
 			title: 'About',
-			slug: 'about',
+			slug: '/about',
 		},
 		{
 			title: 'Contact',
