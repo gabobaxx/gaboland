@@ -12,12 +12,12 @@ import Featured from 'components/featured';
 import Projects from 'components/projects';
 import SectionTitle from 'components/sections/title';
 // * Config
-import { defaultLinks, me as gabriel } from 'config';
+import { PageNavLinks, me as gabriel } from 'config';
 
 export default function Index(): JSX.Element {
 	return (
 		<Fragment>
-			<Header links={defaultLinks.main} />
+			<Header links={PageNavLinks.main} />
 			<Hero name={gabriel.name} occupation={gabriel.occupation} />
 			<Box variant="layout.card">
 				<p style={{ fontSize: '24px' }}>

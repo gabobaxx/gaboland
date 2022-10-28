@@ -2,11 +2,12 @@ import { Flex } from 'theme-ui';
 import { Link as RLink } from '@remix-run/react';
 // * Custom
 import Link from 'components/links';
-import type { navLinks } from 'config';
-import { defaultLinks } from 'config';
+import { PageNavLinks } from 'config';
+// * Types
+import type { NavLink } from 'types';
 
-export default function NavLinks({ links }: { links?: typeof navLinks }) {
-	const linksToRender = links ?? defaultLinks.default;
+export default function NavLinks({ links }: { links?: NavLink[] }) {
+	const linksToRender = links ?? PageNavLinks.default;
 	return (
 		<Flex
 			as="nav"
@@ -14,9 +15,9 @@ export default function NavLinks({ links }: { links?: typeof navLinks }) {
 			sx={{ gap: ['12px', '24px'] }}
 		>
 			{linksToRender.length !== 0 &&
-				linksToRender.map((n) => (
-					<Link as={RLink} to={n.slug} key={n.slug}>
-						{n.title}
+				linksToRender.map((link) => (
+					<Link as={RLink} to={link.slug} key={link.slug}>
+						{link.title}
 					</Link>
 				))}
 		</Flex>

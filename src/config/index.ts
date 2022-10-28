@@ -5,33 +5,13 @@ export const me = {
 	occupation: 'Web Developer & Solution Maker',
 };
 
-export const navLinks: Array<NavLink> = [
-	{
-		title: 'Gaboland',
-		slug: '/',
-	},
-	{
-		title: 'About',
-		slug: 'about',
-	},
-	{
-		title: 'Posts',
-		slug: 'posts',
-	},
-];
-
-export const defaultLinks = {
-	default: [{ title: 'Home', slug: '/' }],
-	main: navLinks,
-};
-
 export type PageLinksType = {
 	main: NavLink[];
 	posts: NavLink[];
 	about: NavLink[];
 	default: NavLink[];
 };
-export const PageLinks: PageLinksType = {
+export const PageNavLinks: PageLinksType = {
 	default: [{ title: 'Home', slug: '/' }],
 	main: [
 		{
