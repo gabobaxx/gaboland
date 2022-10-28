@@ -20,3 +20,14 @@ export const getIconClass = (icon: AvailableIcons) => {
 
 	return IconClasses[icon];
 };
+
+/**
+ * This function receives a word
+ * and returns that word with the first
+ * letter capitalized (uppercase).
+ * Exmaple: 'icon' => 'Icon'
+ * @param word string
+ * @returns string
+ */
+export const capitalize = (word: string) =>
+	word.charAt(0).toUpperCase() + word.slice(1);
