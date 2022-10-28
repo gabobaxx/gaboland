@@ -1,22 +1,9 @@
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
-
-import { getPosts } from 'models/posts.server';
-
+// * Custom
 import Header from 'components/header';
-
-import type { NavLink } from 'types';
-
-const postsHeaderLinks: NavLink[] = [
-	{
-		title: 'Gaboland',
-		slug: '/',
-	},
-	{
-		title: 'About',
-		slug: '/about',
-	},
-];
+import { PageNavLinks } from 'config';
+import { getPosts } from 'models/posts.server';
 
 type LoaderData = {
 	posts: Awaited<ReturnType<typeof getPosts>>;
@@ -33,13 +20,11 @@ export default function Posts() {
 
 	return (
 		<main>
-			<Header links={postsHeaderLinks} />
+			<Header links={PageNavLinks.posts} />
 			<h1>Posts</h1>
 			<ul>
 				<li>
-					<Link to="admin" className="text-red-600 underline">
-						Admin
-					</Link>
+					<Link to="admin">Admin</Link>
 				</li>
 				{posts.map((post) => (
 					<li key={post.slug}>
