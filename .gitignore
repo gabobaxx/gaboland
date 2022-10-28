@@ -70,3 +70,6 @@ build
 .vscode
 .DS_Store
 .vercel/
+
+# Remix
+api/
