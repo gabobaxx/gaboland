@@ -77,6 +77,7 @@ export default merge(tailwind, {
 		tgradient: 'linear-gradient(230.96deg, #3CB96E 15.34%, #979FA3 72.39%)',
 
 		// * Light Theme
+		FontColor: colors.grayscale[800],
 		HeaderText: colors.primary[700],
 		BackgroundColorCardFeatured: '#FCFCFC',
 		BackgroundColorCard: colors.grayscale[100],
@@ -85,9 +86,10 @@ export default merge(tailwind, {
 				background: DarkModeColors.kentcdodds,
 			},
 			dark: {
+				FontColor: colors.grayscale[100],
 				HeaderText: colors.grayscale[100],
 				background: DarkModeColors.faztweb,
-				BackgroundColorCard: colors.grayscale[100],
+				BackgroundColorCard: colors.grayscale[800],
 			},
 		},
 	},
