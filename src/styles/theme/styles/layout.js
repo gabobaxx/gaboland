@@ -16,7 +16,7 @@ export const layout = {
 	footer: {
 		py: 20,
 		px: 24,
-		gap: 32,
+		gap: 24,
 		fontSize: 10,
 		color: 'gs100',
 		display: 'block',
@@ -110,5 +110,37 @@ export const layout = {
 	container: {
 		padding: 4,
 		maxWidth: '5xl',
+	},
+	contact: {
+		card: {
+			padding: 24,
+			borderRadius: 16,
+			textAlign: 'center',
+			alignItems: 'center',
+			flexDirection: 'column',
+			backgroundColor: 'ContactCardBackgroundColor',
+			header: {
+				marginBottom: 2,
+				fontSize: '1.5rem',
+				fontWeight: 'bold',
+				textAlign: 'start',
+			},
+			p: {
+				marginBottom: 3,
+				textAlign: 'center',
+				fontSize: '0.8125rem',
+			},
+			footer: {
+				display: 'flex',
+				justifyContent: 'space-between',
+				a: {
+					fontSize: '14px',
+					color: 'GS800',
+					i: {
+						marginRight: '5px',
+					},
+				},
+			},
+		},
 	},
 };

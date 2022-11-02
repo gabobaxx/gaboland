@@ -8,9 +8,11 @@ import Link from 'components/links';
 import Posts from 'components/posts';
 import Header from 'components/header';
 import Footer from 'components/footer';
+import Contact from 'components/contact';
 import Featured from 'components/featured';
 import Projects from 'components/projects';
 import SectionTitle from 'components/sections/title';
+import FooterSocialLinks from 'components/footer/social-links';
 // * Config
 import { PageNavLinks, me as gabriel } from 'config';
 
@@ -38,7 +40,10 @@ export default function Index(): JSX.Element {
 			<Posts />
 			<SectionTitle title="More Projects" icon="cpu" />
 			<Projects />
-			<Footer />
+			<Footer sx={{ flexDirection: 'column' }}>
+				<Contact />
+				<FooterSocialLinks />
+			</Footer>
 		</Fragment>
 	);
 }
