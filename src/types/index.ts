@@ -1,3 +1,5 @@
+import type { ReactNode, CSSProperties } from 'react';
+
 export type NavLink = {
 	title: string;
 	slug: string;
@@ -14,3 +16,8 @@ export type AvailableIcons =
 	| 'twitter'
 	| 'linkedin'
 	| 'github';
+
+export type ComponentProps = {
+	children: ReactNode;
+	sx?: CSSProperties;
+};
