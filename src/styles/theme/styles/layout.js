@@ -24,6 +24,20 @@ export const layout = {
 		textAlign: 'center',
 		backgroundColor: 'red',
 		justifyContent: 'center',
+		links: {
+			width: '100%',
+			alignItems: 'center',
+			justifyContent: 'space-between',
+			a: {
+				color: 'GS300',
+				fontSize: '18px',
+				borderColor: 'GS300',
+				':hover': {
+					color: '#ffffff',
+					borderColor: '#ffffff',
+				},
+			},
+		},
 	},
 	hero: {
 		gap: 16,
