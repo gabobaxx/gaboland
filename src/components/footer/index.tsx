@@ -1,10 +1,13 @@
+import type { ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { SocialLinksBadges } from 'components/links/social-links-badges';
 
-const Footer = () => {
+type FooterProps = {
+	children: ReactNode;
+};
+const Footer = ({ children }: FooterProps) => {
 	return (
 		<Flex as="footer" variant="layout.footer">
-			<SocialLinksBadges hidden={{ responsive: 'twitter' }} />
+			{children}
 		</Flex>
 	);
 };
