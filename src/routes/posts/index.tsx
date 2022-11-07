@@ -1,5 +1,6 @@
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
+import type { HeadersFunction } from '@remix-run/node';
 // * Custom
 import Header from 'components/header';
 import { PageNavLinks } from 'config';
@@ -10,9 +11,25 @@ type LoaderData = {
 };
 
 export const loader = async () => {
-	return json<LoaderData>({
-		posts: await getPosts(),
-	});
+	return json<LoaderData>(
+		{
+			posts: await getPosts(),
+		},
+		{
+			status: 200,
+			headers: {
+				'Cache-Control':
+					'public, max-age=60, s-maxage=1812, stale-whilerevalidate=60',
+			},
+		}
+	);
+};
+
+export const headers: HeadersFunction = () => {
+	return {
+		'Cache-Control':
+			'public, max-age=60, s-maxage=3604, stale-while-revalidate=60',
+	};
 };
 
 export default function Posts() {
