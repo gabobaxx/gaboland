@@ -1,4 +1,14 @@
 export const layout = {
+	containers: {
+		paragraph: {
+			p: {
+				my: 24,
+				px: 24,
+				fontFamily: 'head',
+				fontWeight: 'regular',
+			},
+		},
+	},
 	header: {
 		my: 24,
 		px: 24,

@@ -1,15 +1,17 @@
-import { CacheProvider } from '@emotion/react';
-import { RemixBrowser } from '@remix-run/react';
-import type { ReactNode } from 'react';
-import { useCallback, useState } from 'react';
+// * React
 import { hydrate } from 'react-dom';
-
+import { useCallback, useState } from 'react';
+import { RemixBrowser } from '@remix-run/react';
+// * Emotion Cache
+import { CacheProvider } from '@emotion/react';
 import { ClientStyleContext } from './styles/context';
 import { createEmotionCache } from './styles/createEmotionCache';
-
+// * Types
+import type { ReactNode } from 'react';
 type ClientCacheProviderProps = {
 	children: ReactNode;
 };
+
 const ClientCacheProvider = ({ children }: ClientCacheProviderProps) => {
 	const [cache, setCache] = useState(createEmotionCache());
 
