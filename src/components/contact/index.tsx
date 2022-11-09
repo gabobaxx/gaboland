@@ -1,3 +1,4 @@
+import { Flex } from 'theme-ui';
 import { capitalize } from 'utils';
 import { SocialLinks as links } from 'config';
 
@@ -6,13 +7,13 @@ import { Title, Body, Footer, ContactCard } from './card';
 const ContactInfo = [
 	{
 		title: 'Work Contact',
-		body: 'If you are an entrepreneur or somebody who are looking for someone who develop your app or website, you can contact me from 8:00h to 11:00h and from 15:00h to 18:h ET. for an immediate response.',
+		body: 'If you are an entrepreneur or somebody who are looking for someone who develop your app or website, you can contact me from 8:00h to 11:00h and from 15:00h to 18:00h ET. For an immediate response.',
 		links: [links.linkedin, links.linkedin],
 		icons: ['inboxes-fill', 'linkedin'],
 	},
 	{
 		title: 'Friendly Contact',
-		body: 'If you are an old friend or a stranger who wants to contact me for anything (say hello, connection, etc.) write at any time through the media but do not expect an immediate response.',
+		body: 'If you just wants to say hello write at any time through the media but do not expect an immediate response.',
 		links: ['t.me/gabrielba15', links.twitter],
 		icons: ['telegram', 'twitter'],
 	},
@@ -20,7 +21,7 @@ const ContactInfo = [
 
 export default function Contact() {
 	return (
-		<>
+		<Flex id="contact" sx={{ flexDirection: 'column', gap: 24 }}>
 			{ContactInfo.map((info) => (
 				<ContactCard key={info.title}>
 					<Title>{info.title}</Title>
@@ -39,6 +40,6 @@ export default function Contact() {
 					</Footer>
 				</ContactCard>
 			))}
-		</>
+		</Flex>
 	);
 }
