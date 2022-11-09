@@ -59,7 +59,7 @@ export const PageNavLinks: PageLinksType = {
 
 export const SocialLinks = {
 	linkedin: 'https://linkedin.com/in/gabrielbencomo',
-	instagram: 'https://instagram.com/gabrielba15',
-	twitter: 'https://twitter.com/gabrielbca15',
-	github: 'https://github.com/gabrielba15',
+	instagram: 'https://instagram.com/gabobaxx',
+	twitter: 'https://twitter.com/gabobaxx',
+	github: 'https://github.com/gabobaxx',
 };
