@@ -1,17 +1,22 @@
 /** @jsx jsx */
-import { animated, useSpring, config } from 'react-spring';
-import { Container, jsx, Flex, Heading } from 'theme-ui';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+// ? ANIMATIONS
+
+import SEO from './seo';
+import { jsx } from 'theme-ui';
 import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+import { animated, useSpring, config } from 'react-spring';
+
 // Components
 import Layout from './layout';
 import Hero from 'components/hero';
-import ToolsCard from 'components/cards/tools-card';
-import ParagraphWithIcon from 'components/paragraph-with-icon';
 import WorkingOnIt from 'components/working-on-it';
 import { NormalCard } from 'components/cards/card';
+import ToolsCard from 'components/cards/tools-card';
+import ParagraphWithIcon from 'components/paragraph-with-icon';
 import ProjectCard, { LargeProjectCard } from 'components/cards/project-card';
-import SEO from './seo';
 
 type PageProps = {
 	data: {
@@ -68,8 +73,7 @@ const Page = ({ data: { page } }: PageProps) => {
 						justifyContent: 'center',
 
 						display: 'grid',
-						gridTemplateColumns:
-							'repeat(auto-fit, minmax(366px, auto))',
+						gridTemplateColumns: 'repeat(auto-fit, minmax(366px, auto))',
 					}}
 				>
 					<MDXRenderer>{page.body}</MDXRenderer>
