@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react';
+import { useCatch } from '@remix-run/react';
 // * Types/Interfaces
 import type { ReactNode } from 'react';
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
@@ -30,6 +31,44 @@ export const meta: MetaFunction = () => ({
 	title: 'Gaboland - Solution Maker',
 	viewport: 'width=device-width,initial-scale=1',
 });
+
+export function CatchBoundary() {
+	const caught = useCatch();
+
+	return (
+		<html>
+			<head>
+				<title>Oops! Somenthing Wrong :(</title>
+				<Meta />
+				<Links />
+			</head>
+			<body
+				style={{
+					color: '#fff',
+					display: 'flex',
+					alignItems: 'center',
+					background: '#0E0E0E',
+					fontFamily: 'Manrope',
+					flexDirection: 'column',
+					justifyContent: 'center',
+				}}
+			>
+				<h4>CODE {caught.status}</h4>
+				<h3>{caught.statusText.toUpperCase()}</h3>
+				<h2>
+					Go back to{' '}
+					<a
+						href={caught.data !== null ? caught.data.slug : '/'}
+						style={{ color: '#09f' }}
+					>
+						{caught.data !== null ? caught.data.route : 'homepage'}
+					</a>
+					.
+				</h2>
+			</body>
+		</html>
+	);
+}
 
 const Document = withEmotionCache(
 	(
