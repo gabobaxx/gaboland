@@ -21,7 +21,7 @@ const SectionTitle = ({ variant, title, icon = 'star' }: SectionTitleProps) => {
 			variant={variant || 'layout.card'}
 			sx={{
 				gap: '8px',
-				color: 'P900',
+				color: 'HeaderText',
 				fontWeight: 'bold',
 				alignItems: 'center',
 			}}

@@ -58,6 +58,11 @@ export const layout = {
 		h4: { fontSize: [18, 24], fontWeight: 'regular' },
 		h5: { fontSize: [18, 24], fontWeight: 'regular', margin: 0 },
 	},
+	featured: {
+		backgroundColor: 'FeaturedBackground',
+		py: '24px',
+		marginTop: '24px',
+	},
 	card: {
 		margin: 24,
 		padding: 24,
@@ -65,8 +70,14 @@ export const layout = {
 		backgroundColor: 'BackgroundColorCard',
 		p: {
 			fontWeight: 'bold',
-			span: {
-				color: 'P900',
+			'span:nth-child(1)': {
+				color: 'SpanOne',
+			},
+			'span:nth-child(2)': {
+				color: 'SpanTwo',
+			},
+			'span:nth-child(3)': {
+				color: 'SpanThree',
 			},
 		},
 		featured: {
@@ -77,7 +88,7 @@ export const layout = {
 			p: {
 				fontWeight: 'bold',
 				span: {
-					color: 'P900',
+					color: 'FontColor',
 				},
 			},
 		},
@@ -88,8 +99,8 @@ export const layout = {
 			px: [48, 64],
 			borderRadius: 8,
 			border: '2px solid',
-			borderColor: 'P900',
-			color: 'P900',
+			borderColor: 'BorderColorOutlineButton',
+			color: 'FontColorOutlineButton',
 			fontWeight: 'bold',
 			':hover': { color: 'primary', borderColor: 'primary' },
 		},

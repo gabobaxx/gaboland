@@ -82,6 +82,12 @@ export default merge(tailwind, {
 		ContactCardBackgroundColor: '#F7F7FC',
 		BackgroundColorCardFeatured: '#FCFCFC',
 		BackgroundColorCard: colors.grayscale[100],
+		FeaturedBackground: '#F7F7F7',
+		SpanOne: '#3CB96E',
+		SpanTwo: colors.primary[900],
+		SpanThree: '#F2C94C',
+		BorderColorOutlineButton: colors.primary[900],
+		FontColorOutlineButton: colors.primary[900],
 		modes: {
 			altamira: {
 				background: DarkModeColors.kentcdodds,
@@ -90,7 +96,14 @@ export default merge(tailwind, {
 				FontColor: colors.grayscale[100],
 				HeaderText: colors.grayscale[100],
 				background: DarkModeColors.faztweb,
-				BackgroundColorCard: colors.grayscale[800],
+				FeaturedBackground: DarkModeColors.faztweb,
+				BackgroundColorCard: colors.grayscale[900],
+				BackgroundColorCardFeatured: colors.grayscale[900],
+				SpanOne: '#BE342D', // alert
+				SpanTwo: '#3CB96E', // success
+				SpanThree: '#F2C94C', // warning
+				FontColorOutlineButton: colors.grayscale[100],
+				BorderColorOutlineButton: colors.grayscale[100],
 			},
 		},
 	},

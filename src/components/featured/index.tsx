@@ -5,7 +5,7 @@ import FeaturedProject from 'components/projects/featured-project';
 
 const Featured = () => {
 	return (
-		<Box sx={{ backgroundColor: '#F7F7F7', py: '24px', marginTop: '24px' }}>
+		<Box variant="layout.featured">
 			<SectionTitle title="Featured Project" variant="layout.card.featured" />
 			<FeaturedProject title="Refribenco" instagram="refribenco">
 				Company dedicated to providing refrigeration spare parts and{' '}

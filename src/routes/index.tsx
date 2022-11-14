@@ -1,6 +1,6 @@
 // * Third Party
 import { Fragment } from 'react';
-import { Box, Flex } from 'theme-ui';
+import { Box, Flex, Text } from 'theme-ui';
 import { Link as RLink } from '@remix-run/react';
 // * Custom Components
 import Hero from 'components/hero';
@@ -34,7 +34,8 @@ export default function Index(): JSX.Element {
 			<Box variant="layout.card">
 				<p style={{ fontSize: '24px' }}>
 					<span>Also, I’m an engineer</span> who loves to contribute{' '}
-					<span>to the growth</span> and advancement of civilization.
+					<span>to the growth</span> and{' '}
+					<span>advancement of civilization.</span>
 				</p>
 				<p style={{ fontSize: '20px', marginTop: 32 }}>
 					Remember, <span>make solutions and stay away</span> from problems.
