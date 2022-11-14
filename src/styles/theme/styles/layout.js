@@ -32,7 +32,7 @@ export const layout = {
 		display: 'block',
 		fontWeight: 'bold',
 		textAlign: 'center',
-		backgroundColor: 'red',
+		backgroundColor: 'FooterBackground',
 		justifyContent: 'center',
 		links: {
 			width: '100%',
@@ -156,7 +156,7 @@ export const layout = {
 				justifyContent: 'space-between',
 				a: {
 					fontSize: '14px',
-					color: 'GS800',
+					color: 'FontColor',
 					i: {
 						marginRight: '5px',
 					},

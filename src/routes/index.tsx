@@ -1,6 +1,6 @@
 // * Third Party
 import { Fragment } from 'react';
-import { Box, Flex, Text } from 'theme-ui';
+import { Box, Flex } from 'theme-ui';
 import { Link as RLink } from '@remix-run/react';
 // * Custom Components
 import Hero from 'components/hero';

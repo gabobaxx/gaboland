@@ -15,7 +15,7 @@ const DarkModeColors = {
 
 export default merge(tailwind, {
 	config: {
-		initialColorModeName: 'light',
+		initialColorModeName: 'dark',
 	},
 	colors: {
 		primary: colors.primary[500],
@@ -88,6 +88,11 @@ export default merge(tailwind, {
 		SpanThree: '#F2C94C',
 		BorderColorOutlineButton: colors.primary[900],
 		FontColorOutlineButton: colors.primary[900],
+		FeaturedProjectBackground: colors.primary[500],
+		FeaturedPostBackground: '#FCFCFC',
+		CalasDreamerBackground: colors.primary[100],
+		TerapistBackground: colors.primary[900],
+		FooterBackground: colors.primary[500],
 		modes: {
 			altamira: {
 				background: DarkModeColors.kentcdodds,
@@ -104,6 +109,12 @@ export default merge(tailwind, {
 				SpanThree: '#F2C94C', // warning
 				FontColorOutlineButton: colors.grayscale[100],
 				BorderColorOutlineButton: colors.grayscale[100],
+				FeaturedProjectBackground: colors.grayscale[900],
+				FeaturedPostBackground: colors.grayscale[900],
+				CalasDreamerBackground: colors.grayscale[900],
+				TerapistBackground: colors.grayscale[900],
+				FooterBackground: DarkModeColors.faztweb,
+				ContactCardBackgroundColor: colors.grayscale[900],
 			},
 		},
 	},

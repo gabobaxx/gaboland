@@ -9,7 +9,7 @@ const projects = [
 		instagram: 'calasdreamer',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibusegestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sitamet, consectetur.',
-		styles: { color: { background: 'P100', font: 'GS100' } },
+		styles: { color: { background: 'CalasDreamerBackground', font: 'GS100' } },
 		badge: { title: 'Developer', icon: 'laptop' },
 	},
 	{
@@ -18,7 +18,7 @@ const projects = [
 		instagram: 'gabrielba15',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibusegestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sitamet, consectetur.',
-		styles: { color: { background: 'P900', font: 'GS100' } },
+		styles: { color: { background: 'TerapistBackground', font: 'GS100' } },
 		badge: { title: 'Developer', icon: 'laptop' },
 	},
 ];

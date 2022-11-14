@@ -14,7 +14,11 @@ const FeaturedPost = ({ title, slug, children }: FeaturedPostProps) => {
 	return (
 		<Flex
 			variant="layout.card"
-			sx={{ gap: '16px', flexDirection: 'column', backgroundColor: '#FCFCFC' }}
+			sx={{
+				gap: '16px',
+				flexDirection: 'column',
+				backgroundColor: 'FeaturedPostBackground',
+			}}
 		>
 			<Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
 				<Paragraph sx={{ fontSize: '12px' }}>{title}</Paragraph>

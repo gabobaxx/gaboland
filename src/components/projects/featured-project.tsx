@@ -20,7 +20,7 @@ const FeaturedProject = ({
 				gap: '16px',
 				color: 'GS100',
 				flexDirection: 'column',
-				backgroundColor: 'primary',
+				backgroundColor: 'FeaturedProjectBackground',
 			}}
 		>
 			<Flex sx={{ justifyContent: 'space-between' }}>
