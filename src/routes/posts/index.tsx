@@ -17,18 +17,18 @@ type LoaderData = {
 };
 
 export const loader = async () => {
-	// const newPosts = await getPosts();
-	// let posts = newPosts.map((post, number) => {
-	// 	return {
-	// 		id: number.toString(),
-	// 		description:
-	// 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur',
-	// 		title: post.title,
-	// 		slug: post.slug,
-	// 	};
-	// });
+	const newPosts = await getPosts();
+	let posts = newPosts.map((post, number) => {
+		return {
+			id: number.toString(),
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur',
+			title: post.title,
+			slug: post.slug,
+		};
+	});
 
-	return json<LoaderData>({ posts: [] });
+	return json<LoaderData>({ posts });
 };
 
 export default function Posts() {
