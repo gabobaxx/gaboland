@@ -14,7 +14,6 @@ type LoaderData = { post: Post; html: string };
 
 export const loader: LoaderFunction = async ({ params }) => {
 	invariant(params.slug, 'params.slug is required');
-
 	const post = await getPost(params.slug);
 	invariant(post, () => {
 		throw json(
