@@ -23,8 +23,6 @@ export async function getPosts(): Promise<Array<Post>> {
 	const posts = database.results as PageObjectResponse[];
 
 	return posts.map((post) => {
-		console.log(post);
-		// const name = post.properties.Name.title[0].plain_text;
 		const postForCache = {
 			id: post.id,
 			slug: post.id,
@@ -33,7 +31,7 @@ export async function getPosts(): Promise<Array<Post>> {
 		};
 
 		postsCache.push(...postsCache, postForCache);
-		console.log(postsCache);
+
 		return postForCache;
 	});
 }

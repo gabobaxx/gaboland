@@ -1,4 +1,5 @@
-import { Flex } from 'theme-ui';
+import { Box } from 'theme-ui';
+import type { AvailableIcons } from 'types';
 import { getIconClass } from 'utils';
 
 type BadgeProps = {
@@ -18,9 +19,9 @@ const Badge = ({
 	hover = { background: '', color: '' },
 	color = { background: 'P900', font: 'GS100' },
 }: BadgeProps) => {
-	const IconBootstrapClass = getIconClass(icon);
+	const IconBootstrapClass = getIconClass(icon as AvailableIcons);
 	return (
-		<Flex
+		<Box
 			variant={variant}
 			sx={{
 				color: color.font,
@@ -30,7 +31,7 @@ const Badge = ({
 		>
 			<i className={IconBootstrapClass}></i>
 			<p>{title}</p>
-		</Flex>
+		</Box>
 	);
 };
 
