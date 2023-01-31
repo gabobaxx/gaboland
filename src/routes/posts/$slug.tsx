@@ -9,12 +9,12 @@ import { getPost } from 'models/posts.server';
 // * Types/Interfaces
 import type { LoaderFunction } from '@remix-run/node';
 import type { Post } from 'models/posts.server';
+import Header from 'components/header';
 
 type LoaderData = { post: Post; html: string };
 
 export const loader: LoaderFunction = async ({ params }) => {
 	invariant(params.slug, 'params.slug is required');
-
 	const post = await getPost(params.slug);
 	invariant(post, () => {
 		throw json(
@@ -28,18 +28,20 @@ export const loader: LoaderFunction = async ({ params }) => {
 			}
 		);
 	});
-
 	const html = marked(post.markdown);
 	return json<LoaderData>({ post, html });
+	// return json({ posts: true });
 };
 
 export default function PostSlug() {
 	const { post, html } = useLoaderData() as LoaderData;
 
 	return (
-		<main className="mx-auto max-w-4xl">
-			<h1 className="my-6 border-b-2 text-center text-3xl">{post.title}</h1>
+		<main>
+			<Header />
+			<h1>{post.title}</h1>
 			<div dangerouslySetInnerHTML={{ __html: html }} />
+			{/* POST */}
 		</main>
 	);
 }

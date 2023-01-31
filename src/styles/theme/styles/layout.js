@@ -106,6 +106,8 @@ export const layout = {
 		},
 	},
 	badge: {
+		display: 'flex',
+		maxWidth: '250px',
 		py: '8px',
 		px: '16px',
 		gap: '8px',

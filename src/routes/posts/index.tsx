@@ -1,35 +1,34 @@
 import { json } from '@remix-run/node';
-import { Link, useLoaderData } from '@remix-run/react';
-import type { HeadersFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 // * Custom
 import Header from 'components/header';
+import SectionTitle from 'components/sections/title';
+import PostsComponent from 'components/posts';
 import { PageNavLinks } from 'config';
 import { getPosts } from 'models/posts.server';
 
 type LoaderData = {
-	posts: Awaited<ReturnType<typeof getPosts>>;
+	posts: {
+		id: string;
+		description: string;
+		title: string;
+		slug: string;
+	}[];
 };
 
 export const loader = async () => {
-	return json<LoaderData>(
-		{
-			posts: await getPosts(),
-		},
-		{
-			status: 200,
-			headers: {
-				'Cache-Control':
-					'public, max-age=60, s-maxage=1812, stale-whilerevalidate=60',
-			},
-		}
-	);
-};
+	const newPosts = await getPosts();
+	let posts = newPosts.map((post, number) => {
+		return {
+			id: number.toString(),
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur',
+			title: post.title,
+			slug: post.slug,
+		};
+	});
 
-export const headers: HeadersFunction = () => {
-	return {
-		'Cache-Control':
-			'public, max-age=60, s-maxage=3604, stale-while-revalidate=60',
-	};
+	return json<LoaderData>({ posts });
 };
 
 export default function Posts() {
@@ -38,17 +37,8 @@ export default function Posts() {
 	return (
 		<main>
 			<Header links={PageNavLinks.posts} />
-			<h1>Posts</h1>
-			<ul>
-				<li>
-					<Link to="admin">Admin</Link>
-				</li>
-				{posts.map((post) => (
-					<li key={post.slug}>
-						<Link to={post.slug}>{post.title}</Link>
-					</li>
-				))}
-			</ul>
+			<SectionTitle title="Latest Posts" icon="article" />
+			<PostsComponent posts={posts} />
 		</main>
 	);
 }

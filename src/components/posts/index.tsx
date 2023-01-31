@@ -2,43 +2,33 @@ import { Flex, Paragraph } from 'theme-ui';
 import Badge from 'components/badges';
 import BadgeLink from 'components/badges/badge-link';
 
-const posts = [
+const postsArray = [
 	{
 		id: '1',
-		title: 'Migrate from Gatsby to Remix',
+		title: 'Blog Post For Test',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.',
-	},
-	{
-		id: '2',
-		title: 'Migrate from Gatsby to Remix',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.',
-	},
-	{
-		id: '3',
-		title: 'Migrate from Gatsby to Remix',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.',
+		slug: '/posts',
 	},
 ];
 
-export default function Posts() {
+export default function Posts({ posts }: { posts?: typeof postsArray }) {
+	const array = posts ?? postsArray;
 	return (
 		<>
-			{posts.map((post) => (
+			{array.map((post) => (
 				<Flex
 					key={post.id}
 					variant="layout.card"
 					sx={{
 						gap: '16px',
 						flexDirection: 'column',
-						// color: 'GS100',
-						// backgroundColor: 'primary',
 					}}
 				>
 					<Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-						<Paragraph sx={{ fontSize: '12px' }}>{post.title}</Paragraph>
+						<Paragraph sx={{ fontSize: '16px', width: 200 }}>
+							{post.title}
+						</Paragraph>
 						<Badge
 							title="Tutorial"
 							color={{ background: '#FCFCFC', font: 'P900' }}
@@ -47,7 +37,7 @@ export default function Posts() {
 					<Paragraph sx={{ fontSize: '12px' }}>{post.description}</Paragraph>
 					<Flex sx={{ justifyContent: 'flex-end' }}>
 						<BadgeLink
-							to="/posts"
+							to={post.slug}
 							icon="article"
 							title="Read Post"
 							color={{ background: '#FCFCFC', font: 'P900' }}

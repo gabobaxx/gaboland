@@ -19,11 +19,16 @@ import {
 } from '@remix-run/react';
 
 import { stylesheet } from 'styles';
+import notion from 'styles/notion.css';
 
 export const links: LinksFunction = () => [
 	stylesheet.reset,
 	stylesheet.fonts,
 	stylesheet.icons,
+	{
+		rel: 'stylesheet',
+		href: notion,
+	},
 ];
 
 export const meta: MetaFunction = () => ({
