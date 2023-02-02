@@ -1,4 +1,4 @@
-import { Flex } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { capitalize } from 'utils';
 import { SocialLinks as links } from 'config';
 
@@ -21,9 +21,21 @@ const ContactInfo = [
 
 export default function Contact() {
 	return (
-		<Flex id="contact" sx={{ flexDirection: 'column', gap: 24 }}>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: ['column', 'row'],
+			}}
+		>
 			{ContactInfo.map((info) => (
-				<ContactCard key={info.title}>
+				<ContactCard
+					key={info.title}
+					sx={{
+						flexDirection: 'column',
+						width: ['90%', '50%'],
+						margin: '24px',
+					}}
+				>
 					<Title>{info.title}</Title>
 					<Body>{info.body}</Body>
 					<Footer>
@@ -40,6 +52,6 @@ export default function Contact() {
 					</Footer>
 				</ContactCard>
 			))}
-		</Flex>
+		</Box>
 	);
 }

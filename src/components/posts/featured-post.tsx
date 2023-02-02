@@ -21,13 +21,13 @@ const FeaturedPost = ({ title, slug, children }: FeaturedPostProps) => {
 			}}
 		>
 			<Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-				<Paragraph sx={{ fontSize: '12px' }}>{title}</Paragraph>
+				<Paragraph sx={{ fontSize: '18px' }}>{title}</Paragraph>
 				<Badge
 					title="Tutorial"
 					color={{ background: '#F7F7F7', font: 'P900' }}
 				/>
 			</Flex>
-			<Paragraph sx={{ fontSize: '12px' }}>{children}</Paragraph>
+			<Paragraph sx={{ fontSize: '15px' }}>{children}</Paragraph>
 			<Flex sx={{ justifyContent: 'flex-end' }}>
 				<BadgeLink
 					icon="article"

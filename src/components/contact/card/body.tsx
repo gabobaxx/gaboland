@@ -3,7 +3,7 @@ import type { ComponentProps } from 'types';
 
 const Body = ({ children, sx }: ComponentProps) => {
 	return (
-		<Box as="p" sx={{ ...sx }}>
+		<Box sx={{ ...sx }} as="p">
 			{children}
 		</Box>
 	);

@@ -151,7 +151,7 @@ export const layout = {
 			p: {
 				marginBottom: 3,
 				textAlign: 'center',
-				fontSize: '0.8125rem',
+				fontSize: '1rem',
 			},
 			footer: {
 				display: 'flex',

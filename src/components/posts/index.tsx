@@ -1,4 +1,4 @@
-import { Flex, Paragraph } from 'theme-ui';
+import { Flex, Paragraph, Box } from 'theme-ui';
 import Badge from 'components/badges';
 import BadgeLink from 'components/badges/badge-link';
 
@@ -10,12 +10,19 @@ const postsArray = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.',
 		slug: '/posts',
 	},
+	{
+		id: '2',
+		title: 'Blog Post For Test 2',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.',
+		slug: '/posts',
+	},
 ];
 
 export default function Posts({ posts }: { posts?: typeof postsArray }) {
 	const array = posts ?? postsArray;
 	return (
-		<>
+		<Box sx={{ display: 'flex', flexDirection: ['column', 'row'] }}>
 			{array.map((post) => (
 				<Flex
 					key={post.id}
@@ -23,6 +30,7 @@ export default function Posts({ posts }: { posts?: typeof postsArray }) {
 					sx={{
 						gap: '16px',
 						flexDirection: 'column',
+						width: ['90%', '50%'],
 					}}
 				>
 					<Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
@@ -46,6 +54,6 @@ export default function Posts({ posts }: { posts?: typeof postsArray }) {
 					</Flex>
 				</Flex>
 			))}
-		</>
+		</Box>
 	);
 }
