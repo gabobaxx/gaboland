@@ -11,6 +11,8 @@ import type { LoaderFunction } from '@remix-run/node';
 import type { Post } from 'models/posts.server';
 import Header from 'components/header';
 
+import { Box, Heading } from 'theme-ui';
+
 type LoaderData = { post: Post; html: string };
 
 export const loader: LoaderFunction = async ({ params }) => {
@@ -53,8 +55,18 @@ export default function PostSlug() {
 					},
 				]}
 			/>
-			<h1>{post.title}</h1>
-			<div dangerouslySetInnerHTML={{ __html: html }} />
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					maxWidth: '800px',
+					margin: '0 auto',
+					padding: '24px',
+				}}
+			>
+				<Heading sx={{ fontSize: ['2rem', '3rem'] }}>{post.title}</Heading>
+				<div dangerouslySetInnerHTML={{ __html: html }} />
+			</Box>
 		</main>
 	);
 }

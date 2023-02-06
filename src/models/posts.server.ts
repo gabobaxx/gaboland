@@ -10,6 +10,7 @@ export type Post = {
 	id: string;
 	slug: string;
 	title: string;
+	description: string;
 	markdown: string;
 };
 
@@ -21,12 +22,12 @@ export async function getPosts(): Promise<Array<Post>> {
 	});
 
 	const posts = database.results as PageObjectResponse[];
-
 	return posts.map((post) => {
 		const postForCache = {
 			id: post.id,
 			slug: post.id,
 			title: post.properties.Name.title[0].plain_text,
+			description: post.properties.Description.rich_text[0].plain_text,
 			markdown: '',
 		};
 
@@ -52,6 +53,7 @@ export async function getPost(slug: string) {
 		id: page.id,
 		slug: page.id,
 		title: page.properties.Name.title[0].plain_text,
+		description: page.properties.Description.rich_text[0].plain_text,
 		markdown: mdString,
 	};
 	return post;

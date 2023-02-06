@@ -112,29 +112,22 @@
 	margin-bottom: 0.25em;
 }
 
-.notion-h1,
-.notion-h2,
-.notion-h3 {
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-top: 0.75em;
+	margin-bottom: 0.25em;
+}
+
+h2,
+h3 {
 	font-weight: 600;
 	line-height: 1.3;
 	padding: 3px 2px;
+	font-size: 1.875rem;
+	margin-top: 1.1rem;
 }
 
-.notion-h1 {
-	font-size: 1.875em;
-	margin-top: 1.4em;
-}
-.notion-h1:first-child {
-	margin-top: 0;
-}
-.notion-h2 {
-	font-size: 1.5em;
-	margin-top: 1.1em;
-}
-.notion-h3 {
-	font-size: 1.25em;
-	margin-top: 1em;
-}
 .notion-emoji {
 	font-family: 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
 		'Segoe UI Symbol';
@@ -487,6 +480,23 @@ img.notion-page-icon {
 	font-size: 14px;
 	line-height: 1.4;
 	color: rgba(55, 53, 47, 0.6);
+}
+
+blockquote {
+	background-color: 'red';
+	padding: 16px 16px 16px 12px;
+	display: inline-flex;
+	width: 100%;
+	border-radius: 3px;
+	border-width: 1px;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 4px 0;
+}
+
+blockquote > p {
+	margin-left: 8px;
+	white-space: pre-line;
 }
 
 .notion-callout {
