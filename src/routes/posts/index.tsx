@@ -10,8 +10,8 @@ import { getPosts } from 'models/posts.server';
 type LoaderData = {
 	posts: {
 		id: string;
-		description: string;
 		title: string;
+		description: string;
 		slug: string;
 	}[];
 };
@@ -21,8 +21,7 @@ export const loader = async () => {
 	let posts = newPosts.map((post, number) => {
 		return {
 			id: number.toString(),
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur',
+			description: post.description,
 			title: post.title,
 			slug: post.slug,
 		};
