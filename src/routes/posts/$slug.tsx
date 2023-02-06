@@ -30,7 +30,6 @@ export const loader: LoaderFunction = async ({ params }) => {
 	});
 	const html = marked(post.markdown);
 	return json<LoaderData>({ post, html });
-	// return json({ posts: true });
 };
 
 export default function PostSlug() {
@@ -38,10 +37,24 @@ export default function PostSlug() {
 
 	return (
 		<main>
-			<Header />
+			<Header
+				links={[
+					{
+						title: 'Gaboland',
+						slug: '/',
+					},
+					{
+						title: 'Posts',
+						slug: '/posts',
+					},
+					{
+						title: 'About',
+						slug: '/about',
+					},
+				]}
+			/>
 			<h1>{post.title}</h1>
 			<div dangerouslySetInnerHTML={{ __html: html }} />
-			{/* POST */}
 		</main>
 	);
 }
