@@ -1,3 +1,4 @@
+import type { HeadersFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 // * Custom
@@ -8,28 +9,19 @@ import { PageNavLinks } from 'config';
 import { getPosts } from 'models/posts.server';
 
 type LoaderData = {
-	posts: {
-		id: string;
-		title: string;
-		description: string;
-		slug: string;
-	}[];
+	posts: Awaited<ReturnType<typeof getPosts>>;
 };
 
 export const loader = async () => {
-	const newPosts = await getPosts();
-	let posts = newPosts.map((post, number) => {
-		return {
-			id: number.toString(),
-			description: post.description,
-			title: post.title,
-			slug: post.slug,
-		};
-	});
-
-	return json<LoaderData>({ posts });
+	return json<LoaderData>({ posts: await getPosts() });
 };
 
+export const headers: HeadersFunction = () => {
+	return {
+		'Cache-Control':
+			'public, max-age=60, s-maxage=3604, stale-while-revalidate=60',
+	};
+};
 export default function Posts() {
 	const { posts } = useLoaderData() as LoaderData;
 

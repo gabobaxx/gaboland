@@ -14,8 +14,6 @@ export type Post = {
 	markdown: string;
 };
 
-const postsCache: Post[] = [];
-
 export async function getPosts(): Promise<Array<Post>> {
 	const database = await notion.databases.query({
 		database_id: blogDatabaseId,
@@ -23,17 +21,13 @@ export async function getPosts(): Promise<Array<Post>> {
 
 	const posts = database.results as PageObjectResponse[];
 	return posts.map((post) => {
-		const postForCache = {
+		return {
 			id: post.id,
 			slug: post.id,
 			title: post.properties.Name.title[0].plain_text,
 			description: post.properties.Description.rich_text[0].plain_text,
 			markdown: '',
 		};
-
-		postsCache.push(...postsCache, postForCache);
-
-		return postForCache;
 	});
 }
 

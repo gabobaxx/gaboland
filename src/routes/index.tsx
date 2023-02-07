@@ -1,7 +1,7 @@
 // * Third Party
 import { Fragment } from 'react';
 import { Box, Flex } from 'theme-ui';
-import { Link as RLink } from '@remix-run/react';
+import { Link as RLink, useLoaderData } from '@remix-run/react';
 // * Custom Components
 import Hero from 'components/hero';
 import Link from 'components/links';
@@ -16,8 +16,27 @@ import FooterSocialLinks from 'components/footer/social-links';
 import { SocialLinksBadges } from 'components/links/social-links-badges';
 // * Config
 import { PageNavLinks, me as gabriel } from 'config';
+import type { HeadersFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
+import { getPosts } from 'models/posts.server';
+
+type LoaderData = {
+	posts: Awaited<ReturnType<typeof getPosts>>;
+};
+
+export const loader = async () => {
+	return json<LoaderData>({ posts: await getPosts() });
+};
+
+export const headers: HeadersFunction = () => {
+	return {
+		'Cache-Control':
+			'public, max-age=60, s-maxage=3604, stale-while-revalidate=60',
+	};
+};
 
 export default function Index(): JSX.Element {
+	const { posts } = useLoaderData() as LoaderData;
 	return (
 		<Fragment>
 			<Header links={PageNavLinks.main} />
@@ -58,7 +77,7 @@ export default function Index(): JSX.Element {
 
 			<Featured />
 			<SectionTitle title="More Posts" icon="article" />
-			<Posts />
+			<Posts posts={posts} />
 			<Contact />
 			<Footer>
 				<FooterSocialLinks />
