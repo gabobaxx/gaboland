@@ -13,14 +13,13 @@ import Contact from 'components/contact';
 import SectionTitle from 'components/sections/title';
 import FooterSocialLinks from 'components/footer/social-links';
 import { SocialLinksBadges } from 'components/links/social-links-badges';
+import FeaturedProject from 'components/projects/featured-project';
+import FeaturedPostComponent from 'components/posts/featured-post-component';
 // * Config
 import { json } from '@remix-run/node';
 import { getPosts } from 'models/posts.server';
 import { PageNavLinks, me as gabriel } from 'config';
 import type { HeadersFunction } from '@remix-run/node';
-
-import FeaturedPost from 'components/posts/featured-post';
-import FeaturedProject from 'components/projects/featured-project';
 
 type LoaderData = {
 	posts: Awaited<ReturnType<typeof getPosts>>;
@@ -95,36 +94,7 @@ export default function Index(): JSX.Element {
 					</FeaturedProject>
 				</Box>
 				<Box sx={{ width: ['100%', '50%'] }}>
-					{posts.length > 0 ? (
-						posts.map((post) => {
-							return post.featured[1] ? (
-								<>
-									<SectionTitle
-										title="Featured Post"
-										variant="layout.card.featured"
-									/>
-									<FeaturedPost title={post.title} slug={post.slug}>
-										{post.description}
-									</FeaturedPost>
-								</>
-							) : (
-								''
-							);
-						})
-					) : (
-						<>
-							<SectionTitle
-								title="Featured Post"
-								variant="layout.card.featured"
-							/>
-							<FeaturedPost title="Whitout Post Yet..." slug="posts">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem
-								ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet,
-								consectetur adipiscing elit. Faucibus egestas vitae.
-							</FeaturedPost>
-						</>
-					)}
+					<FeaturedPostComponent posts={posts} />
 				</Box>
 			</Box>
 
