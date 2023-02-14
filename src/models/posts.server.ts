@@ -12,6 +12,14 @@ export type Post = {
 	title: string;
 	description: string;
 	markdown: string;
+	tags: [
+		{
+			id: string;
+			name: string;
+			color: string;
+		}
+	];
+	featured: boolean;
 };
 
 export async function getPosts(): Promise<Array<Post>> {
@@ -21,12 +29,16 @@ export async function getPosts(): Promise<Array<Post>> {
 
 	const posts = database.results as PageObjectResponse[];
 	return posts.map((post) => {
+		const tags = post.properties.Tags.multi_select;
+		const featured = tags.map((tag) => tag.name === 'Featured');
 		return {
 			id: post.id,
 			slug: post.id,
 			title: post.properties.Name.title[0].plain_text,
 			description: post.properties.Description.rich_text[0].plain_text,
 			markdown: '',
+			tags,
+			featured,
 		};
 	});
 }
@@ -41,7 +53,8 @@ export async function getPost(slug: string) {
 	const mdblocks = await n2m.pageToMarkdown(page.id);
 	const mdString = n2m.toMarkdownString(mdblocks);
 
-	const name = page.properties.Name.title[0].plain_text;
+	const tags = page.properties.Tags.multi_select;
+	const featured = tags.map((tag) => tag.name === 'Featured');
 
 	const post: Post = {
 		id: page.id,
@@ -49,6 +62,8 @@ export async function getPost(slug: string) {
 		title: page.properties.Name.title[0].plain_text,
 		description: page.properties.Description.rich_text[0].plain_text,
 		markdown: mdString,
+		featured,
+		tags,
 	};
 	return post;
 }

@@ -32,7 +32,7 @@ const FeaturedPost = ({ title, slug, children }: FeaturedPostProps) => {
 				<BadgeLink
 					icon="article"
 					title="Read Post"
-					to={`/posts/${slug}`}
+					to={slug}
 					color={{ background: 'GS100', font: 'P900' }}
 					hover={{ background: 'GS100', color: 'primary' }}
 				/>

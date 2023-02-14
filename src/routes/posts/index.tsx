@@ -29,7 +29,13 @@ export default function Posts() {
 		<main>
 			<Header links={PageNavLinks.posts} />
 			<SectionTitle title="Latest Posts" icon="article" />
-			<PostsComponent posts={posts} />
+			{posts.length > 0 ? (
+				<PostsComponent posts={posts} />
+			) : (
+				<div style={{ display: 'flex', justifyContent: 'center' }}>
+					<h2>Without Posts Yet...</h2>
+				</div>
+			)}
 		</main>
 	);
 }
