@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link } from 'gatsby';
 import { Box, Link as TLink } from 'theme-ui';
 

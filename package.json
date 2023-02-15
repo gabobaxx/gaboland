@@ -1,57 +1,69 @@
 {
-  "private": true,
-  "name": "gaboland",
-  "description": "Gabriel's Portfolio",
-  "version": "1.0.0",
-  "author": "@gabrielba15",
-  "license": "MIT",
-  "starter-name": "gatsby-starter-portfolio-caremaland",
-  "scripts": {
-    "build": "gatsby build",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "3.0.0",
-    "@lekoarts/gatsby-theme-emma": "3.0.2",
-    "gatsby": "4.4.0",
-    "gatsby-plugin-manifest": "4.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "cross-env": "7.0.3",
-    "eslint": "7.19.0",
-    "eslint-plugin-react": "7.28.0",
-    "husky": "7.0.4"
-  },
-  "lint-staged": {
-    "*.{jsx,js}": [
-      "yarn lint:fix"
-    ]
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/gabrielba15/portfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gabrielba15/portfolio/issues"
-  },
-  "homepage": "https://github.com/gabrielba15/portfolio#readme",
-  "directories": {
-    "doc": "docs"
-  },
-  "keywords": [
-    "portfolio",
-    "website",
-    "personal"
-  ]
+	"private": true,
+	"name": "gaboland",
+	"description": "Gabriel's Website",
+	"version": "1.0.1",
+	"author": "@gabrielba15",
+	"license": "MIT",
+	"scripts": {
+		"dev": "remix dev",
+		"build": "remix build",
+		"prepare": "husky install",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix ."
+	},
+	"dependencies": {
+		"@emotion/react": "11.10.5",
+		"@emotion/server": "11.10.0",
+		"@notionhq/client": "2.2.2",
+		"@remix-run/node": "1.7.2",
+		"@remix-run/react": "1.7.2",
+		"@remix-run/vercel": "1.7.2",
+		"@theme-ui/presets": "0.15.3",
+		"@vercel/node": "2.5.18",
+		"emotion": "11.0.0",
+		"marked": "4.1.0",
+		"notion-to-md": "2.5.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"theme-ui": "0.15.3",
+		"tiny-invariant": "1.2.0"
+	},
+	"devDependencies": {
+		"@remix-run/dev": "1.7.2",
+		"@remix-run/eslint-config": "1.7.2",
+		"@remix-run/serve": "1.7.2",
+		"@types/marked": "4.0.7",
+		"@types/react": "18.0.21",
+		"@types/react-dom": "18.0.6",
+		"@typescript-eslint/eslint-plugin": "5.12.1",
+		"@typescript-eslint/parser": "5.12.1",
+		"cross-env": "7.0.3",
+		"eslint": "8.24.0",
+		"eslint-plugin-react": "7.28.0",
+		"husky": "7.0.4",
+		"typescript": "4.5.5"
+	},
+	"lint-staged": {
+		"*.{jsx,js}": [
+			"yarn lint:fix"
+		]
+	},
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/gabrielba15/portfolio.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gabrielba15/portfolio/issues"
+	},
+	"homepage": "https://github.com/gabrielba15/portfolio#readme",
+	"directories": {
+		"doc": "docs"
+	},
+	"keywords": [
+		"portfolio",
+		"website",
+		"personal"
+	]
 }

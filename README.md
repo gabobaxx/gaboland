@@ -1,13 +1,60 @@
-<!--
 <p align="center">
-  <a href="https://cara.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
+  <a href="https://gabo.land">
+    <img alt="Gaboland" src="public/assets/lion-banner-removebg-preview.png" width="120"/>
   </a>
 </p>
--->
+
 <h1 align="center">
-  WELCOME TO MY LAND 🦁
+  Gaboland 2023
 </h1>
+
+<!--
+<p align="center">
+   This is <a href="https://gabo.land" target="_blank">gabo.land</a> version 2023 rewritten with <a href="https://remix.run/" target="_blank">Remix</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/gabrielba15/gaboland/blob/develop/CHANGELOG.md"><strong>Changelog</strong></a> ·
+  <a href="https://github.com/gabrielba15/gaboland/tree/gatsby"><strong>V1 With Gatsby</strong></a> ·
+  <a href="https://github.com/gabrielba15/gaboland#-contributing"><strong>Contribute</strong></a>
+</p>
+<br/>
+
+
+## 📑 Contributing
+
+If you see a bug, something in the UI you don't like or a simple feature that you'll want to share with the project, create an [issue](https://github.com/gabrielba15/gaboland/issues).
+
+If you want to fix that bug or just contribute:
+
+## 🛠 Installation & Set Up
+
+
+
+1. [Fork](https://github.com/gabrielba15/gaboland/fork) this repo.
+
+2. Clone repo
+
+   ```sh
+   git clone https://github.com/<your-username>/gaboland.git
+   ```
+
+3. Install dependencies
+
+   ```sh
+   yarn install
+   ```
+
+4. Happy hacking
+
+   ```sh
+   yarn dev
+   ```
+5. [Pull](https://github.com/gabrielba15/gaboland/pulls) to develop branch.
+
+
+🌟 ***Thank you so much, you just contributed to an open source project.***
+
 
 <!--
 <p align="center">
@@ -23,36 +70,16 @@
 </p>
 
 -->
-
+<!-- 
 This is my personal project, it is a simple website that works as my portfolio for now, I have some ideas or goals that I want to achieve and I think that the best way is to start with myself. I would like this continue advancing and help people who need it with my knowledge. 
 
 Make solutions, don't mistakes 🧠🚀🦁
 
-## 📑 Contributing
+For details on how to use Vercel, check out our [documentation](https://vercel.com/docs).
 
-If you see a bug, something in the UI you don't like or a simple feature that you'll wanna share with me, create a issue with a corresponding format. 
+## Contributing
 
-Title: 💡Do it a blog. 
-
-Description: I just want a blog section... 
-
-Tags: 💡 Idea 
-
-💡 [Emoji corresponding to the tag] Feature name or title of the issue. 
-
-Feature 👉 💡
-
-Bug 👉 🐞
-
-UI 👉 📺
-
-You can add the tags what you want. 
-
-I've just accepted issues for now. Pull Requests can be possible soon... 
-
-Thanks u so much 🙏 you make this project keep it going. 
-
-## 🌟 Special Thanks
-
-- Thanks to lekoarts and his starter [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emma)., this can be possible for his community contribution. 
-- Thanks to all the people who are with me at every moment.
+- [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
+- [Contributing Guidelines](./.github/CONTRIBUTING.md)
+- [MIT License](./LICENSE)
+- -->

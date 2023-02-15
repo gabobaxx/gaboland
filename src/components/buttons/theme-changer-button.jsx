@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { useColorMode, jsx } from 'theme-ui';
+import { useColorMode, Button } from 'theme-ui';
 
 const ThemeChangerButton = () => {
 	const [colorMode, setColorMode] = useColorMode();
@@ -8,14 +7,18 @@ const ThemeChangerButton = () => {
 		setColorMode(isDark ? 'light' : 'dark');
 	};
 	return (
-		<button
-			sx={{ variant: 'buttons.toggle', fontWeight: 'semibold' }}
+		<Button
+			as="button"
+			variant="buttons.toggle"
 			onClick={toggleColorMode}
-			type="button"
 			aria-label="Toggle dark mode"
 		>
-			{isDark ? 'Light' : 'Dark'}
-		</button>
+			{isDark ? (
+				<i className="bi bi-brightness-high"></i>
+			) : (
+				<i className="bi bi-moon-stars"></i>
+			)}
+		</Button>
 	);
 };
 

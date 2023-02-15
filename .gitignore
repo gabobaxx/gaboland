@@ -62,9 +62,14 @@ typings/
 
 .cache
 **/.cache
-public
+public/build 
+public/gatsby
+build
 
 .idea
 .vscode
 .DS_Store
 .vercel/
+
+# Remix
+api/
