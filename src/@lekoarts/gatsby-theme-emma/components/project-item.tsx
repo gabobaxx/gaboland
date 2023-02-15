@@ -3,7 +3,8 @@ import * as React from 'react';
 import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 import { animated } from 'react-spring';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import type { IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { LargeProjectCard } from 'components/cards/project-card';
 
 type ProjectItemProps = {
@@ -35,10 +36,10 @@ const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
 			sx={{
 				a: {
 					width: 500,
-					transition: `all 0.3s ease-in-out`,
-					textDecoration: `none`,
+					transition: 'all 0.3s ease-in-out',
+					textDecoration: 'none',
 					'&:hover': {
-						textDecoration: `none`,
+						textDecoration: 'none',
 					},
 				},
 			}}

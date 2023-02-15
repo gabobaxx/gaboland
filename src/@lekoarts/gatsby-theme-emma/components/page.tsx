@@ -38,8 +38,8 @@ const components = {
 const Page = ({ data: { page } }: PageProps) => {
 	const titleProps = useSpring({
 		config: config.slow,
-		from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
-		to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
+		from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
+		to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
 	});
 	const contentProps = useSpring({
 		config: config.slow,

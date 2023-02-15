@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Themed } from 'theme-ui';
 import { useTrail } from 'react-spring';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from './layout';
 import ProjectItem from './project-item';
 
@@ -29,20 +29,20 @@ const ProjectsPlaceholderText = () => (
 	<Layout>
 		<Container>
 			<Themed.p>
-				Hi!{` `}
+				Hi!{' '}
 				<span role="img" aria-label="Wave emoji">
 					👋
 				</span>
-				{` `}
+				{' '}
 				<br />
 				Thanks for using <b>@lekoarts/gatsby-theme-emma</b>. You currently don't
-				have any content in your{` `}
+				have any content in your{' '}
 				<i>projects</i> folder - that's why this page displays a placeholder
-				text. Head over to the{` `}
+				text. Head over to the{' '}
 				<Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emma">
 					README
 				</Themed.a>
-				{` `}
+				{' '}
 				to learn how to setup them.
 			</Themed.p>
 			<Themed.p>
@@ -51,7 +51,7 @@ const ProjectsPlaceholderText = () => (
 				<code>content/projects</code>. Go into this folder, create a new folder
 				called <code>example</code> and create an <code>index.mdx</code> file
 				there and place an image. Edit the frontmatter like described in the
-				{` `}
+				{' '}
 				<Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emma">
 					README
 				</Themed.a>
@@ -63,8 +63,8 @@ const ProjectsPlaceholderText = () => (
 
 const Projects = ({ projects }: ProjectsProps) => {
 	const trail = useTrail(projects.length, {
-		from: { height: `0%` },
-		to: { height: `100%` },
+		from: { height: '0%' },
+		to: { height: '100%' },
 	});
 
 	if (projects.length === 0) return <ProjectsPlaceholderText />;
