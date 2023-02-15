@@ -32,7 +32,7 @@ const FeaturedPostComponent = ({ posts }: { posts: any[] }) => {
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
 				egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit
 				amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing
-				elit. Faucibus egestas vitae.
+				elit. Faucibus egestas vitae!
 			</FeaturedPost>
 		</>
 	);
