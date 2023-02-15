@@ -28,7 +28,7 @@ const FeaturedPostComponent = ({ posts }: { posts: any[] }) => {
 	return (
 		<>
 			<SectionTitle title="Featured Post" variant="layout.card.featured" />
-			<FeaturedPost title="Whitout Post Yet..." slug="posts">
+			<FeaturedPost title="Whitout Featured Post Yet..." slug="posts">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
 				egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit
 				amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing
