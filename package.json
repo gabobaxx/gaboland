@@ -2,47 +2,47 @@
 	"private": true,
 	"name": "gaboland",
 	"description": "Gabriel's Website",
-	"version": "1.0.1",
-	"author": "@gabrielba15",
+	"version": "2.0.2.3",
+	"author": "@gabobaxx",
 	"license": "MIT",
 	"scripts": {
+		"lint": "eslint .",
 		"dev": "remix dev",
 		"build": "remix build",
 		"prepare": "husky install",
-		"lint": "eslint .",
 		"lint:fix": "eslint --fix ."
 	},
 	"dependencies": {
-		"@emotion/react": "11.10.5",
+		"@emotion/react": "11.10.6",
 		"@emotion/server": "11.10.0",
-		"@notionhq/client": "2.2.2",
+		"@notionhq/client": "2.2.3",
 		"@remix-run/node": "1.13.0",
 		"@remix-run/react": "1.13.0",
 		"@remix-run/vercel": "1.13.0",
-		"@theme-ui/presets": "0.15.3",
-		"@vercel/node": "2.5.18",
+		"@theme-ui/presets": "0.15.5",
+		"@vercel/node": "2.9.6",
 		"emotion": "11.0.0",
-		"marked": "4.1.0",
+		"marked": "4.2.12",
 		"notion-to-md": "2.5.5",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"theme-ui": "0.15.3",
-		"tiny-invariant": "1.2.0"
+		"theme-ui": "0.15.5",
+		"tiny-invariant": "1.3.1"
 	},
 	"devDependencies": {
-		"@remix-run/dev": "1.7.2",
-		"@remix-run/eslint-config": "1.7.2",
-		"@remix-run/serve": "1.7.2",
-		"@types/marked": "4.0.7",
-		"@types/react": "18.0.21",
-		"@types/react-dom": "18.0.6",
-		"@typescript-eslint/eslint-plugin": "5.12.1",
-		"@typescript-eslint/parser": "5.12.1",
+		"@remix-run/dev": "1.13.0",
+		"@remix-run/eslint-config": "1.13.0",
+		"@remix-run/serve": "1.13.0",
+		"@types/marked": "4.0.8",
+		"@types/react": "18.0.28",
+		"@types/react-dom": "18.0.11",
+		"@typescript-eslint/eslint-plugin": "5.53.0",
+		"@typescript-eslint/parser": "5.53.0",
 		"cross-env": "7.0.3",
-		"eslint": "8.24.0",
-		"eslint-plugin-react": "7.28.0",
-		"husky": "7.0.4",
-		"typescript": "4.5.5"
+		"eslint": "8.34.0",
+		"eslint-plugin-react": "7.32.2",
+		"husky": "8.0.3",
+		"typescript": "4.9.5"
 	},
 	"lint-staged": {
 		"*.{jsx,js}": [
@@ -50,14 +50,11 @@
 		]
 	},
 	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/gabrielba15/portfolio.git"
-	},
+	"repository": "git+ssh://git@github.com:gabobaxx/gaboland.git",
 	"bugs": {
-		"url": "https://github.com/gabrielba15/portfolio/issues"
+		"url": "https://github.com/gabobaxx/gaboland/issues"
 	},
-	"homepage": "https://github.com/gabrielba15/portfolio#readme",
+	"homepage": "https://github.com/gabobaxx/gaboland#readme",
 	"directories": {
 		"doc": "docs"
 	},
