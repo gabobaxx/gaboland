@@ -1,5 +1,6 @@
 // * React
-import { hydrate } from 'react-dom';
+import { startTransition, StrictMode } from 'react';
+import { hydrateRoot } from 'react-dom/client';
 import { useCallback, useState } from 'react';
 import { RemixBrowser } from '@remix-run/react';
 // * Emotion Cache
@@ -24,9 +25,13 @@ const ClientCacheProvider = ({ children }: ClientCacheProviderProps) => {
 	);
 };
 
-hydrate(
-	<ClientCacheProvider>
-		<RemixBrowser />
-	</ClientCacheProvider>,
-	document
-);
+startTransition(() => {
+	hydrateRoot(
+		document,
+		<StrictMode>
+			<ClientCacheProvider>
+				<RemixBrowser />
+			</ClientCacheProvider>
+		</StrictMode>
+	);
+});
