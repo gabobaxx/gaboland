@@ -9,6 +9,7 @@
 		"lint": "eslint .",
 		"dev": "remix dev",
 		"build": "remix build",
+		"prepare": "husky install",
 		"lint:fix": "eslint --fix ."
 	},
 	"dependencies": {
@@ -44,6 +45,11 @@
 		"husky": "8.0.3",
 		"tailwindcss": "3.4.3",
 		"typescript": "4.9.5"
+	},
+	"lint-staged": {
+		"*.{jsx,js}": [
+			"yarn lint:fix"
+		]
 	},
 	"main": "index.js",
 	"repository": "git+ssh://git@github.com:gabobaxx/gaboland.git",
