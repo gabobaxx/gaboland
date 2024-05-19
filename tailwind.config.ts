@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 export default {
+	darkMode: 'class',
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		extend: {
@@ -48,6 +49,9 @@ export default {
 					700: '#5F5F5F',
 					800: '#393939',
 					900: '#131313',
+				},
+				extra: {
+					checks: '#F7F7FC',
 				},
 			},
 		},

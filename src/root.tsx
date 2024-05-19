@@ -9,6 +9,12 @@ import { ThemeProvider } from 'theme-ui';
 import { withEmotionCache } from '@emotion/react';
 import { ServerStyleContext, ClientStyleContext } from './styles/context';
 
+import clsx from 'clsx';
+import {
+	ThemeProvider as TailwindThemeProvider,
+	useTheme,
+} from 'utils/theme-provider';
+
 import {
 	Links,
 	LiveReload,
@@ -114,8 +120,10 @@ const Document = withEmotionCache(
 			resetClientStyleData();
 		}, [resetClientStyleData]);
 
+		const [theme] = useTheme();
+
 		return (
-			<html lang="en">
+			<html lang="en" className={clsx(theme)}>
 				<head>
 					<meta charSet="utf-8" />
 					<meta
@@ -147,10 +155,12 @@ const Document = withEmotionCache(
 
 export default function App() {
 	return (
-		<Document>
-			<ThemeProvider theme={Theme}>
-				<Outlet />
-			</ThemeProvider>
-		</Document>
+		<TailwindThemeProvider>
+			<Document>
+				<ThemeProvider theme={Theme}>
+					<Outlet />
+				</ThemeProvider>
+			</Document>
+		</TailwindThemeProvider>
 	);
 }
