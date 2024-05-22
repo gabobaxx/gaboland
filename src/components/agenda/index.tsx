@@ -5,7 +5,7 @@ import ArrowDownCircle from 'components/icons/ArrowDownCircle';
 export default function CallAgenda() {
 	return (
 		<>
-			<TailwindSectionTitle className="mt-6 justify-center items-center dark:bg-extra-checks">
+			<TailwindSectionTitle className="mt-6 justify-center items-center">
 				<p className="font-bold text-xs md:text-base text-primary-700">
 					AGENDA UNA LLAMADA ABAJO
 				</p>
