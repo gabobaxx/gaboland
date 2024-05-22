@@ -1,10 +1,5 @@
 import { ReactElement } from 'react';
 
-// <div className="relative left-0 top-0">
-//			<div className="absolute h-6 p-6 top-10 left-10 z-10 border-2 border-grayscale-100"></div>
-//			<div className="absolute h-10 p-10 -z-10 border-2 border-primary-500"></div>
-//		</div>
-
 interface HeroProps {
 	children?: ReactElement;
 	name?: string;
