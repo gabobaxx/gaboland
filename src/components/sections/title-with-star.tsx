@@ -8,12 +8,10 @@ export default function TitleWithStarIcon(
 	return (
 		<TailwindSectionTitle
 			{...props}
-			className={`${props.className ?? ''} rounded-full`}
+			className={`${props.className ?? ''} rounded-full text-primary-700`}
 		>
-			<StarIcon className="h-4 w-4 md:h-6 md:w-62 text-xs md:text-base text-primary-700" />
-			<p className="font-bold text-xs md:text-base text-primary-700">
-				{props.children}
-			</p>
+			<StarIcon className="h-4 w-4 md:h-6 md:w-62 text-xs md:text-base" />
+			<p className="font-bold text-xs md:text-base">{props.children}</p>
 		</TailwindSectionTitle>
 	);
 }

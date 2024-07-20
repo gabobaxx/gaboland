@@ -4,7 +4,7 @@ import type { NavLink } from 'types';
 
 export default function Header({ links }: { links?: NavLink[] }) {
 	return (
-		<header className="mt-6 px-6 font-bold flex justify-between items-center text-base md:text-xl">
+		<header className="mt-6 px-6 font-bold flex justify-between items-center text-base md:text-xl dark:text-white">
 			<NavLinks links={links} />
 			<ThemeChangerButton />
 		</header>

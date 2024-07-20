@@ -8,7 +8,7 @@ export default function TailwindSectionTitle(
 			{...props}
 			className={`${
 				props.className ?? ''
-			} flex gap-2 p-4 bg-extra-checks rounded-3xl `}
+			} flex gap-2 p-4 rounded-3xl bg-extra-checks dark:bg-grayscale-900 dark:text-white`}
 		/>
 	);
 }

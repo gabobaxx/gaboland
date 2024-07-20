@@ -5,12 +5,12 @@ import { SunIcon } from '@heroicons/react/24/solid';
 
 const ThemeChangerButton = () => {
 	// Tailwind theme changer
-	const [, setTheme] = useTheme();
+	const [theme, setTheme] = useTheme();
 
-	const [colorMode, setColorMode] = useColorMode();
-	const isDark = colorMode === 'dark';
+	// const [colorMode, setColorMode] = useColorMode();
+	const isDark = theme === Theme.DARK;
 	const toggleColorMode = () => {
-		setColorMode(isDark ? 'light' : 'dark');
+		// setColorMode(isDark ? 'light' : 'dark');
 		// Tailwind theme changer
 		setTheme((prevTheme) =>
 			prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT

@@ -4,14 +4,9 @@ import { isRouteErrorResponse, useRouteError } from '@remix-run/react';
 import type { ReactNode } from 'react';
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
 // * Theme
-import Theme from 'styles/theme';
-import { ThemeProvider } from 'theme-ui';
-import { withEmotionCache } from '@emotion/react';
-import { ServerStyleContext, ClientStyleContext } from './styles/context';
-
-import clsx from 'clsx';
 import {
 	ThemeProvider as TailwindThemeProvider,
+	Theme,
 	useTheme,
 } from 'utils/theme-provider';
 
@@ -27,6 +22,7 @@ import {
 import { stylesheet } from 'styles';
 import notion from 'styles/notion.css';
 import styles from 'styles/tailwind.css';
+import clsx from 'clsx';
 
 export const links: LinksFunction = () => [
 	stylesheet.reset,
@@ -101,65 +97,36 @@ export function CatchBoundary() {
 	}
 }
 
-const Document = withEmotionCache(
-	(
-		{
-			children,
-		}: {
-			children: ReactNode;
-		},
-		_emotionCache
-	) => {
-		const serverStyleData = useContext(ServerStyleContext);
-		const clientStyleData = useContext(ClientStyleContext);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-		const resetClientStyleData = clientStyleData?.reset || function () {};
-
-		// Only executed on client
-		useEffect(() => {
-			resetClientStyleData();
-		}, [resetClientStyleData]);
-
-		const [theme] = useTheme();
-
-		return (
-			<html lang="en" className={clsx(theme)}>
-				<head>
-					<meta charSet="utf-8" />
-					<meta
-						name="viewport"
-						content="width=device-width,
+const Document = ({ children }: { children: ReactNode }) => {
+	const [theme] = useTheme();
+	return (
+		<html lang="es" className={clsx(theme)}>
+			<head>
+				<meta charSet="utf-8" />
+				<meta
+					name="viewport"
+					content="width=device-width,
 					initial-scale=1"
-					/>
-					<Meta />
-					<Links />
-					{serverStyleData?.map(({ key, ids, css }) => (
-						<style
-							key={key}
-							data-emotion={`${key} ${ids.join(' ')}`}
-							dangerouslySetInnerHTML={{ __html: css }}
-						/>
-					))}
-				</head>
+				/>
+				<Meta />
+				<Links />
+			</head>
 
-				<body>
-					{children}
-					<ScrollRestoration />
-					<Scripts />
-					<LiveReload />
-				</body>
-			</html>
-		);
-	}
-);
+			<body className="dark:bg-extra-dark">
+				{children}
+				<ScrollRestoration />
+				<Scripts />
+				<LiveReload />
+			</body>
+		</html>
+	);
+};
 
 export default function App() {
 	return (
 		<TailwindThemeProvider>
 			<Document>
-				<ThemeProvider theme={Theme}>
-					<Outlet />
-				</ThemeProvider>
+				<Outlet />
 			</Document>
 		</TailwindThemeProvider>
 	);
