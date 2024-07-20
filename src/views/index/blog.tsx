@@ -47,6 +47,7 @@ export default function Blog({ post }: BlogProps) {
 					{limitWords({ paragraph: post.description, numWords: 13 }) ??
 						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.'}
 				</p>
+				// ! Error: POST NOT FOUND
 				<Outline
 					href={post ? `/posts/${post.slug}` : '/'}
 					className="border border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-grayscale-100 focus:ring-primary-500"

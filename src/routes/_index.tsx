@@ -3,8 +3,8 @@ import { json } from '@remix-run/node';
 import { getPosts } from 'models/posts.server';
 import { useLoaderData } from '@remix-run/react';
 // * Sections Page
-import Header from 'components/header/tailwind-header';
 import Blog from 'views/index/blog';
+import Header from 'components/header/tailwind-header';
 // * Types
 import type { HeadersFunction } from '@remix-run/node';
 // * Utils
