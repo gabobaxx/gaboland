@@ -11,7 +11,7 @@ type ThemeContextType = [Theme | null, Dispatch<SetStateAction<Theme | null>>];
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 function ThemeProvider({ children }: { children: ReactNode }) {
-	const [theme, setTheme] = useState<Theme | null>(Theme.DARK);
+	const [theme, setTheme] = useState<Theme | null>(Theme.LIGHT);
 
 	return (
 		<ThemeContext.Provider value={[theme, setTheme]}>
