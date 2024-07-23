@@ -22,3 +22,8 @@ export function limitWords({
 	// Indicate truncation with an ellipsis (...)
 	return `${truncatedParagraph}...`;
 }
+
+export function limitTextToFirstDot({ paragraph }: { paragraph: string }) {
+	const words = paragraph.split('.');
+	return `${words[0]}...`;
+}
