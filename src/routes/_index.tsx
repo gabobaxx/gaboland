@@ -4,6 +4,7 @@ import { getPosts } from 'models/posts.server';
 import { useLoaderData } from '@remix-run/react';
 // * Sections Page
 import Blog from 'views/index/blog';
+import Projects from 'views/index/projects';
 import Header from 'components/header/tailwind-header';
 // * Types
 import type { HeadersFunction } from '@remix-run/node';
@@ -31,7 +32,8 @@ export default function Index(): JSX.Element {
 	return (
 		<main className="px-6">
 			<Header links={PageNavLinks.about} />
-			<Blog post={posts[4]} />
+			<Blog post={posts[0]} />
+			<Projects />
 		</main>
 	);
 }

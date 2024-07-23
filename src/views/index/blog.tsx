@@ -5,7 +5,7 @@ import { Bookmark, SparklesIcon } from 'components/icons';
 import SectionTitle from 'components/sections/title-with-star';
 // * Utils
 import { Post } from 'types';
-import { limitWords } from 'utils/limit-words';
+import { limitTextToFirstDot } from 'utils/limit-words';
 
 interface BlogProps {
 	post: Post;
@@ -44,10 +44,10 @@ export default function Blog({ post }: BlogProps) {
 					</span>
 				</div>
 				<p className="text-grayscale-800 dark:text-white">
-					{limitWords({ paragraph: post.description, numWords: 13 }) ??
+					{limitTextToFirstDot({ paragraph: post.description }) ??
 						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus egestas vitae, accumsan, quis euismod convallis. Lorem ipsum dolor sit amet, consectetur.'}
 				</p>
-				// ! Error: POST NOT FOUND
+				{/* // ! Error: POST NOT FOUND */}
 				<Outline
 					href={post ? `/posts/${post.slug}` : '/'}
 					className="border border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-grayscale-100 focus:ring-primary-500"
