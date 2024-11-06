@@ -10,6 +10,7 @@ import Header from 'components/header/tailwind-header';
 import type { HeadersFunction } from '@remix-run/node';
 // * Utils
 import { PageNavLinks } from 'config';
+import Hero from 'views/index/hero';
 
 type LoaderData = {
 	posts: Awaited<ReturnType<typeof getPosts>>;
@@ -34,6 +35,7 @@ export default function Index(): JSX.Element {
 			<Header links={PageNavLinks.about} />
 			<Blog post={posts[0]} />
 			<Projects />
+			<Hero />
 		</main>
 	);
 }
