@@ -27,11 +27,11 @@ export const headers: HeadersFunction = () => {
 	};
 };
 
-export default function Index(): JSX.Element {
+export default function Index() {
 	const { posts } = useLoaderData<LoaderData>();
 
 	return (
-		<main className="px-6">
+		<main className="px-6 max-w-2xl mx-auto">
 			<Header links={PageNavLinks.about} />
 			<Blog post={posts[0]} />
 			<Projects />
