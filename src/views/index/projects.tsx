@@ -43,7 +43,7 @@ export default function Projects() {
 				</p>
 				<ExternalOutline
 					href="https://refribenco.com"
-					className="border border-primary-900 text-primary-900 hover:bg-primary-700 hover:text-primary-700"
+					className="border border-primary-900 text-primary-900 hover:bg-primary-700 hover:text-grayscale-100"
 				>
 					Visitar Refribenco
 				</ExternalOutline>
