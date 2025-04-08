@@ -4,37 +4,6 @@ import { Box } from 'theme-ui';
 import Badge from 'components/badges/badge';
 import SmallCard from 'components/cards/small-card';
 
-/*const CardHeader = ({ title }) => <Box as="header">{title}</Box>;
-
-
-const CardFooter = ({ location, years }) => (
-	<Box as="footer">
-		<Box as="p">
-			<i style={{ marginRight: 5 + 'px' }} className="bi bi-geo-alt-fill"></i>
-			{location}
-		</Box>
-		<Badge>{years}</Badge>
-	</Box>
-);
-
-
-
-const ExperienceCard = ({
-	borderColor = 'p700',
-	title = 'Experience Card',
-	company = 'Company Name',
-	location = 'State, City',
-	years = '2 years',
-}) => (
-	<SmallCard borderColor={borderColor}>
-		<CardHeader title={title} />
-		<CardBody company={company} />
-		<CardFooter location={location} years={years} />
-	</SmallCard>
-);
-
-*/
-
 const ExperienceCard = ({
 	borderColor = 'p700',
 	title = 'Experience Card',

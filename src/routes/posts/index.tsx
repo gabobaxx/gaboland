@@ -2,9 +2,9 @@ import type { HeadersFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 // * Custom
-import Header from 'components/header';
-import SectionTitle from 'components/sections/title';
-import PostsComponent from 'components/posts';
+import Header from 'components/header/tailwind-header';
+import SectionTitle from 'components/sections/title-with-star';
+import PostComponent from 'components/posts/post-component-tailwind';
 import { PageNavLinks } from 'config';
 import { getPosts } from 'models/posts.server';
 
@@ -26,16 +26,14 @@ export default function Posts() {
 	const { posts } = useLoaderData() as LoaderData;
 
 	return (
-		<main>
+		<main className="px-6">
 			<Header links={PageNavLinks.posts} />
-			<SectionTitle title="Latest Posts" icon="article" />
-			{posts.length > 0 ? (
-				<PostsComponent posts={posts} />
-			) : (
-				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<h2>Without Posts Yet...</h2>
-				</div>
-			)}
+			<SectionTitle className="my-6">Ultimos Articulos</SectionTitle>
+			<div className="grid gap-6 md:grid-cols-2">
+				{posts.map((post) => (
+					<PostComponent post={post} key={post.id} />
+				))}
+			</div>
 		</main>
 	);
 }

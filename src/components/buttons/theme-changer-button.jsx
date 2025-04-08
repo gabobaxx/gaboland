@@ -1,11 +1,20 @@
 import { useColorMode, Button } from 'theme-ui';
+import { Theme, useTheme } from 'utils/theme-provider';
 
 const ThemeChangerButton = () => {
+	// Tailwind theme changer
+	const [, setTheme] = useTheme();
+
 	const [colorMode, setColorMode] = useColorMode();
 	const isDark = colorMode === 'dark';
 	const toggleColorMode = (_e) => {
 		setColorMode(isDark ? 'light' : 'dark');
+		// Tailwind theme changer
+		setTheme((prevTheme) =>
+			prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+		);
 	};
+
 	return (
 		<Button
 			as="button"
