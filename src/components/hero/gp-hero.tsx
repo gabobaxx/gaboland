@@ -20,12 +20,8 @@ export default function GPHero() {
 				</p>
 			</div>
 			<p className="font-bold text-xs md:text-base mt-4">
-				Actualmente, me dedico a crear sistemas predecibles de crecimiento y
-				obtencion de clientes para marcas de tecnologia. Los cuales, primero se
-				ponen a prueba a traves de mis propias marcas como Terapist, Gaboland y
-				Refribenco para que mis clientes disfruten de un sistema eficaz,
-				eficiente y barato de crecimiento exponencial en el menor tiempo
-				posible.
+				Actualmente, me dedico a crear sistemas y procesos automatizados predecibles de crecimiento y captacion de clientes para marcas de tecnologia. Los cuales, primero se ponen a prueba a traves de mis propias marcas como Terapist, Gaboland y
+				Refribenco para que mis clientes disfruten de un sistema eficaz y eficiente de crecimiento exponencial en el menor tiempo posible.
 			</p>
 		</>
 	);
