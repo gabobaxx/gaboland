@@ -2,6 +2,8 @@ import { isRouteErrorResponse, useRouteError } from "@remix-run/react";
 // * Types/Interfaces
 import type { ReactNode } from "react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
+// * Vercel Analytics
+import { Analytics } from "@vercel/analytics/remix";
 // * Theme
 import {
 	ThemeProvider as TailwindThemeProvider,
@@ -139,6 +141,8 @@ const Document = ({ children }: { children: ReactNode }) => {
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
+				{/* Vercel Analytics */}
+                <Analytics />
 			</body>
 		</html>
 	);
